@@ -1,0 +1,23 @@
+{#
+    view/components/home/index.html.twig
+#}
+
+{% extends "@STARTERPack/layout.html.twig" %}
+
+{% block title %}{{parent()}} - Home{% endblock title %}
+
+{% block body %}
+
+    <h2>Home Page pouet truc bidule</h2>
+
+    External Data :
+    foo : {{ foo }} <br>
+    Stuff Array : {{ stuff }} <br>
+    full data: {{ pageData.resource.paths[0] }} <br>
+    Dump: {{ dump(stuff) }} <br>
+
+    <img src="./assets/img/sample.jpg" alt="" />
+
+    {% include "./shared/article/index.html.twig" %}
+
+{% endblock %}

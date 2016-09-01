@@ -1,0 +1,16 @@
+{# 
+  shared/header
+#}
+
+{% block header %}
+    <h2>Header Component</h2>
+    <div class="container">
+        <div class="col">Cols</div>
+        <div class="col">Cols</div>
+    </div>
+    {% include "./shared/header/navigation/index.html.twig" %}
+    {% include "./shared/header/search/index.html.twig" %}
+{% endblock %}
+
+{#{% include "./navigation/index.html.twig" %}#}
+

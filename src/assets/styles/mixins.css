@@ -1,0 +1,49 @@
+/**
+*    Creating attributes (all, top bottom, left and right) for margin, padding, etc., in regards of the Grid Gutter Size
+*    var $attr : the attribute to mixin ; example :  margin, padding
+*    var $short : the atomic version of the attribute  ; example : m, p
+*    var $sizeShort : the atomic version of the size to apply mixin ; example : xs, s, m, l
+*    var $sizeVal : value to multiply with the Gutter Size
+*/
+
+@define-mixin createSize $attr, $short, $sizeShort, $sizeVal {
+    .$(short)-$(sizeShort){ $(attr): calc(var(--GutterSize) * $sizeVal); }
+    .$(short)t-$(sizeShort){ $(attr)-top: calc(var(--GutterSize) * $sizeVal); }
+    .$(short)b-$(sizeShort){ $(attr)-bottom: calc(var(--GutterSize) * $sizeVal); }
+    .$(short)l-$(sizeShort){ $(attr)-left: calc(var(--GutterSize) * $sizeVal); }
+    .$(short)r-$(sizeShort){ $(attr)-right: calc(var(--GutterSize) * $sizeVal); }
+}
+
+/**
+*    Creating margins
+*    m-xs, mt-xs, mb-xs, ml-xs, mr-xs
+*    m-s, mt-s, mb-s, ml-s, mr-s
+*    m-m, mt-m, mb-m, ml-m, mr-m
+*    m-l, mt-l, mb-l, ml-l, mr-l
+*    m-xl, mt-xl, mb-xl, ml-xl, mr-xl
+*    m-xxl, mt-xxl, mb-xxl, ml-xxl, mr-xxl
+*/
+
+    @mixin createSize margin, m, xs, 0.1666667;
+    @mixin createSize margin, m, s, 0.3333333;
+    @mixin createSize margin, m, m, 0.5;
+    @mixin createSize margin, m, l, 0.6666667;
+    @mixin createSize margin, m, xl, 0.8333333;
+    @mixin createSize margin, m, xxl, 1;
+
+/**
+*    Creating paddings
+*    p-xs, pt-xs, pb-xs, pl-xs, pr-xs
+*    p-s, pt-s, pb-s, pl-s, pr-s
+*    p-m, pt-m, pb-m, pl-m, pr-m
+*    p-l, pt-l, pb-l, pl-l, pr-l
+*    p-xl, pt-xl, pb-xl, pl-xl, pr-xl
+*    p-xxl, pt-xxl, pb-xxl, pl-xxl, pr-xxl
+*/
+
+    @mixin createSize padding, p, xs, 0.1666667;
+    @mixin createSize padding, p, s, 0.3333333;
+    @mixin createSize padding, p, m, 0.5;
+    @mixin createSize padding, p, l, 0.6666667;
+    @mixin createSize padding, p, xl, 0.8333333;
+    @mixin createSize padding, p, xxl, 1;

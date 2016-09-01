@@ -1,0 +1,33 @@
+{##
+ # /views/layout.html.twig
+ #}
+
+<!DOCTYPE html>
+<html>
+    <head>
+    {% block head %}
+
+        <title>{% block title %}PMD Static{% endblock %}</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/4.1.0/sanitize.min.css">
+
+        <link rel="stylesheet" href="assets/main.css">
+
+    {% endblock %}
+    </head>
+    <body class="body">
+        <h1>Layout</h1>
+        {% block header %}
+            Layout Header
+            {% include "./shared/header/index.html.twig" %}
+        {% endblock %}
+
+        {% block body %}
+            In Layout Block test
+        {% endblock %}
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.js"></script>
+        <script src="assets/main.js"></script>
+    </body>
+</html>

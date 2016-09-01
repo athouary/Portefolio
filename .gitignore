@@ -1,0 +1,7 @@
+# Build files folder
+build/
+
+# npm package folder
+node_modules/
+node_shrinkwrap/
+npm-debug.log

@@ -1,0 +1,14 @@
+[
+    {
+        "route": "pmd_tel_front_esi_layout_articleMenu",
+        "path": "@PMDTELFront/Layout/articleMenu.html.twig"
+    },
+    {
+        "route": "pmd_tel_front_esi_layout_pinned-videos",
+        "path": "@PMDTELFront/Layout/pinnedVideos.html.twig"
+    },
+    {
+        "route": "pmd_tel_front_esi_layout_most-viewed-articles",
+        "path": "@PMDTELFront/Layout/articleMenu.html.twig"
+    }
+]

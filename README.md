@@ -1,16 +1,20 @@
 # Install
 
 ```
-$ git clone git@github.com:ethyde/StarterPack.git
-$ cd StarterPack
+$ git clone git@bitbucket.org:prismamediadigital/pmd-starterpack.git
+$ cd pmd-starterpack
 $ npm install && npm run server open
 ```
 Will install all base NPM packages, start server and open it on home page.
 
+# NPM version
+
+This StarterPack need, at least npm 3.x.x
+
 # List commmands
 
 * ```$ npm run server``` launch an [Express](https://expressjs.com/) + [BrowserSync](https://www.browsersync.io/) local server. If you want to open your browser when server is ready ```$ npm run server open```
-* ```$ npm run build:prod``` build, copy all your file and assets in relevant folders : all img go to ```/build/assets/img/``` folder, CSS & JS files go to ```/build/assets/main.(js|css)```, and template file are cpy, with folder hierarchie.
+* ```$ npm run build:prod``` build, copy all your file and assets in relevant folders : all img go to ```/build/assets/img/``` folder, CSS & JS files go to ```/build/assets/main.(js|css)```, and template file are copied, with folder hierarchie.
 * ```npm run eslint:test``` perform a full linting of all JS files in ```/src/``` and reporte error in console. Follow the [Standard JS StyleGuide](http://standardjs.com/rules.html) except for indent, who are of 4 spaces.
 * ```npm run eslint:format``` try to format you JS file againt rules defined in ```.eslintrc``` file, if can't prompt for error.
 * ```npm run stylelint:test``` perform a recursive linting of CSS file, againt [Stylelint Config Standard](https://github.com/stylelint/stylelint-config-standard), with 4 indent rule.

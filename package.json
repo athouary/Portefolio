@@ -1,20 +1,16 @@
 {
-  "name": "starterpack",
+  "name": "pmd-starterpack",
   "version": "0.0.8",
   "description": "Complete Front-End workflow with Webpack, Babel, PostCss and real php Twig",
-  "private": false,
-  "homepage": "https://github.com/ethyde/StarterPack#readme",
+  "private": true,
+  "homepage": "https://bitbucket.org/prismamediadigital/pmd-starterpack#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ethyde/StarterPack.git"
+    "url": "git+https://bitbucket.org/prismamediadigital/pmd-starterpack"
   },
-  "author": "Ethyde",
-  "license": "WTFPL",
-  "bugs": {
-    "url": "https://github.com/ethyde/StarterPack/issues"
-  },
+  "author": "PMD",
   "engines": {
-    "node": "^5.0.0",
+    "node": "^6",
     "npm": "^3.3.6"
   },
   "scripts": {
@@ -54,7 +50,6 @@
     "file-loader": "^0.9.0",
     "fontgen-loader": "git+ssh://git@github.com/DragonsInn/fontgen-loader.git#pull/23/head",
     "image-webpack-loader": "^2.0.0",
-    "jquery": "^3.1.0",
     "node-twig": "^1.1.0",
     "postcss-browser-reporter": "^0.5.0",
     "postcss-cssnext": "^2.7.0",

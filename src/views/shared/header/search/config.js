@@ -1,7 +1,7 @@
 /*
  * shared/header/search
  */
-import './assets/script'
-import './assets/style'
+import './assets/styles/style';
+import './assets/scripts/script';
 
 import '../index.html.twig'

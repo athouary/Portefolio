@@ -2,8 +2,8 @@
  * Shared/article
  */
 
-import './assets/script';
-import './assets/style';
+import './assets/styles/style';
+import './assets/scripts/script';
 
 // import image
-import './assets/img/background.jpg'
+import './assets/images/background.jpg'

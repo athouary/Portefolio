@@ -1,8 +1,8 @@
 /*
  * shared/header/search
  */
-import './assets/script'
-import './assets/style'
+import './assets/styles/style';
+import './assets/scripts/script';
 
 // import template
-import  './index.html';
+import  './index.html.twig';

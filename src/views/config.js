@@ -1,10 +1,11 @@
-// First of all import Main Module composants.
+// Expose jQuery to the global (window) namespace
+require('expose?$!expose?jQuery!jquery');
 
 // import Main JS
 import '../assets/scripts/main';
 
 // import Main CSS
-import  '../assets/styles/main.css';
+import  '../assets/styles/main';
 
 // // import Main Images
 import '../assets/images/sample.jpg';

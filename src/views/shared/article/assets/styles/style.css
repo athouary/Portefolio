@@ -1,0 +1,31 @@
+/*
+ * Shared/article/assets
+ */
+
+@import "../../../../../assets/styles/vars.css";
+
+/*.body {
+    background: pink;
+}*/
+
+:fullscreen a {
+    display: flex;
+}
+
+.test {
+    font-weight: bold;
+    background: url('/img/background.jpg');
+
+    @media (--viewport-medium) {
+        font-size: calc(var(--fontSize) * 1.2);
+    }
+
+}
+
+/*.container {
+    @neat-span-columns 4;
+
+    @media (width >= 768px) {
+        @neat-span-columns 2;
+    }
+}*/

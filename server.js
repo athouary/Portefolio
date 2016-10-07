@@ -38,16 +38,6 @@ const configVars = require('./project.config.js');
 var articleData = null;
 
 app.engine('.twig', createEngine({
-    root: __dirname + '/src/views',
-    extensions: [
-        {
-            file: __dirname + '/extensions/twigDump.php',
-            func: 'twigDumpExtension'
-        }
-    ]
-}));
-
-app.engine('.twig', createEngine({
     root: configVars.viewsPath,
     extensions: [
         {
@@ -70,6 +60,10 @@ app.engine('.twig', createEngine({
 // // This section is used to configure twig.
 app.set('views', configVars.viewsPath);
 app.set('view engine', 'twig');
+
+app.set("twig options", {
+    strict_variables: false
+});
 
 fs.readFile('data/data.json', 'utf8', function (err, data) {
     if (err) {

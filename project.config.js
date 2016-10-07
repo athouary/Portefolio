@@ -16,21 +16,33 @@ const configSite = {
     aliases: {
         'STARTERPack': path.join(__dirname, '/src/views')
     },
-    neatConfig: {
-        neatMaxWidth: "1170px",
-        neatGutterWidth: "1.875em",
+    gridMaxWidth: "1170px",
+    gridWidths: ["10", "15", "20", "25", "33.33", "45", "50", "60", "66.33", "75", "85", "90", "100"],
+    gridBreakpoints: new Map([
+            ["lg", 1200],
+            ["md", 1024],
+            ["sm", 768],
+            ["xs", 480]
+    ]),
+    gridGutterSize: 20,
+    gridOuterSpacing: 10,
+    mixins: {
+        gridCalc: function () {
+            return gridMixin(configSite)
+        }
     },
-    cssNextConfig: {
-        browsers: ['last 2 versions'],
-        features: {
-            customProperties: {
-                variables: {
-                    "--GutterSize": "30px"
+    cssNextConfig: function(){
+        return {
+            browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1'],
+            features: {
+                customProperties: {
+                    variables: {
+                        "--GutterSize": this.gridGutterSize+"px"
+                    }
                 }
             }
         }
     }
-
 }
 
 // module.exports = config

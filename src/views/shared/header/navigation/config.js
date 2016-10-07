@@ -1,5 +1,5 @@
 /*
  * shared/header/navigation
  */
-import './assets/script'
-import './assets/style'
+import './assets/styles/style';
+import './assets/scripts/script';

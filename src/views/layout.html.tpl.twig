@@ -11,7 +11,7 @@
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/4.1.0/sanitize.min.css">
 
-        <link rel="stylesheet" href="/assets/styles/main.css?01fc818b6133912ac823">
+        <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.main.css %>">
 
     {% endblock %}
     </head>
@@ -26,7 +26,7 @@
             In Layout Block test
         {% endblock %}
 
-        <script src="/assets/scripts/main.js?01fc818b6133912ac823"></script>
+        <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 
     </body>
 </html>

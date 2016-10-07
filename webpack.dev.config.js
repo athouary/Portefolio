@@ -1,17 +1,19 @@
+'use strict';
+
 const webpack = require('webpack');
 const path = require('path');
 
 const configSite = require('./project.config.js');
 
 const config = {
-    devtool: '#inline-source-map',
+    devtool: '#eval',
     context: path.join(__dirname, 'src'),
-    entry: [
-        'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
-        'src/views/config'
-    ],
+    entry: {
+        // adsHelper: ['./views/blocks/ads/config'], 
+        main: ['src/views/config', 'webpack/hot/dev-server', 'webpack-hot-middleware/client']
+    },
     output: {
-        filename: 'assets/[name].js',
+        filename: 'assets/scripts/[name].js',
         path: path.join(__dirname, 'build'),
         publicPath: 'http://localhost:3000/'
     },
@@ -33,25 +35,32 @@ const config = {
             },
             {
                 test: /\.html.twig$/,
-                loader: "file?name=[path][name].[ext]"
+                loader: 'file?name=[path][name].[ext]'
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
+                exclude: /fonts/,
                 loaders: [
-                    'file?&name=./assets/img/[name].[ext]',
-                    'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+                    'file?&name=./assets/images/[name].[ext]',
                 ]
             },
             {
                 test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-                loader: "file"
+                exclude: /images/,
+                loader: 'file?&name=./assets/font/[name].[ext]'
             }
         ]
     },
     plugins: [
-        new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.NoErrorsPlugin(),
+        // needed for internal dependency, but need expose in config.js for external call
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        })
     ],
     resolve: {
         root: path.resolve(__dirname),
@@ -65,7 +74,7 @@ const config = {
     externals: {
         // import jquery is external and available
         //  on the global var jQuery
-        customImport: "Zepto"
+        customImport: 'Zepto'
     },
     postcss: function (webpack) {
         return [
@@ -76,9 +85,6 @@ const config = {
             require('postcss-url')(),
             require('postcss-cssnext')(
                 configSite.cssNextConfig
-            ),
-            require('postcss-neat')(
-                configSite.neatConfig
             ),
             require('css-mqpacker')({
                 sort: true

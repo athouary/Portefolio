@@ -19,19 +19,23 @@
     "fontRoute": "./src/assets/fonts"
   },
   "scripts": {
-    "server": "node server",
-    "server:open": "node server open",
-    "clean:build": "rimraf -- build",
-    "build:font": "dcs-icon-font --icons './telfront2/static/assets/fonts/svg/**/*.svg' --out $npm_package_config_fontRoute --fontname TEL --baseclass icon --classprefix icon- --cssTemplate $npm_package_config_fontRoute/font.hbs --cssDest $npm_package_config_staticRoute/assets/styles/ --cssFontsUrl ../fonts/TEL/",
-    "build:prod": "npm run clean:build && webpack --progress --colors --config webpack.prod.config.js",
-    "build:dev": "npm run clean:build && webpack --progress --colors --config webpack.dev.config.js",
+    "clean": "rimraf -- build",
+    "font": "dcs-icon-font --icons './src/assets/fonts/svg/**/*.svg' --out $npm_package_config_fontRoute --fontname TEL --baseclass icon --classprefix icon- --cssTemplate $npm_package_config_fontRoute/font.hbs --cssDest $npm_package_config_staticRoute/assets/styles/ --cssFontsUrl ../fonts/TEL/",
+
+    "prebuild": "echo '### Clean build folder' && npm run clean",
+    "build": "webpack --progress --colors --config webpack.prod.config.js",
+
     "eslint": "./node_modules/.bin/eslint",
     "eslint:test": "eslint -c .eslintrc ./src/ || true",
     "eslint:format": "eslint -c .eslintrc --fix ./src/ || true",
     "stylelint": "./node_modules/.bin/stylelint",
     "stylelint:test": "stylelint './src/**/*.css' --config .stylelintrc || true",
     "stylefmt": "./node_modules/.bin/stylefmt",
-    "stylefmt:format": "stylefmt -c .stylelintrc -R ./src/"
+    "stylefmt:format": "stylefmt -c .stylelintrc -R ./src/",
+
+    "prewatch": "### Start the server and watch for file changes\n node server",
+    "watch": "node server",
+    "server:open": "### Start the server, watch for file changes and open your default browser\n    node server open"
   },
   "dependencies": {
       "jquery": "^3.1.0"
@@ -52,8 +56,11 @@
     "eslint-loader": "^1.5.0",
     "eslint-plugin-promise": "^2.0.1",
     "eslint-plugin-standard": "^2.0.0",
+    "expose-loader": "^0.7.1",
     "express": "^3.21.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "fontfaceobserver": "^2.0.4",
+    "html-webpack-plugin": "^2.22.0",
     "file-loader": "^0.9.0",
     "image-webpack-loader": "^2.0.0",
     "node-twig": "^1.1.0",
@@ -61,7 +68,6 @@
     "postcss-cssnext": "^2.7.0",
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.9.1",
-    "postcss-neat": "^2.5.2",
     "postcss-reporter": "^1.4.1",
     "postcss-url": "^5.1.2",
     "rimraf": "^2.5.4",

@@ -14,10 +14,10 @@ $(document).ready( function(){
 
 // import Zepto but without include it to the build
 // See external{} in webpack.dev.config.js
-import Zepto from 'customImport';
+// import Zepto from 'customImport';
 
-Zepto(function($){
+// Zepto(function($){
 
-    console.log('Zepto externaly loaded from Main.js')
+//     console.log('Zepto externaly loaded from Main.js')
 
-})
+// })

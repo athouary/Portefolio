@@ -1,6 +1,4 @@
-/**
- * index.js
- */
+'use strict';
 
 /**
  * Require Browsersync along with webpack and middleware for it
@@ -123,7 +121,7 @@ app.get('/', function(req, res) {
 // });
 
 app.get('/:controller/:page', function(req, res) {
-    res.render('./' + req.params.controller + '/' + req.params.page + '.html.twig', {
+    res.render( req.params.controller + '/' + req.params.page + '.html.twig', {
         context: articleData,
     });
 });
@@ -137,9 +135,9 @@ app.listen(9000);
  * If needed Reload all devices when bundle is complete
  */
 
-bundler.plugin('done', function (stats) {
-    browserSync.reload();
-});
+// bundler.plugin('done', function (stats) {
+//     browserSync.reload();
+// });
 
 /**
  * Run Browsersync and use middleware for Hot Module Replacement

@@ -10,6 +10,7 @@ const configSite = require('./project.config.js');
 
 const config = {
     context: path.join(__dirname, 'src'),
+    stats: { children: false },
     entry: {
         // adsHelper: ['./views/blocks/ads/config'], 
         main: ['src/views/config']

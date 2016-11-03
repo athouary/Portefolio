@@ -1,6 +1,6 @@
 {
   "name": "pmd-starterpack",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Complete Front-End workflow with Webpack, Babel, PostCss and real php Twig",
   "private": true,
   "homepage": "https://bitbucket.org/prismamediadigital/pmd-starterpack#readme",
@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://bitbucket.org/prismamediadigital/pmd-starterpack"
   },
-  "author": "PMD",
+  "author": "PrismaMedia",
   "engines": {
     "node": "^6",
     "npm": "^3.3.6"
@@ -19,26 +19,21 @@
     "fontRoute": "./src/assets/fonts"
   },
   "scripts": {
-    "clean": "rimraf -- build",
-    "font": "dcs-icon-font --icons './src/assets/fonts/svg/**/*.svg' --out $npm_package_config_fontRoute --fontname TEL --baseclass icon --classprefix icon- --cssTemplate $npm_package_config_fontRoute/font.hbs --cssDest $npm_package_config_staticRoute/assets/styles/ --cssFontsUrl ../fonts/TEL/",
-
-    "prebuild": "echo '### Clean build folder' && npm run clean",
-    "build": "webpack --progress --colors --config webpack.prod.config.js",
-
-    "eslint": "./node_modules/.bin/eslint",
-    "eslint:test": "eslint -c .eslintrc ./src/ || true",
-    "eslint:format": "eslint -c .eslintrc --fix ./src/ || true",
-    "stylelint": "./node_modules/.bin/stylelint",
-    "stylelint:test": "stylelint './src/**/*.css' --config .stylelintrc || true",
-    "stylefmt": "./node_modules/.bin/stylefmt",
-    "stylefmt:format": "stylefmt -c .stylelintrc -R ./src/",
-
-    "prewatch": "### Start the server and watch for file changes\n node server",
-    "watch": "node server",
-    "server:open": "### Start the server, watch for file changes and open your default browser\n    node server open"
+    "clean": "### Clean/Remove build folder\n    rimraf -- build",
+    "font": "### Build icon-font\n    dcs-icon-font --icons './src/assets/fonts/svg/**/*.svg' --out $npm_package_config_fontRoute --fontname TEL --baseclass icon --classprefix icon- --cssTemplate $npm_package_config_fontRoute/font.hbs --cssDest $npm_package_config_staticRoute/assets/styles/ --cssFontsUrl ../fonts/TEL/",
+    "build:webpack": "### Build all other assets (js, css, images)\n    webpack --progress --colors --config webpack.prod.config.js",
+    "build": "npm run clean && npm run build:webpack",
+    "test": "### Lint your JS and CSS files\n    npm run test:eslint && npm run test:stylelint",
+    "test:format": "### Try to format your JS and CSS files\n    npm run test:eslintfmt && npm run test:stylelfmt",
+    "test:eslint": "### Launch ESlint\n    ./node_modules/.bin/eslint -c .eslintrc ./src/ || true",
+    "test:eslintfmt": "### Format JS files with ESlint\n    eslint -c .eslintrc --fix ./src/ || true",
+    "test:stylelint": "### Launch Stylelint\n    ./node_modules/.bin/stylelint './src/**/*.css' --config .stylelintrc || true",
+    "test:stylelfmt": "### Format CSS files with StyleFMT\n    ./node_modules/.bin/stylefmt -c .stylelintrc -R ./src/",
+    "start": "### Launch server and start watching files\n    node server",
+    "start:open": "### Start the server, watch for file changes and open your default browser\n    node server open"
   },
   "dependencies": {
-      "jquery": "^3.1.0"
+    "jquery": "^3.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.13.2",
@@ -59,19 +54,20 @@
     "expose-loader": "^0.7.1",
     "express": "^3.21.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
     "fontfaceobserver": "^2.0.4",
     "html-webpack-plugin": "^2.22.0",
-    "file-loader": "^0.9.0",
     "image-webpack-loader": "^2.0.0",
     "node-twig": "^1.1.0",
     "postcss-browser-reporter": "^0.5.0",
     "postcss-cssnext": "^2.7.0",
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.9.1",
+    "postcss-mixins": "^5.4.0",
     "postcss-reporter": "^1.4.1",
     "postcss-url": "^5.1.2",
-    "rimraf": "^2.5.4",
     "request": "^2.74.0",
+    "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
     "stylefmt": "^4.2.3",
     "stylelint": "^7.1.0",

@@ -74,7 +74,7 @@ const config = {
     externals: {
         // import jquery is external and available
         //  on the global var jQuery
-        customImport: 'Zepto'
+        customImport: "Zepto"
     },
     postcss: function (webpack) {
         return [
@@ -82,9 +82,12 @@ const config = {
                 path: path.join(__dirname, 'src/assets/styles'), // Du to some bug with resolve of relative/absolute path we need to define it here ATM
                 addDependencyTo: webpack
             }),
+            require("postcss-mixins")({
+                mixins: configSite.mixins
+            }),
             require('postcss-url')(),
             require('postcss-cssnext')(
-                configSite.cssNextConfig
+                configSite.cssNextConfig()
             ),
             require('css-mqpacker')({
                 sort: true

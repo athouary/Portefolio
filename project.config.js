@@ -1,3 +1,5 @@
+"use strict";
+
 const path = require('path');
 
 /**
@@ -9,6 +11,8 @@ const path = require('path');
 *   assets: An object to specify the route and the actual path where the assets are stored
 *   aliases: Aliases for the templates
 */
+const gridMixin = require('./mixins.js');
+
 const configSite = {
     homePage : './components/home/index.html.twig',
     viewsPath : path.join(__dirname, '/src/views'),

@@ -10,9 +10,8 @@ const configSite = require('./project.config.js');
 
 const config = {
     context: path.join(__dirname, 'src'),
-    stats: { children: false },
     entry: {
-        // adsHelper: ['./views/blocks/ads/config'], 
+        scriptjs: ['scriptjs'],
         main: ['src/views/config']
     },
     output: {
@@ -90,8 +89,11 @@ const config = {
     postcss: function (webpack) {
         return [
             require('postcss-import')({
-                path: './src/',
+                path: path.join(__dirname, 'src/assets/styles'),
                 addDependencyTo: webpack
+            }),
+            require("postcss-mixins")({
+                mixins: configSite.mixins
             }),
             require("postcss-url")(),
             require('postcss-cssnext')(

@@ -19,7 +19,7 @@ const express = require('express');
 const request = require('request');
 
 // Create Enginee for Twig
-const createEngine = require('node-twig').createEngine;
+const twigCreateEngine = require('node-twig').createEngine;
 
 // Init Express for Twig
 const app = express();
@@ -35,7 +35,7 @@ const configVars = require('./project.config.js');
 
 var articleData = null;
 
-app.engine('.twig', createEngine({
+app.engine('twig', twigCreateEngine({
     root: configVars.viewsPath,
     extensions: [
         {
@@ -71,7 +71,7 @@ fs.readFile('data/data.json', 'utf8', function (err, data) {
 
     articleData = JSON.parse(data);
 
-    console.dir(articleData);
+    // console.dir(articleData);
 });
 
 //Lets configure and request

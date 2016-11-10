@@ -9,7 +9,7 @@ const config = {
     devtool: '#eval',
     context: path.join(__dirname, 'src'),
     entry: {
-        // adsHelper: ['./views/blocks/ads/config'], 
+        scriptjs: ['scriptjs'], 
         main: ['src/views/config', 'webpack/hot/dev-server', 'webpack-hot-middleware/client']
     },
     output: {

@@ -11,7 +11,7 @@ const configSite = require('./project.config.js');
 const config = {
     context: path.join(__dirname, 'src'),
     entry: {
-        scriptjs: ['scriptjs'],
+        // scriptjs: ['scriptjs'],
         main: ['src/views/config']
     },
     output: {

@@ -1,34 +1,35 @@
-{##
- # /views/layout.html.twig
- #}
-<!DOCTYPE html>
-<html>
-    <head>
-    {% block head %}
-
-        <title>{% block title %}PMD Static{% endblock %}</title>
-
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/4.1.0/sanitize.min.css">
-
-        <link rel="stylesheet" href="/assets/styles/main.css?161202563d9bcbf94a87">
-
-        <script src="/assets/scripts/scriptjs.js?161202563d9bcbf94a87"></script>
-
-    {% endblock %}
-    </head>
-    <body class="body">
-        <h1>Layout</h1>
-        {% block header %}
-            Layout Header
-            {% include "./shared/header/index.html.twig" %}
-        {% endblock %}
-
-        {% block body %}
-            In Layout Block test
-        {% endblock %}
-
-        <script src="/assets/scripts/main.js?161202563d9bcbf94a87"></script>
-
-    </body>
-</html>
+Html Webpack Plugin:
+<pre>
+  TypeError: Cannot read property 'entry' of undefined
+  
+  - layout.html.tpl.twig:53 
+    /Users/eplouvie/Projects/Labs/PMD-StarterPack/src/views/layout.html.tpl.twig:53:51
+  
+  - layout.html.tpl.twig:58 module.exports
+    /Users/eplouvie/Projects/Labs/PMD-StarterPack/src/views/layout.html.tpl.twig:58:4
+  
+  - index.js:260 
+    [PMD-StarterPack]/[html-webpack-plugin]/index.js:260:16
+  
+  - util.js:16 tryCatcher
+    [PMD-StarterPack]/[bluebird]/js/release/util.js:16:23
+  
+  - promise.js:510 Promise._settlePromiseFromHandler
+    [PMD-StarterPack]/[bluebird]/js/release/promise.js:510:31
+  
+  - promise.js:567 Promise._settlePromise
+    [PMD-StarterPack]/[bluebird]/js/release/promise.js:567:18
+  
+  - promise.js:604 Promise._settlePromiseCtx
+    [PMD-StarterPack]/[bluebird]/js/release/promise.js:604:10
+  
+  - async.js:143 Async._drainQueue
+    [PMD-StarterPack]/[bluebird]/js/release/async.js:143:12
+  
+  - async.js:148 Async._drainQueues
+    [PMD-StarterPack]/[bluebird]/js/release/async.js:148:10
+  
+  - async.js:17 Immediate.Async.drainQueues [as _onImmediate]
+    [PMD-StarterPack]/[bluebird]/js/release/async.js:17:14
+  
+</pre>

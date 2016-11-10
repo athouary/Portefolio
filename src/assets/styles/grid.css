@@ -25,11 +25,11 @@
     *zoom: 1;
 }
 
-.container {
+/*.container {
 	@neat-outer-container;
     @neat-show-grid;
 }
 
 .col {
     @neat-span-columns 6;
-}
+}*/

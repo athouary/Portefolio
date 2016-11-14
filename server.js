@@ -57,7 +57,7 @@ app.engine('twig', twigCreateEngine({
 
 // // This section is used to configure twig.
 app.set('views', configVars.viewsPath);
-app.set('view engine', 'twig');
+// app.set('view engine', 'twig');
 
 app.set("twig options", {
     strict_variables: false
@@ -120,11 +120,11 @@ app.get('/', function(req, res) {
 //     res.end('You want to see my ' + req.params.color + ' ' + req.params.brand + '? Follow me.');
 // });
 
-app.get('/:controller/:page', function(req, res) {
-    res.render( req.params.controller + '/' + req.params.page + '.html.twig', {
-        context: articleData,
-    });
-});
+// app.get('/:controller/:page', function(req, res) {
+//     res.render( req.params.controller + '/' + req.params.page + '.html.twig', {
+//         context: articleData,
+//     });
+// });
 
 /*
  * Express server to listen on port : 9000

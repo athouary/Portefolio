@@ -34,10 +34,6 @@ const config = {
                 loader: 'style!css?sourceMap&importLoaders=1!postcss'
             },
             {
-                test: /\.html.twig$/,
-                loader: 'file?name=[path][name].[ext]'
-            },
-            {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 exclude: /fonts/,
                 loaders: [

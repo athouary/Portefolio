@@ -1,6 +1,10 @@
 # Build files folder
 build/
 
+# ignore font generated files and css
+src/assets/fonts/TEL
+src/assets/styles/TEL.css
+
 # npm package folder
 node_modules/
 node_shrinkwrap/

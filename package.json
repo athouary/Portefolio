@@ -19,6 +19,8 @@
     "fontRoute": "./src/assets/fonts"
   },
   "scripts": {
+    "rimraf": "./node_modules/.bin/rimraf",
+    "ncp": "./node_modules/.bin/ncp",
     "?info": "### Display list of avaible NPM Script Commandes.",
     "info": "./node_modules/.bin/npm-scripts-info",
     "?build": "### Build Everythings",
@@ -26,7 +28,7 @@
     "?build:webpack": "### Build Webpack things : assets (js, css, images) except icon-font, template, etc.",
     "build:webpack": "webpack --progress --colors --config webpack.prod.config.js",
     "?clean": "### Clean/Remove build folder",
-    "clean": "rimraf -- build",
+    "clean": "npm run rimraf build",
     "?font": "### Build icon-font",
     "font": "dcs-icon-font --icons ./src/assets/fonts/svg/**/*.svg --out ./src/assets/fonts --fontname TEL --baseclass icon --classprefix icon- --cssTemplate ./src/assets/fonts/templates/fonts.hbs --cssDest ./src/assets/styles/ --cssFontsUrl ../fonts/TEL/",
     "?test": "### Lint your JS and CSS files",
@@ -73,6 +75,7 @@
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.24.1",
     "image-webpack-loader": "^3.0.0",
+    "ncp": "^2.0.0",
     "node-twig": "^1.1.0",
     "npm-scripts-info": "^0.3.6",
     "postcss-browser-reporter": "^0.5.0",

@@ -46,7 +46,9 @@
     "?start": "### Launch server and start watching files",
     "start": "node server",
     "?start:open": "### Start the server, watch for file changes and open your default browser",
-    "start:open": "node server open"
+    "start:open": "node server open",
+    "?doc:jsdoc": "### Generate JSDoc file in Markdown",
+    "doc:jsdoc": "./node_modules/.bin/jsdoc2md --configure './docs/jsdoc/jsdoc.json' './src/**/*.js' > './docs/jsdoc/API.md'"
   },
   "dependencies": {
     "fontfaceobserver": "^2.0.7",
@@ -75,6 +77,8 @@
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.24.1",
     "image-webpack-loader": "^3.0.0",
+    "jsdoc-babel": "^0.3.0",
+    "jsdoc-to-markdown": "^2.0.1",
     "ncp": "^2.0.0",
     "node-twig": "^1.1.0",
     "npm-scripts-info": "^0.3.6",

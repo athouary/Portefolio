@@ -48,9 +48,7 @@
     "?start:open": "### Start the server, watch for file changes and open your default browser",
     "start:open": "node server open",
     "?doc:jsdoc": "### Generate JSDoc file in Markdown",
-    "doc:jsdoc": "./node_modules/.bin/jsdoc2md --configure './docs/jsdoc/jsdoc.json' './src/**/*.js' > './docs/jsdoc/API.md'",
-    "?githook": "### Add GitHook to force some task",
-    "precommit": "npm run test"
+    "doc:jsdoc": "./node_modules/.bin/jsdoc2md --configure './docs/jsdoc/jsdoc.json' './src/**/*.js' > './docs/jsdoc/API.md'"
   },
   "dependencies": {
     "fontfaceobserver": "^2.0.7",
@@ -78,7 +76,6 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.24.1",
-    "husky": "^0.12.0",
     "image-webpack-loader": "^3.0.0",
     "jsdoc-babel": "^0.3.0",
     "jsdoc-to-markdown": "^2.0.1",

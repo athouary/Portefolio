@@ -3,7 +3,7 @@
 ```
 $ git clone git@bitbucket.org:prismamediadigital/pmd-starterpack.git
 $ cd pmd-starterpack
-$ npm install && npm run server open
+$ npm install && npm run start:open
 ```
 Will install all base NPM packages, start server and open it on home page.
 

@@ -10,7 +10,7 @@
     background: url('/img/background.jpg');
 
     @media (--viewport-medium) {
-        font-size: calc(var(--fontSize) * 1.2);
+        font-size: calc(var(--fs-3) * 1.2);
     }
 
 }

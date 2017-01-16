@@ -15,10 +15,10 @@ const gridMixin = require('./mixins.js');
 
 const configSite = {
     homePage : './components/home/index.html.twig',
-    viewsPath : path.join(__dirname, '/src/views'),
+    viewsPath : path.join(__dirname, '../src/views'),
     assetsPath : './src/assets',
     aliases: {
-        'STARTERPack': path.join(__dirname, '/src/views')
+        'STARTERPack': path.join(__dirname, '../src/views')
     },
     gridMaxWidth: "1170px",
     gridWidths: ["10", "15", "20", "25", "33.33", "45", "50", "60", "66.33", "75", "85", "90", "100"],

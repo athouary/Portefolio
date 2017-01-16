@@ -30,7 +30,7 @@
     "?clean": "### Clean/Remove build folder",
     "clean": "npm run rimraf build",
     "?font": "### Build icon-font",
-    "font": "dcs-icon-font --icons ./src/assets/fonts/svg/**/*.svg --out ./src/assets/fonts --fontname TEL --baseclass icon --classprefix icon- --cssTemplate ./src/assets/fonts/templates/fonts.hbs --cssDest ./src/assets/styles/ --cssFontsUrl ../fonts/TEL/",
+    "font": "dcs-icon-font --icons ./src/assets/fonts/svg/**/*.svg --out ./src/assets/fonts --fontname STARTERFONT --baseclass icon --classprefix icon- --cssTemplate ./src/assets/fonts/templates/fonts.hbs --cssDest ./src/assets/styles/ --cssFontsUrl ../fonts/STARTERFONT/",
     "?test": "### Lint your JS and CSS files",
     "test": "npm run test:eslint && npm run test:stylelint",
     "?test:format": "### Try to format your JS and CSS files",

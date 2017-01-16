@@ -9,14 +9,16 @@
 
 @import "vars.css";
 @import "mixins.css";
+@import "core.css";
+@import "atomic.css";
 
 /*  ========================================================================
     COMMON
     ======================================================================== */
 
 @import "styleguide.css";
-@import "grid.css";
-@import "TEL.css";
+@import "tools.css";
+@import "STARTERFONT.css";
 
 /*  ========================================================================
     PRINT

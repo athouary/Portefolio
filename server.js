@@ -27,7 +27,7 @@ const app = express();
 /**
 *   Config Object to specify paths to views, css, js and assets
 */
-const configVars = require('./project.config.js');
+const configVars = require('./config/project.config.js');
 
 /**
  * Define empty object to store data

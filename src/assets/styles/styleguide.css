@@ -4,10 +4,10 @@
 /* some var() & calc() */
 
 body {
-    color: var(--mainColor);
-    font-size: var(--fontSize);
-    line-height: calc(var(--fontSize) * 1.5);
-    padding: calc((var(--fontSize) / 2)+ 1px);
+    color: var(--black);
+    font-size: var(--fs-3);
+    line-height: calc(var(--fs-3) * 1.5);
+    padding: calc((var(--fs-3) / 2)+ 1px);
 }
 
 
@@ -15,7 +15,7 @@ body {
 
 @media (--viewport-medium) {
     body {
-        font-size: calc(var(--fontSize) * 1.2);
+        font-size: calc(var(--fs-4) * 1.2);
     }
 }
 

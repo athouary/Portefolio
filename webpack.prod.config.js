@@ -5,7 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
-const configSite = require('./project.config.js');
+const configSite = require('./config/project.config.js');
 
 
 const config = {
@@ -96,7 +96,7 @@ const config = {
             }),
             require("postcss-url")(),
             require('postcss-cssnext')(
-                configSite.cssNextConfig
+                configSite.cssNextConfig()
             ),
             require('css-mqpacker')({
                 sort: true

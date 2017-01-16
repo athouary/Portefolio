@@ -1,0 +1,467 @@
+/**
+ *  Atomic
+ *
+ * Notes :
+ * This file is for unique CSS rules (that have a limited amount of value that can be associated with the property)
+ */
+.o-n {
+    outline: none;
+}
+
+.f-l {
+    float: left;
+}
+
+.f-r {
+    float: right;
+}
+
+.f-n {
+    float: none;
+}
+
+.c-b {
+    clear: both;
+}
+
+.c-l {
+    clear: left;
+}
+
+.c-r {
+    clear: right;
+}
+
+.a-n {
+    appearance: none;
+}
+
+.va-m {
+    vertical-align: middle;
+}
+
+.va-t {
+    vertical-align: top;
+}
+
+.va-b {
+    vertical-align: bottom;
+}
+
+.va-s {
+    vertical-align: sub;
+}
+
+.va-tt {
+    vertical-align: text-top;
+}
+
+.va-tb {
+    vertical-align: text-bottom;
+}
+
+.d-i {
+    display: inline;
+}
+
+.d-ib {
+    display: inline-block;
+}
+
+.d-b {
+    display: block;
+}
+
+.d-t {
+    display: table;
+}
+
+.d-tr {
+    display: table-row;
+}
+
+.d-tc {
+    display: table-cell;
+}
+
+.tl-f {
+    table-layout: fixed;
+}
+
+.d-fx {
+    display: flex;
+}
+
+.d-n {
+    display: none;
+}
+
+.fxw-w {
+    flex-wrap: wrap;
+}
+
+.fw-nw {
+    flex-wrap: nowrap;
+}
+
+.fd-c {
+    flex-direction: column;
+}
+
+.fd-cr {
+    flex-direction: column-reverse;
+}
+
+.fd-r {
+    flex-direction: row;
+}
+
+.fd-rr {
+    flex-direction: row-reverse;
+}
+
+.jc-fs {
+    justify-content: flex-start;
+}
+
+.jc-fe {
+    justify-content: flex-end;
+}
+
+.jc-c {
+    justify-content: center;
+}
+
+.ac-fs {
+    align-content: flex-start;
+}
+
+.ac-fe {
+    align-content: flex-end;
+}
+
+.ac-c {
+    align-content: center;
+}
+
+.ai-fs {
+    align-items: flex-start;
+}
+
+.ai-fe {
+    align-items: flex-end;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+.ai-s {
+    align-items: stretch;
+}
+
+.ls-n {
+    list-style: none;
+}
+
+.td-n {
+    text-decoration: none;
+}
+
+.td-n-hover:hover,
+.td-n-hover:active,
+.td-n-hover:focus {
+    text-decoration: none;
+}
+
+.td-u {
+    text-decoration: underline;
+}
+
+.td-u-hover:hover,
+.td-u-hover:active,
+.td-u-hover:focus {
+    text-decoration: underline;
+}
+
+.tt-l {
+    text-transform: lowercase;
+}
+
+.tt-u {
+    text-transform: uppercase;
+}
+
+.tt-c {
+    text-transform: capitalize;
+}
+
+.tt-n {
+    text-transform: normal;
+}
+
+.to-e {
+    text-overflow: ellipsis;
+}
+
+.to-c {
+    text-overflow: clip;
+}
+
+.fs-i {
+    font-style: italic;
+}
+
+.fs-n {
+    font-style: normal;
+}
+
+.fs-o {
+    font-style: oblique;
+}
+
+.ws-n {
+    white-space: normal;
+}
+
+.ws-nw {
+    white-space: nowrap;
+}
+
+.ws-p {
+    white-space: pre;
+}
+
+.ws-pl {
+    white-space: pre-line;
+}
+
+.ws-pw {
+    white-space: pre-wrap;
+}
+
+.to-e {
+    text-overflow: ellipsis;
+}
+
+.ta-c {
+    text-align: center;
+}
+
+.ta-l {
+    text-align: left;
+}
+
+.ta-r {
+    text-align: right;
+}
+
+.ta-j {
+    text-align: justify;
+}
+
+.wb-n {
+    word-break: normal;
+}
+
+.wb-b {
+    word-break: break-all;
+}
+
+.wb-k {
+    word-break: keep-all;
+}
+
+.p-s {
+    position: static;
+}
+
+.p-r {
+    position: relative;
+}
+
+.p-a {
+    position: absolute;
+}
+
+.p-f {
+    position: fixed;
+}
+
+.o-h {
+    overflow: hidden;
+}
+
+.ox-h {
+    overflow-x: hidden;
+}
+
+.oy-h {
+    overflow-y: hidden;
+}
+
+.o-a {
+    overflow: auto;
+}
+
+.ox-a {
+    overflow-x: auto;
+}
+
+.oy-a {
+    overflow-y: auto;
+}
+
+.o-s {
+    overflow: scroll;
+}
+
+.ox-s {
+    overflow-x: scroll;
+}
+
+.oy-s {
+    overflow-y: scroll;
+}
+
+.ox-v {
+    overflow-x: visible;
+}
+
+.b-n {
+    border: none;
+}
+
+/* ===  VISIBILITY  === */
+
+.v-h {
+    visibility: hidden;
+}
+
+.o-0 {
+    opacity: 0;
+}
+
+/* ===  POSITION  === */
+
+.t-0 {
+    top: 0;
+}
+
+.l-0 {
+    left: 0;
+}
+
+.r-0 {
+    right: 0;
+}
+
+.b-0 {
+    bottom: 0;
+}
+
+.t-50 {
+    top: 50%;
+}
+
+.l-50 {
+    left: 50%;
+}
+
+.r-50 {
+    right: 50%;
+}
+
+.b-50 {
+    bottom: 50%;
+}
+
+.t-100 {
+    top: 100%;
+}
+
+.l-100 {
+    left: 100%;
+}
+
+.r-100 {
+    right: 100%;
+}
+
+.b-100 {
+    bottom: 100%;
+}
+
+/* ===  Z-INDEX  === */
+
+.zi-0 {
+    z-index: 0;
+}
+
+.zi-1 {
+    z-index: 1;
+}
+
+.zi-2 {
+    z-index: 2;
+}
+
+.zi-3 {
+    z-index: 3;
+}
+
+.zi-4 {
+    z-index: 4;
+}
+
+.zi-5 {
+    z-index: 5;
+}
+
+.zi-6 {
+    z-index: 6;
+}
+
+.zi-7 {
+    z-index: 7;
+}
+
+.zi-8 {
+    z-index: 8;
+}
+
+.zi-9 {
+    z-index: 9;
+}
+
+.zi-10 {
+    z-index: 10;
+}
+
+/* === HEIGHT === */
+
+.h-100 {
+    height: 100%;
+}
+
+.minh-100 {
+    min-height: 100%;
+}
+
+.h-auto {
+    height: auto;
+}
+
+.h-0 {
+    height: 0;
+}
+
+/*=== WIDTH === */
+
+.w-a {
+    width: auto;
+}
+
+.maxw-100 {
+    max-width: 100%;
+}

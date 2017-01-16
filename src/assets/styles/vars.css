@@ -1,11 +1,57 @@
 /* custom properties */
 
 :root {
-    --fontSize: 1rem;
-    --mainColor: #123456;
     --highlightColor: hwb(190, 35%, 20%);
+
+    /* COLORS */
+    --white: #ffffff;
+    --white_60: rgba(255, 255, 255, .6);
+    --black: #000000;
+    --black_60: rgba(0, 0, 0, .6);
+    --grey-1: #333333;
+    --grey-2: #979797;
+    --grey-3: #eaeaea;
+
+    --red: #e20024;
+    --red-hover: rgba(226, 0, 36, .6);
+
+     /* FONTS */
+    --fs-1: 10px;
+    --fs-2: 12px;
+    --fs-3: 14px;
+    --fs-4: 16px;
+    --fs-5: 18px;
+    --fs-6: 24px;
+    --fs-7: 36px;
+    --fs-8: 42px;
+
+    /* Sizes relative to --GutterSize */
+    --space-xs: calc(var(--GutterSize) * 0.25);
+    --space-sm: calc(var(--GutterSize) * 0.5);
+    --space-md: calc(var(--GutterSize) * 1);
+    --space-lg: calc(var(--GutterSize) * 1.5);
+    --space-xl: calc(var(--GutterSize) * 2);
+    --space-xxl: calc(var(--GutterSize) * 3);
+
+    /* Radius sizes */
+    --radius-xs: 1px;
+    --radius-sm: 3px;
+    --radius-md: 4px;
+    --radius-lg: 9px;
+    --radius-xl: 15px;
 }
 
-/* custom media queries definition */
+/*  Custom media queries
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-@custom-media --viewport-medium (width<=50rem);
+@custom-media --viewport-large (width <= 1024px);
+/* Usage name for your styles : @media (--viewport-large) {} */
+
+@custom-media --viewport-medium (width <= 768px);
+/* Usage name for your styles : @media (--viewport-medium) {} */
+
+@custom-media --viewport-small (width <= 620px);
+/* Usage name for your styles : @media (--viewport-small) {} */
+
+@custom-media --viewport-extraSmall (width <= 480px);
+/* Usage name for your styles : @media (--viewport-extraSmall) {} */

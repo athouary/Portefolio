@@ -3,7 +3,7 @@
 const webpack = require('webpack');
 const path = require('path');
 
-const configSite = require('./project.config.js');
+const configSite = require('./config/project.config.js');
 
 const config = {
     devtool: '#eval',

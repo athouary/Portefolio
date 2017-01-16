@@ -3,9 +3,17 @@
 ```
 $ git clone git@bitbucket.org:prismamediadigital/pmd-starterpack.git
 $ cd pmd-starterpack
-$ npm install && npm run start:open
+$ npm install && npm run font && npm run start:open
 ```
 Will install all base NPM packages, start server and open it on home page.
+
+NOTE : You have to manualy build your icon font one time to prevent building error
+
+# Post-Install
+
+You have to manualy custom some param depend on your project :
+* icon font name need to be set in ```package.json``` near line #33 (scripts.font) change **STARTERFONT** with the name you want for you icon font. And in **main.css**, update near line #21 the name of the file
+* Atomic Mixin who are defined in ```atomic.css``` can be customizable with vars.css (see sample for creating border)
 
 # NPM version
 
@@ -39,10 +47,9 @@ All path configurations should be administrable from ```project.config.js``` fil
 
 > **viewsPath** and **assetsPath** are used by BrowserSync to know file who watch
 
-
 **aliases** are used to reproduce **{% extends "@STARTERPack/layout.html.twig" %}** 
 
-**neatConfig** and **cssNextConfig** are used by PostCSS modules.
+**cssNextConfig** are used by PostCSS modules.
 
 ## Twig Filter and functions mock
 

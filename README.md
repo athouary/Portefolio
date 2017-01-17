@@ -45,7 +45,7 @@ All path configurations should be administrable from ```project.config.js``` fil
 
 **assetsPath** where all commons files are stored (css, js, images, etc.)/
 
-> **viewsPath** and **assetsPath** are used by BrowserSync to know file who watch
+**viewsPath** and **assetsPath** are used by BrowserSync to know file who watch
 
 **aliases** are used to reproduce **{% extends "@STARTERPack/layout.html.twig" %}** 
 

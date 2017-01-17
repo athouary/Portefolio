@@ -5,9 +5,13 @@ $ git clone git@bitbucket.org:prismamediadigital/pmd-starterpack.git
 $ cd pmd-starterpack
 $ npm install && npm run font && npm run start:open
 ```
+or in one line :
+```
+$ git clone git@bitbucket.org:prismamediadigital/pmd-starterpack.git && cd pmd-starterpack && npm install && npm run font && npm run start:open
+```
 Will install all base NPM packages, start server and open it on home page.
 
-NOTE : You have to manualy build your icon font one time to prevent building error
+NOTE : You have to manualy build your icon font one time to prevent building error. And your ```src/assets/fonts/svg``` have to not be empty.
 
 # Post-Install
 

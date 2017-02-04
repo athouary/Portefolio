@@ -8,8 +8,10 @@
 
         <title>{% block title %}PMD Static{% endblock %}</title>
 
-        <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/4.1.0/sanitize.min.css">
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.common.css %>">
 
         <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.main.css %>">
 
@@ -19,14 +21,17 @@
         <h1>Layout</h1>
         {% block header %}
             Layout Header
-            {% include "./shared/header/index.html.twig" %}
         {% endblock %}
 
         {% block body %}
-            In Layout Block test
+            In Layout Body
         {% endblock %}
 
+        <script src="<%= htmlWebpackPlugin.files.chunks.common.entry %>"></script>
         <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+
+        {% block javascript %}
+        {% endblock %}
 
     </body>
 </html>

@@ -11,8 +11,9 @@ const configSite = require('./config/project.config.js');
 const config = {
     context: path.join(__dirname, 'src'),
     entry: {
-        // scriptjs: ['scriptjs'],
-        main: ['src/views/config']
+        common: ['jquery', 'scriptjs', 'main.css'],
+        main: ['src/views/config'],
+        head: ['src/views/shared/header/config']
     },
     output: {
         filename: 'assets/scripts/[name].js',
@@ -55,16 +56,22 @@ const config = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin('assets/styles/[name].css'),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.NoErrorsPlugin(),
         new webpack.optimize.DedupePlugin(),
+        new ExtractTextPlugin('assets/styles/[name].css', {
+            allChunks:true
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            minChunks: 3,
+            name: "common"
+        }),
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,
             filename: path.join(__dirname, 'src/views/layout.html.twig'),
             template: path.join(__dirname, 'src/views/layout.html.tpl.twig')
-        }),
+        })
         // Uncomment to minify JS and CSS
         // new webpack.optimize.UglifyJsPlugin({
         //     compress: {
@@ -78,7 +85,8 @@ const config = {
             template: 'src/views',
             vendor: 'node_modules'
         },
-        modulesDirectories: ['node_modules', './src'],
+        // Need to add base styles to be able to require main.css in entry
+        modulesDirectories: ['node_modules', './src', 'src/assets/styles'],
         extensions: ['', '.js', '.css', '.twig']
     },
     externals: {

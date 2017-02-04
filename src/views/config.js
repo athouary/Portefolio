@@ -1,5 +1,5 @@
 // Expose jQuery to the global (window) namespace
-require('expose?$!expose?jQuery!jquery');
+// require('expose?$!expose?jQuery!jquery');
 
 // import Main JS
 import '../assets/scripts/main';
@@ -14,4 +14,4 @@ import '../assets/images/sample.jpg';
 import Home from 'template/components/home/config';
 
 // // import Shared Component
-import Header from 'template/shared/header/config';
+// import Header from 'template/shared/header/config';

@@ -6,9 +6,14 @@
 
 {% block title %}{{parent()}} - Home{% endblock title %}
 
+{% block header %}
+    Header Home
+    {% include "./shared/header/index.html.twig" %}
+{% endblock %}
+
 {% block body %}
 
-    <h2>Home Page pouet truc bidule</h2>
+    <h2>Home Page</h2>
 
     External Data :
     foo : {{ foo }} <br>
@@ -16,8 +21,15 @@
     full data: {{ pageData.resource.paths[0] }} <br>
     Dump: {{ dump(stuff) }} <br>
 
+    <div class="testHome">testHome</div>
+
     <img src="./assets/images/sample.jpg" alt="" />
 
-    {% include "./shared/article/index.html.twig" %}
+    {#{% include "./shared/article/index.html.twig" %}#}
 
+{% endblock %}
+
+{% block javascript %}
+    {# TODO: here it's work but it would be cool to manage it from shared than from component #}
+    <script src="/assets/scripts/head.js"></script>
 {% endblock %}

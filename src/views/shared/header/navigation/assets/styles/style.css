@@ -2,15 +2,17 @@
  * components/home/assets
  */
 
-@import "../../../../../../assets/styles/vars.css";
+@import "vars.css";
 
-.test {
-    font-size: 80px;
-    font-weight: bold;
-    background: url('/img/background.jpg');
+.testHome {
+    background-color: pink;
 
     @media (--viewport-medium) {
-        font-size: calc(var(--fontSize) * 1.2);
+        font-size: calc(var(--fs-4) * 1.2);
     }
 
+}
+
+.navigation {
+    background: black;
 }

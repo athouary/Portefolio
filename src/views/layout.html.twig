@@ -8,10 +8,12 @@
 
         <title>{% block title %}PMD Static{% endblock %}</title>
 
-        <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/4.1.0/sanitize.min.css">
 
-        <link rel="stylesheet" href="/assets/styles/main.css?a2835246869cd2f7b920">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="/assets/styles/common.css?728ad5f8d0afed5f62e0">
+
+        <link rel="stylesheet" href="/assets/styles/main.css?728ad5f8d0afed5f62e0">
 
     {% endblock %}
     </head>
@@ -19,14 +21,17 @@
         <h1>Layout</h1>
         {% block header %}
             Layout Header
-            {% include "./shared/header/index.html.twig" %}
         {% endblock %}
 
         {% block body %}
-            In Layout Block test
+            In Layout Body
         {% endblock %}
 
-        <script src="/assets/scripts/main.js?a2835246869cd2f7b920"></script>
+        <script src="/assets/scripts/common.js?728ad5f8d0afed5f62e0"></script>
+        <script src="/assets/scripts/main.js?728ad5f8d0afed5f62e0"></script>
+
+        {% block javascript %}
+        {% endblock %}
 
     </body>
 </html>

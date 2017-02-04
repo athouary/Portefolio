@@ -9,8 +9,10 @@ const config = {
     devtool: '#eval',
     context: path.join(__dirname, 'src'),
     entry: {
-        // scriptjs: ['scriptjs'], 
-        main: ['src/views/config', 'webpack/hot/dev-server', 'webpack-hot-middleware/client']
+        // scriptjs: ['scriptjs'],
+        common: ['jquery', 'scriptjs'],
+        main: ['src/views/config', 'webpack/hot/dev-server', 'webpack-hot-middleware/client'],
+        head: ['src/views/shared/header/config']
     },
     output: {
         filename: 'assets/scripts/[name].js',
@@ -56,6 +58,10 @@ const config = {
             $: "jquery",
             jQuery: "jquery",
             "window.jQuery": "jquery"
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            minChunks: 3,
+            name: "common"
         })
     ],
     resolve: {
@@ -64,6 +70,7 @@ const config = {
             template: 'src/views',
             vendor: 'node_modules'
         },
+        // Need to add base styles, to module, then it can be @import like a module
         modulesDirectories: ['node_modules'],
         extensions: ['', '.js', '.css']
     },
@@ -75,6 +82,7 @@ const config = {
     postcss: function (webpack) {
         return [
             require('postcss-import')({
+                //addModulesDirectories: [ "src/assets/style" ],
                 path: path.join(__dirname, 'src/assets/styles') // Du to some bug with resolve of relative/absolute path we need to define it here ATM
             }),
             require("postcss-mixins")({

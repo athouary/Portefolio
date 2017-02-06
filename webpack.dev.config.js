@@ -9,10 +9,8 @@ const config = {
     devtool: '#eval',
     context: path.join(__dirname, 'src'),
     entry: {
-        // scriptjs: ['scriptjs'],
-        common: ['jquery', 'scriptjs'],
-        main: ['src/views/config', 'webpack/hot/dev-server', 'webpack-hot-middleware/client'],
-        head: ['src/views/shared/header/config']
+        common: ['jquery', 'scriptjs', 'main.css', 'src/views/shared/header/config'],
+        main: ['src/views/config', 'webpack/hot/dev-server', 'webpack-hot-middleware/client']
     },
     output: {
         filename: 'assets/scripts/[name].js',
@@ -26,7 +24,7 @@ const config = {
                 exclude: /node_modules/,
                 loader: 'babel',
                 query: {
-                    presets: ['es2015', 'stage-0'],
+                    presets: ['latest'],
                     plugins: ['transform-runtime']
                 }
             },
@@ -71,7 +69,7 @@ const config = {
             vendor: 'node_modules'
         },
         // Need to add base styles, to module, then it can be @import like a module
-        modulesDirectories: ['node_modules'],
+        modulesDirectories: ['node_modules', 'src/assets/styles'],
         extensions: ['', '.js', '.css']
     },
     externals: {

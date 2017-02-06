@@ -11,9 +11,8 @@ const configSite = require('./config/project.config.js');
 const config = {
     context: path.join(__dirname, 'src'),
     entry: {
-        common: ['jquery', 'scriptjs', 'main.css'],
-        main: ['src/views/config'],
-        head: ['src/views/shared/header/config']
+        common: ['jquery', 'scriptjs', 'main.css', 'src/views/shared/header/config'],
+        main: ['src/views/config']
     },
     output: {
         filename: 'assets/scripts/[name].js',
@@ -27,7 +26,7 @@ const config = {
                 exclude: /node_modules/,
                 loader: 'babel',
                 query: {
-                    presets: ['es2015', 'stage-0'],
+                    presets: ['latest'],
                     plugins: ['transform-runtime']
                 }
             },
@@ -86,7 +85,7 @@ const config = {
             vendor: 'node_modules'
         },
         // Need to add base styles to be able to require main.css in entry
-        modulesDirectories: ['node_modules', './src', 'src/assets/styles'],
+        modulesDirectories: ['node_modules', 'src', 'src/assets/styles'],
         extensions: ['', '.js', '.css', '.twig']
     },
     externals: {

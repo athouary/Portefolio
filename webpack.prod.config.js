@@ -33,7 +33,7 @@ const config = {
             {
                 test: /\.css$/,
                 exclude: /node_modules/,
-                loader: ExtractTextPlugin.extract('style', 'css!postcss')
+                loader: ExtractTextPlugin.extract('style', 'css?importLoaders=1!!postcss')
             },
             {
                 test: /\.html.twig$/,
@@ -102,12 +102,12 @@ const config = {
                 mixins: configSite.mixins
             }),
             require("postcss-url")(),
+            require('css-mqpacker')({
+                sort: true
+            }),
             require('postcss-cssnext')(
                 configSite.cssNextConfig()
             ),
-            require('css-mqpacker')({
-                sort: true
-            })
         ];
     }
 }

@@ -10,4 +10,4 @@ import './assets/scripts/script';
 // import './index.html.twig';
 
 // import shared component who are used in this module
-// import Article from 'template/shared/article/config';
+import Article from 'template/shared/article/config';

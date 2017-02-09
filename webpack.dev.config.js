@@ -9,8 +9,8 @@ const config = {
     devtool: '#eval',
     context: path.join(__dirname, 'src'),
     entry: {
-        common: ['jquery', 'scriptjs', 'main.css', 'src/views/shared/header/config'],
-        main: ['src/views/config', 'webpack/hot/dev-server', 'webpack-hot-middleware/client']
+        common: ['jquery', 'scriptjs', './assets/styles/main.css', './views/shared/header/config'],
+        main: ['./views/config', 'webpack/hot/dev-server', 'webpack-hot-middleware/client']
     },
     output: {
         filename: 'assets/scripts/[name].js',
@@ -68,8 +68,7 @@ const config = {
             template: 'src/views',
             vendor: 'node_modules'
         },
-        // Need to add base styles, to module, then it can be @import like a module
-        modulesDirectories: ['node_modules', 'src/assets/styles'],
+        modulesDirectories: ['node_modules', 'src'],
         extensions: ['', '.js', '.css']
     },
     externals: {

@@ -11,7 +11,7 @@ const configSite = require('./config/project.config.js');
 const config = {
     context: path.join(__dirname, 'src'),
     entry: {
-        common: ['jquery', 'scriptjs', 'main.css', 'src/views/shared/header/config'],
+        common: ['jquery', 'scriptjs', './assets/styles/main.css', 'src/views/shared/header/config'],
         main: ['src/views/config']
     },
     output: {
@@ -85,7 +85,7 @@ const config = {
             vendor: 'node_modules'
         },
         // Need to add base styles to be able to require main.css in entry
-        modulesDirectories: ['node_modules', 'src', 'src/assets/styles'],
+        modulesDirectories: ['node_modules', 'src'],
         extensions: ['', '.js', '.css', '.twig']
     },
     externals: {

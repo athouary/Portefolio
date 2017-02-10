@@ -5,7 +5,7 @@
 import './assets/styles/style';
 import './assets/scripts/script';
 // Depend of environnement, require file
-// if ( !isDeveloping ) {
+// if ( process.env.NODE_ENV !== 'production' ) {
 //     require('./assets/scripts/script')
 // }
 

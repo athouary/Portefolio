@@ -2,7 +2,7 @@
  * Shared/article/assets
  */
 
-@import "../../../../../assets/styles/vars.css";
+@import "vars.css";
 
 /*.body {
     background: pink;
@@ -20,6 +20,10 @@
         font-size: calc(var(--fs-3) * 1.2);
     }
 
+}
+
+.testArticle {
+    background: red;
 }
 
 /*.container {

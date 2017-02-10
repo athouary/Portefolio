@@ -17,6 +17,7 @@ const path = require('path');
 const fs = require('fs');
 const express = require('express');
 const request = require('request');
+const extend = require('util')._extend
 
 // Create Enginee for Twig
 const twigCreateEngine = require('node-twig').createEngine;
@@ -25,15 +26,20 @@ const twigCreateEngine = require('node-twig').createEngine;
 const app = express();
 
 /**
-*   Config Object to specify paths to views, css, js and assets
-*/
+ *  Config Object to specify paths to views, css, js and assets
+ */
 const configVars = require('./config/project.config.js');
 
 /**
- * Define empty object to store data
+ *  Test NODE_ENV to production if not set
+ */
+const isDeveloping = process.env.NODE_ENV !== 'production';
+
+/**
+ *  Define empty object to store data
  */
 
-var articleData = null;
+const pageData;
 
 app.engine('twig', twigCreateEngine({
     root: configVars.viewsPath,
@@ -55,41 +61,24 @@ app.engine('twig', twigCreateEngine({
 }));
 
 
-// // This section is used to configure twig.
+// This section is used to configure twig.
 app.set('views', configVars.viewsPath);
-// app.set('view engine', 'twig');
 
 app.set("twig options", {
     strict_variables: false
 });
 
+// Add Global DATA to the page
 fs.readFile('data/data.json', 'utf8', function (err, data) {
+
     if (err) {
         console.log('Error: ' + err);
         return;
     }
 
-    articleData = JSON.parse(data);
+    pageData = JSON.parse(data);
 
-    // console.dir(articleData);
 });
-
-//Lets configure and request
-// request({
-//     url: 'http://modulus.io', //URL to hit
-//     qs: {from: 'blog example', time: +new Date()}, //Query string data
-//     method: 'GET', //Specify the method
-//     headers: { //We can define headers too
-//         'Content-Type': 'MyContentType',
-//         'Custom-Header': 'Custom Value'
-//     }
-// }, function(error, response, body){
-//     if(error) {
-//         console.log(error);
-//     } else {
-//         console.log(response.statusCode, body);
-//     }
-// });
 
 // Basic Static route
 // app.get('/', function(req, res) {
@@ -102,11 +91,34 @@ fs.readFile('data/data.json', 'utf8', function (err, data) {
 //     });
 // });
 
-app.get('/', function(req, res) {
-    res.render(configVars.homePage, {
-        context: articleData,
-    });
-});
+// Routing : handle client requests
+app.get('/:component?/:template?', function(req, res) {
+
+    let component = req.params.component || 'Home'
+    let template = req.params.template || 'index'
+    let data = Object.keys(req.query)[0] || 'default'
+    let componentPath = path.join( configVars.viewsPath, 'components', component )
+    let templatePath = componentPath + '/' + template + '.html.twig'
+
+    fs.readFile( componentPath + '/fixtures/' + data + '.json', (err, data) => {
+        
+        pageData = extend(pageData, {
+            env_serv: process.env.NODE_ENV,
+            foo: 'bar',
+            stuff: ['This', 'can', 'be', 'anything']
+        })
+
+        if (err) {
+            console.log( err )
+        } else {
+            res.render( templatePath, {
+                context: extend(pageData, JSON.parse( data ))
+            })
+        }
+
+
+    })
+})
 
 // Custom header sample
 // app.get('/cars', function(req, res) {

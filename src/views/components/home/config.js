@@ -2,9 +2,13 @@
  * components/home
  */
 
-
 import './assets/styles/style';
 import './assets/scripts/script';
+// Depend of environnement, require file
+// if ( !isDeveloping ) {
+//     require('./assets/scripts/script')
+// }
+
 
 // import static template to be build/export with webpack
 // import './index.html.twig';

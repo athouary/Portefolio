@@ -14,7 +14,7 @@ const config = {
     },
     output: {
         filename: 'assets/scripts/[name].js',
-        path: path.join(__dirname, 'build'),
+        path: path.resolve(__dirname, 'build'),
         publicPath: 'http://localhost:3000/'
     },
     module: {
@@ -51,6 +51,9 @@ const config = {
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('production')
+        }),
         // needed for internal dependency, but need expose in config.js for external call
         new webpack.ProvidePlugin({
             $: "jquery",

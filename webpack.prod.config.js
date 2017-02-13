@@ -68,6 +68,11 @@ const config = {
             minChunks: 3,
             name: "common"
         }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        }),
         new HtmlWebpackPlugin({
             inject: false,
             hash: true,
@@ -94,7 +99,7 @@ const config = {
     externals: {
         // require("jquery") is external and available
         //  on the global var jQuery
-        'customImport': "Zepto"
+        customImport: "Zepto"
     },
     postcss: function (webpack) {
         return [

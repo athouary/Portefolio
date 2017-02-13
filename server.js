@@ -94,7 +94,7 @@ fs.readFile('data/data.json', 'utf8', function (err, data) {
 // Routing : handle client requests
 app.get('/:component?/:template?', function(req, res) {
 
-    let component = req.params.component || 'Home'
+    let component = req.params.component || 'home'
     let template = req.params.template || 'index'
     let data = Object.keys(req.query)[0] || 'default'
     let componentPath = path.join( configVars.viewsPath, 'components', component )

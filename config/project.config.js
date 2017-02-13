@@ -16,7 +16,7 @@ const gridMixin = require('./mixins.js');
 const configSite = {
     homePage : './components/home/index.html.twig',
     viewsPath : path.join(__dirname, '../src/views'),
-    assetsPath : './src/assets',
+    assetsPath : path.join(__dirname, '../src/assets'),
     aliases: {
         'STARTERPack': path.join(__dirname, '../src/views')
     },

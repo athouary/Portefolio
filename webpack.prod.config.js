@@ -101,16 +101,16 @@ const config = {
             require('postcss-import')({
                 path: path.join(__dirname, 'src/assets/styles')
             }),
-            require("postcss-mixins")({
+            require('postcss-mixins')({
                 mixins: configSite.mixins
             }),
-            require("postcss-url")(),
+            require('postcss-url')(),
             require('css-mqpacker')({
                 sort: true
             }),
             require('postcss-cssnext')(
                 configSite.cssNextConfig()
-            ),
+            )
         ];
     }
 }

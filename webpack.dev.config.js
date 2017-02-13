@@ -82,10 +82,9 @@ const config = {
     postcss: function (webpack) {
         return [
             require('postcss-import')({
-                //addModulesDirectories: [ "src/assets/style" ],
                 path: path.join(__dirname, 'src/assets/styles') // Du to some bug with resolve of relative/absolute path we need to define it here ATM
             }),
-            require("postcss-mixins")({
+            require('postcss-mixins')({
                 mixins: configSite.mixins
             }),
             require('postcss-url')(),

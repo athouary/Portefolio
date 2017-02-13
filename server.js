@@ -39,7 +39,7 @@ const isDeveloping = process.env.NODE_ENV !== 'production';
  *  Define empty object to store data
  */
 
-const pageData;
+var pageData = {};
 
 app.engine('twig', twigCreateEngine({
     root: configVars.viewsPath,

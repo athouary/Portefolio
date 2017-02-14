@@ -41,7 +41,7 @@ This StarterPack need, at least npm 3.x.x
 
 # Usage
 
-All path configurations should be administrable from ```project.config.js``` file. You can change where are stored views or assets folder by this way, pass some config for PostCss, and so on.
+All path configurations should be administrable in ```config/project.config.js``` file. You can change where are stored views or assets folder by this way, pass some config for PostCss, and so on.
 
 **homePage** point to the template you want to render (not the layout, the template).
 

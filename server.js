@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Require Browsersync along with webpack and middleware for it
+ *  Require Browsersync along with webpack and middleware for it
  */
 const browserSync          = require('browser-sync');
 const webpack              = require('webpack');
@@ -11,7 +11,7 @@ const webpackConfig        = require('./webpack.dev.config');
 const bundler              = webpack(webpackConfig);
 
 /**
- * Require some tools path, fs, express, etc.
+ *  Require some tools path, fs, express, etc.
  */
 const path = require('path');
 const fs = require('fs');
@@ -139,12 +139,12 @@ app.get('/:component?/:template?', function(req, res) {
 // });
 
 /*
- * Express server to listen on port : 9000
+ *  Express server to listen on port : 9000
  */
 app.listen(9000);
 
 /*
- * If needed Reload all devices when bundle is complete
+ *  If needed Reload all devices when bundle is complete
  */
 
 // bundler.plugin('done', function (stats) {
@@ -152,7 +152,7 @@ app.listen(9000);
 // });
 
 /**
- * Run Browsersync and use middleware for Hot Module Replacement
+ *  Run Browsersync and use middleware for Hot Module Replacement
  */
 browserSync({
     open: process.argv[2] === 'open' ? true : false,

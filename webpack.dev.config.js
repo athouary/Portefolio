@@ -24,7 +24,7 @@ const config = {
                 exclude: /node_modules/,
                 loader: 'babel',
                 query: {
-                    presets: ['latest'],
+                    presets: ['latest', 'stage-0'],
                     plugins: ['transform-runtime']
                 }
             },

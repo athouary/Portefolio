@@ -3,6 +3,8 @@
 const webpack = require('webpack'); 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
+const WebpackMd5Hash = require('webpack-md5-hash');
 const path = require('path');
 
 const configSite = require('./config/project.config.js');
@@ -15,7 +17,7 @@ const config = {
         main: ['src/views/config']
     },
     output: {
-        filename: 'assets/scripts/[name].js',
+        filename: 'assets/scripts/[name].js?[chunkhash]',
         path: path.join(__dirname, 'build'),
         publicPath: '/'
     },
@@ -43,25 +45,29 @@ const config = {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 exclude: /fonts/,
                 loaders: [
-                    'file?&name=./assets/images/[name].[ext]',
+                    'file?&name=./assets/images/[name].[ext]?[hash]',
                     'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
                 ]
             },
             {
                 test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
                 exclude: /images/,
-                loader: 'file?&name=assets/fonts/[name].[ext]'
+                loader: 'file?&name=assets/fonts/[name].[ext]?[hash]'
             }
         ]
     },
     plugins: [
+        new WebpackMd5Hash(),
+        new ManifestPlugin({
+            fileName: 'assets/manifest.json'
+        }),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.NoErrorsPlugin(),
         new webpack.optimize.DedupePlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
-        new ExtractTextPlugin('assets/styles/[name].css', {
+        new ExtractTextPlugin('assets/styles/[name].css?[contenthash]', {
             allChunks:true
         }),
         new webpack.optimize.CommonsChunkPlugin({

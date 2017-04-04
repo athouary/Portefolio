@@ -116,12 +116,12 @@ const config = {
                 mixins: configSite.mixins
             }),
             require('postcss-url')(),
-            require('css-mqpacker')({
-                sort: true
-            }),
             require('postcss-cssnext')(
                 configSite.cssNextConfig()
-            )
+            ),
+            require('css-mqpacker')({
+                sort: true
+            })
         ];
     }
 }

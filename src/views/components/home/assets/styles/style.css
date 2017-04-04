@@ -17,4 +17,8 @@
 
 .testHomeHome {
     font-size: calc(var(--fs-8) * 1.2);
+    
+    @media screen and (min-width: 320px) {
+        color: red;
+    }
 }

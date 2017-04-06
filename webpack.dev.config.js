@@ -1,56 +1,67 @@
-'use strict';
+const webpack = require('webpack')
+const path = require('path')
+const configSite = require('./config/project.config.js')
 
-const webpack = require('webpack');
-const path = require('path');
-
-const configSite = require('./config/project.config.js');
-
-const config = {
+const configWebpackDev = {
     devtool: '#eval',
-    context: path.join(__dirname, 'src'),
+    context: path.resolve(__dirname, 'src'),
     entry: {
         common: ['jquery', 'scriptjs', './assets/styles/main.css', './views/shared/header/config'],
         main: ['./views/config', 'webpack/hot/dev-server', 'webpack-hot-middleware/client']
     },
     output: {
         filename: 'assets/scripts/[name].js',
-        path: path.resolve(__dirname, 'build'),
+        path: path.resolve(__dirname, 'dist'),
         publicPath: 'http://localhost:3000/'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel',
-                query: {
-                    presets: ['latest', 'stage-0'],
-                    plugins: ['transform-runtime']
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader'
                 }
             },
             {
                 test: /\.css$/,
-                exclude: /node_modules/,
-                loader: 'style!css?sourceMap&importLoaders=1!postcss'
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1
+                        }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            config: './config/postcss.config.js'
+                        }
+                    }
+                ]
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 exclude: /fonts/,
-                loaders: [
-                    'file?&name=./assets/images/[name].[ext]',
-                ]
+                loader: 'file-loader',
+                options: {
+                    name: './assets/images/[name].[ext]'
+                }
             },
             {
                 test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
                 exclude: /images/,
-                loader: 'file?&name=./assets/font/[name].[ext]'
+                loader: 'file-loader',
+                options: {
+                    name: './assets/font/[name].[ext]'
+                }
             }
         ]
     },
     plugins: [
-        new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin(),
+        new webpack.NoEmitOnErrorsPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('developpement')
         }),
@@ -66,38 +77,18 @@ const config = {
         })
     ],
     resolve: {
-        root: path.resolve(__dirname),
         alias: {
-            template: 'src/views',
-            vendor: 'node_modules'
+            template: path.resolve(__dirname, 'src/views'),
+            vendor: path.resolve(__dirname, 'node_modules')
         },
-        modulesDirectories: ['node_modules', 'src'],
-        extensions: ['', '.js', '.css']
+        modules: ['node_modules', path.resolve(__dirname, 'src')],
+        extensions: ['.js', '.css']
     },
     externals: {
         // import jquery is external and available
         //  on the global var jQuery
         customImport: "Zepto"
-    },
-    postcss: function (webpack) {
-        return [
-            require('postcss-import')({
-                path: path.join(__dirname, 'src/assets/styles') // Du to some bug with resolve of relative/absolute path we need to define it here ATM
-            }),
-            require('postcss-mixins')({
-                mixins: configSite.mixins
-            }),
-            require('postcss-url')(),
-            require('postcss-cssnext')(
-                configSite.cssNextConfig()
-            ),
-            require('css-mqpacker')({
-                sort: true
-            }),
-            require('postcss-browser-reporter')(),
-            require('postcss-reporter')(),
-        ];
     }
 }
 
-module.exports = config
+module.exports = configWebpackDev

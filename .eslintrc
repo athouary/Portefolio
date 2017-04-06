@@ -3,8 +3,9 @@
     "parserOptions": {
         "ecmaVersion": 6,
         "ecmaFeatures": {
-        "experimentalObjectRestSpread": true,
-        "jsx": true
+            "impliedStrict": true,
+            "experimentalObjectRestSpread": true,
+            "jsx": true
         },
         "sourceType": "module"
     },
@@ -23,9 +24,5 @@
         "document": false,
         "navigator": false,
         "window": false
-    },
-
-    "rules": {
-        "indent": ["error", 4]
     }
 }

@@ -2,7 +2,7 @@
     display: flex;
 }
 
-.header {
+.headerShared {
     color: pink;
     background: green;
 }

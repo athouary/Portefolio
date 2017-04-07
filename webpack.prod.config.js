@@ -34,7 +34,8 @@ const config = {
                         {
                             loader: 'css-loader',
                             options: {
-                                importLoaders: 1
+                                importLoaders: 1,
+                                minimize: true || {/* CSSNano Options */}
                             }
                         },
                         {
@@ -58,13 +59,19 @@ const config = {
                     },
                     {
                         loader: 'image-webpack-loader',
-                        options: {
-                            progressive: true,
-                            optimizationLevel: 7,
-                            interlaced: false,
+                        query: {
+                            mozjpeg: {
+                                progressive: true,
+                            },
+                            gifsicle: {
+                                interlaced: false,
+                            },
+                            optipng: {
+                                optimizationLevel: 4,
+                            },
                             pngquant: {
-                                quality: '65-90',
-                                speed: 4
+                                quality: '75-90',
+                                speed: 3,
                             }
                         }
                     }
@@ -97,13 +104,24 @@ const config = {
             $: "jquery",
             jQuery: "jquery",
             "window.jQuery": "jquery"
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false,
+                screw_ie8: true,
+                conditionals: true,
+                unused: true,
+                comparisons: true,
+                sequences: true,
+                dead_code: true,
+                evaluate: true,
+                join_vars: true,
+                if_return: true
+            },
+            output: {
+                comments: false
+            }
         })
-        // Uncomment to minify JS and CSS
-        // new webpack.optimize.UglifyJsPlugin({
-        //     compress: {
-        //         warnings: false
-        //     }
-        // })
     ],
     resolve: {
         alias: {

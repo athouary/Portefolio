@@ -1,4 +1,4 @@
 /*
  * shared/header/assets
  */
-console.log( 'Header Script JS' );
+console.log( 'Shared Header Script JS' );

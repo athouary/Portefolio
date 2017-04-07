@@ -8,12 +8,12 @@
 
 {% block header %}
     Header Home
-    {#{% include "./shared/header/index.html.twig" %}#}
+    {% include "./shared/header/index.html.twig" %}
 {% endblock %}
 
 {% block body %}
 
-    <h2>Home Page</h2>
+    <h2>Home Component</h2>
 
     External Data :<br>
     foo : {{ foo }} <br>
@@ -30,9 +30,12 @@
         Env Dev 
     {% endif %}
 
-    <div class="testHomeHome">testHomeHome</div>
+    <div class="classFromHomeComponent">classFromHomeComponent</div>
 
-    <img src="./assets/images/sample.jpg" alt="" />
+    <div>
+        This Picture are loaded from global Assets <br>
+        <img src="./assets/images/sample.jpg" alt="" />
+    </div>
 
     {#{% include "./shared/article/index.html.twig" %}#}
 

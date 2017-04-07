@@ -17,9 +17,7 @@ const config = {
     ),
     require('css-mqpacker')({
         sort: true
-    }),
-    require('postcss-browser-reporter')(),
-    require('postcss-reporter')()
+    })
   ]
 }
 

@@ -4,8 +4,9 @@
 
 @import "vars.css";
 
-.testHome {
-    font-size: 80px;
+.classFromHomeComponent {
+    font-size: 25px;
+    line-height: 30px;
     font-weight: bold;
     background: url('../images/background.jpg');
 
@@ -13,12 +14,4 @@
         font-size: calc(var(--fs-3) * 1.2);
     }
 
-}
-
-.testHomeHome {
-    font-size: calc(var(--fs-8) * 1.2);
-    
-    @media screen and (min-width: 320px) {
-        color: red;
-    }
 }

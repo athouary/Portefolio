@@ -92,6 +92,12 @@ const config = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
+        new HtmlWebpackPlugin({
+            inject: false,
+            hash: true,
+            filename: path.join(__dirname, 'src/views/layout.html.twig'),
+            template: path.join(__dirname, 'src/views/layout.html.tpl.twig')
+        }),
         new ExtractTextPlugin({
             filename: 'assets/styles/[name].css?[contenthash]',
             allChunks:true

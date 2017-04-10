@@ -11,14 +11,10 @@
     },
 
     "env": {
-        "es6": true,
         "node": true
     },
 
-    "plugins": [
-        "standard",
-        "promise"
-    ],
+    "extends": "standard",
 
     "globals": {
         "document": false,

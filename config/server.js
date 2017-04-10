@@ -15,6 +15,7 @@ import { resolve as resolvePath } from 'path'
 import fs from 'fs'
 import { _extend as extend } from 'util'
 import request from 'request'
+import dir from 'node-dir'
 import 'colors'
 
 // Create Enginee for Twig
@@ -33,12 +34,7 @@ const app = express()
  */
 const isDeveloping = process.env.NODE_ENV !== 'production';
 
-/**
- *  Define empty object to store data
- */
-
-let pageData = {};
-
+// Create Twig Engine for Express
 app.engine('twig', twigCreateEngine({
     root: configVars.viewsPath,
     extensions: [
@@ -67,75 +63,64 @@ app.set("twig options", {
 
 app.set('port', process.env.PORT || 9000)
 
-// Add Global DATA to the page
-fs.readFile('data/data.json', 'utf8', (err, data) => {
-
-    if (err) {
-        console.log('Error: ' + err);
-        return;
-    }
-
-    pageData = JSON.parse(data);
-
-});
-
-// Basic Static route
-// app.get('/', (req, res) => {
-//     res.render('./components/home/index.html.twig', {
-//         context: {
-//             foo: 'bar',
-//             stuff: ['This', 'can', 'be', 'anything'],
-//             pageData: articleData
-//         }
-//     });
-// });
-
 // Routing : handle client requests
 app.get('/:component?/:template?', (req, res) => {
 
-    let component = req.params.component || 'home'
-    let template = req.params.template || 'index'
-    let data = Object.keys(req.query)[0] || 'default'
-    let componentPath = resolvePath( configVars.viewsPath, 'components', component )
-    let templatePath = componentPath + '/' + template + '.html.twig'
+    const component = req.params['component'] || 'home'
+    const template = req.params['template'] || 'index'
+    const getQuery = Object.keys(req.query)
+    const componentPath = resolvePath( configVars.viewsPath, 'components', component )
+    const templatePath = componentPath + '/' + template + '.html.twig'
+    const globalDataPath = resolvePath( __dirname, '../data/data.json' )
+    const data = typeof Object.keys(req.query)[0] === 'undefined' ? 'default' : Object.keys(req.query)[0]
+    let moduleDataPath = resolvePath( componentPath + '/fixtures/' + data + '.json' ) 
+    let globalData
+    let moduleData
 
-    fs.readFile( componentPath + '/fixtures/' + data + '.json', (err, data) => {
-        
-        pageData = extend(pageData, {
-            env_serv: process.env.NODE_ENV,
-            foo: 'bar',
-            stuff: ['This', 'can', 'be', 'anything']
-        })
+    console.log( "data : ", typeof Object.keys(req.query), data);
+
+    // dir.files(componentPath + '/fixtures/', function(err, files) {
+    //     if (err) { throw err };
+
+    //     console.log( 'subdir', files);
+    // })
+
+    try {
+        fs.statSync( moduleDataPath )
+    } catch( e ) {
+        moduleDataPath =  resolvePath( componentPath + '/fixtures/defaultjson' ) 
+    }
+
+    // Add Global DATA to the page
+    fs.readFile(globalDataPath, 'utf8', (err, data) => {
 
         if (err) {
-            console.log( err )
-        } else {
-            res.render( templatePath, {
-                context: extend(pageData, JSON.parse( data ))
-            })
+            console.log('Error: ' + err);
+            return;
         }
 
+        globalData = Object.assign({}, JSON.parse(data));
 
-    })
+        fs.readFile( moduleDataPath, (err, data) => {
+            
+            globalData = Object.assign(globalData, {
+                env_serv: process.env.NODE_ENV,
+                foo: 'bar',
+                stuff: ['This', 'can', 'be', 'anything']
+            })
+
+            if (err) {
+                console.log( err )
+            } else {
+                res.render( templatePath, {
+                    context: extend(globalData, JSON.parse( data ))
+                })
+            }
+
+        })
+    });
+
 })
-
-// Custom header sample
-// app.get('/cars', (req, res) => {
-//     res.setHeader('Content-Type', 'text/plain');
-//     res.end("Here are my cars. Beautiful collection, isn't it?");
-// });
-
-// Dynamic route sample
-// app.get('/cars/:brand/:color', (req, res) => {
-//     res.setHeader('Content-Type', 'text/plain');
-//     res.end('You want to see my ' + req.params.color + ' ' + req.params.brand + '? Follow me.');
-// });
-
-// app.get('/:controller/:page', (req, res) => {
-//     res.render( req.params.controller + '/' + req.params.page + '.html.twig', {
-//         context: articleData,
-//     });
-// });
 
 /*
  *  If needed Reload all devices when bundle is complete

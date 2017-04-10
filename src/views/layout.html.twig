@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/4.1.0/sanitize.min.css">
 
         <!-- Latest compiled and minified CSS -->
-        {% if env_serv == 'production' %}
+        {% if env_serv is defined and env_serv == 'production' %}
         <link rel="stylesheet" href="/assets/styles/common.css?3b17584afc2ebbd9952c11bb14f017e0&b0146c1208b6575af7e5">
         <link rel="stylesheet" href="/assets/styles/main.css?771ba0b448239e9ea6a7b9df8b4aa258&b0146c1208b6575af7e5">
         {% endif %}

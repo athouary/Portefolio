@@ -15,14 +15,19 @@
 
     <h2>Home Component</h2>
 
+    <h3> Test Loading Var </h3>
     External Data :<br>
-    foo : {{ foo }} <br>
-    Data JSON : {{ titleSeo }} - {{ resource.paths[0] }} <br>
-    Default JSON : {{ component_data[0].article }}<br>
-    Dump: {{ dump(env_serv) }} <br>
-    Dump: {{ dump(stuff) }}<br>
-
-    
+    Global Data JSON : {{ titleSeo }} - {{ resource.paths[0] }} <br>
+    Fixture Default JSON :
+    <ul>
+        <li>{{ component_data[0].id }}</li>
+        <li>{{ component_data[0].email }}</li>
+        <li>{{ component_data[0].article }}</li>
+    </ul>
+    Dump ENV: {{ dump(env_serv) }} <br>
+    Data From Object.assign in routing : <br>
+    Foo : {{ foo }} <br>
+    Dump stuff Array : {{ dump(stuff) }}<br>
 
     {% if env_serv == 'production' %}
         Env Prod
@@ -37,7 +42,7 @@
         <img src="./assets/images/sample.jpg" alt="" />
     </div>
 
-    {#{% include "./shared/article/index.html.twig" %}#}
+    {% include "./shared/article/index.html.twig" %}
 
 {% endblock %}
 

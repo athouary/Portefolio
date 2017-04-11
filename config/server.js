@@ -134,7 +134,7 @@ app.get('/:component?/:template?', (req, res) => {
  *  Run Browsersync and use middleware for Hot Module Replacement
  */
 browserSync({
-    open: process.argv[2] === 'open' ? true : false,
+    open: process.argv[2] === '--open' ? true : false,
     logFileChanges: true,
     proxy: {
         target : 'localhost:9000',

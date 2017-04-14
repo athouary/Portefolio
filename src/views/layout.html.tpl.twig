@@ -10,10 +10,10 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/4.1.0/sanitize.min.css">
 
-        {% if env_serv == 'production' %}
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.common.css %>">
-        <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.main.css %>">
+        {% if env_serv is defined and env_serv == 'production' %}
+            <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.common.css %>">
+            <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.main.css %>">
          {% endif %}
     {% endblock %}
     </head>

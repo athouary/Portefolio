@@ -16,7 +16,6 @@ import fs from 'fs'
 import { _extend as extend } from 'util'
 import request from 'request'
 import dir from 'node-dir'
-import 'colors'
 
 // Create Enginee for Twig
 import { createEngine as twigCreateEngine } from 'node-twig'

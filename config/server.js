@@ -76,18 +76,11 @@ app.get('/:component?/:template?', (req, res) => {
     let globalData
     let moduleData
 
-    console.log( "data : ", typeof Object.keys(req.query), data);
-
-    // dir.files(componentPath + '/fixtures/', function(err, files) {
-    //     if (err) { throw err };
-
-    //     console.log( 'subdir', files);
-    // })
-
-    try {
-        fs.statSync( moduleDataPath )
-    } catch( e ) {
-        moduleDataPath =  resolvePath( componentPath + '/fixtures/defaultjson' ) 
+    // Check if file exist : http://stackoverflow.com/a/4482701/2435786
+    if ( !fs.existsSync(moduleDataPath) ) {
+        // Do something
+        moduleDataPath =  resolvePath( componentPath + '/fixtures/default.json' ) 
+        return 
     }
 
     // Add Global DATA to the page

@@ -27,6 +27,7 @@
 }
 
 .container {
+
     @media (width >= 768px) {
         @neat-span-columns 2;
     }

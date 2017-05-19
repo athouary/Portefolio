@@ -26,10 +26,10 @@
     background: red;
 }
 
-/*.container {
+.container {
     @neat-span-columns 4;
 
     @media (width >= 768px) {
         @neat-span-columns 2;
     }
-}*/
+}

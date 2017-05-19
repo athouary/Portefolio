@@ -2,6 +2,10 @@
  * Shared/article/assets
  */
 
+
+
+
+
 // Test for multiple import dependency
 import jQuery from 'vendor/jquery/dist/jquery';
 

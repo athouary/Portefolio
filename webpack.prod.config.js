@@ -1,6 +1,7 @@
 const webpack = require('webpack')
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const BabiliPlugin = require("babili-webpack-plugin")
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const configSite = require('./config/project.config.js')
@@ -39,10 +40,7 @@ const config = {
                             }
                         },
                         {
-                            loader: 'postcss-loader',
-                            options: {
-                                config: './config/postcss.config.js'
-                            }
+                            loader: 'postcss-loader'
                         }
                     ]
                 })
@@ -111,23 +109,30 @@ const config = {
             jQuery: "jquery",
             "window.jQuery": "jquery"
         }),
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false,
-                screw_ie8: true,
-                conditionals: true,
-                unused: true,
-                comparisons: true,
-                sequences: true,
-                dead_code: true,
-                evaluate: true,
-                join_vars: true,
-                if_return: true
-            },
-            output: {
-                comments: false
-            }
+        new BabiliPlugin({
+          // here you can configure Babili options
+          // https://github.com/babel/babili/tree/master/packages/babel-preset-babili#options
+        }, {
+          // Here you can overide some config : 
+          // https://github.com/webpack-contrib/babili-webpack-plugin#overrides
         })
+        // new webpack.optimize.UglifyJsPlugin({
+        //     compress: {
+        //         warnings: false,
+        //         screw_ie8: true,
+        //         conditionals: true,
+        //         unused: true,
+        //         comparisons: true,
+        //         sequences: true,
+        //         dead_code: true,
+        //         evaluate: true,
+        //         join_vars: true,
+        //         if_return: true
+        //     },
+        //     output: {
+        //         comments: false
+        //     }
+        // })
     ],
     resolve: {
         alias: {

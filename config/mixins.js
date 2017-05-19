@@ -35,7 +35,7 @@ const mixin = function (mixin) {
             'margin-right': 'auto',
             'padding-left': (config.gridGutterSize / 2)+"px",
             'padding-right': (config.gridGutterSize / 2)+"px",
-            ['@media'+mediaMaxXs]: {
+            ['@media '+mediaMaxXs]: {
                 'margin': '0 -'+(config.gridOuterSpacing)+'px'
             }
         },
@@ -45,7 +45,7 @@ const mixin = function (mixin) {
             '.area': {
                 'margin': 0
             },
-            ['@media'+mediaMaxXs]: {
+            ['@media '+mediaMaxXs]: {
                 'margin': '0 -'+(config.gridOuterSpacing)+'px'
             }
         }

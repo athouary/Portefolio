@@ -34,10 +34,7 @@ const configWebpackDev = {
                         }
                     },
                     {
-                        loader: 'postcss-loader',
-                        options: {
-                            config: './config/postcss.config.js'
-                        }
+                        loader: 'postcss-loader'
                     }
                 ]
             },

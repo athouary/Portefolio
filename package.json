@@ -49,7 +49,7 @@
     "start:open": "cross-env NODE_ENV=development nodemon boot.js --open",
     "?doc:jsdoc": "### Generate JSDoc file in Markdown",
     "doc:jsdoc": "./node_modules/.bin/jsdoc2md --configure './docs/jsdoc/jsdoc.json' './src/**/*.js' > './docs/jsdoc/API.md'",
-    "precommit": "npm test"
+    "precommit": "npm run test:eslint"
   },
   "dependencies": {
     "fontfaceobserver": "^2.0.9",
@@ -82,7 +82,7 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
     "html-webpack-plugin": "^2.28.0",
-    "husky": "^0.13.3",
+    "husky": "^0.13.4",
     "image-webpack-loader": "^3.3.1",
     "jsdoc-babel": "^0.3.0",
     "jsdoc-to-markdown": "^2.0.1",
@@ -96,6 +96,7 @@
     "postcss-loader": "^2.0.5",
     "postcss-mixins": "^6.0.0",
     "postcss-url": "^6.1.0",
+    "precommit-hook": "^3.0.0",
     "request": "^2.81.0",
     "rimraf": "^2.6.1",
     "style-loader": "^0.17.0",

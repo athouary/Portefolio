@@ -8,6 +8,7 @@ import webpackDevMiddleware from 'webpack-dev-middleware'
 import webpackHotMiddleware from 'webpack-hot-middleware'
 import webpackConfig from '../webpack.dev.config'
 
+const bundler = webpack(webpackConfig);
 /**
  *  Require some tools path, fs, express, etc.
  */
@@ -24,7 +25,7 @@ import { createEngine as twigCreateEngine } from 'node-twig'
  *  Config Object to specify paths to views, css, js and assets
  */
 import configVars from './project.config.js'
-const bundler = webpack(webpackConfig);
+
 
 // Init Express Server
 const app = express()
@@ -52,7 +53,6 @@ app.engine('twig', twigCreateEngine({
     ],
     aliases: configVars.aliases
 }));
-
 
 // This section is used to configure twig.
 app.set('views', configVars.viewsPath);
@@ -114,43 +114,66 @@ app.get('/:component?/:template?', (req, res) => {
 
 })
 
-/*
- *  If needed Reload all devices when bundle is complete
- */
+// app.listen(9000);
 
-// bundler.plugin('done', function (stats) {
-//     browserSync.reload();
+// /*
+//  *  If needed Reload all devices when bundle is complete
+//  */
+
+// // bundler.plugin('done', function (stats) {
+// //     browserSync.reload();
+// // });
+
+// // /**
+// //  *  Run Browsersync and use middleware for Hot Module Replacement
+// //  */
+
+// // // const bs = browserSync.create();
+// browserSync({
+//     open: process.argv[2] === '--open' ? true : false,
+//     logFileChanges: true,
+//     proxy: {
+//       target : 'localhost:' + port,
+//       middleware: [
+//           webpackDevMiddleware(bundler, {
+//               publicPath: webpackConfig.output.publicPath,
+//               stats: {
+//                   colors: true,
+//                   hash: false,
+//                   timings: true,
+//                   chunks: false,
+//                   chunkModules: false,
+//                   modules: false
+//               }
+//           }),
+
+//           webpackHotMiddleware(bundler)
+//       ]
+//     },
+//     files: [
+//       configVars.assetsPath + '/**/*.css',
+//       configVars.assetsPath + '/**/*.js',
+//       configVars.viewsPath + '/**/*.twig'
+//     ]
+//     // files: [
+//     //     "wp-content/themes/**/*.css",
+//     //     {
+//     //         match: ["wp-content/themes/**/*.php"],
+//     //         fn:    function (event, file) {
+//     //             /** Custom event handler **/
+//     //         },
+//     //         options: {
+//     //             ignored: '*.txt'
+//     //         }
+//     //     }
+//     // ]
 // });
 
-/**
- *  Run Browsersync and use middleware for Hot Module Replacement
- */
-browserSync({
-    open: process.argv[2] === '--open' ? true : false,
-    logFileChanges: true,
-    proxy: {
-        target : 'localhost:9000',
-        middleware: [
-            webpackDevMiddleware(bundler, {
-                publicPath: webpackConfig.output.publicPath,
-                stats: {
-                    colors: true,
-                    hash: false,
-                    timings: true,
-                    chunks: false,
-                    chunkModules: false,
-                    modules: false
-                }
-            }),
-
-            webpackHotMiddleware(bundler)
-        ]
-    },
-    files: [
-        configVars.assetsPath + '/**/*.css',
-        configVars.assetsPath + '/**/*.js',
-        configVars.viewsPath + '/**/*.twig'
-    ]
-});
+// // // bs.watch(
+// // //   [
+// // //       configVars.assetsPath + '/**/*.css',
+// // //       configVars.assetsPath + '/**/*.js',
+// // //       configVars.viewsPath + '/**/*.twig'
+// // //   ], {ignored: '*.map.css'});
 
 export default app

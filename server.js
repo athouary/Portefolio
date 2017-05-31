@@ -11,18 +11,19 @@ import configVars from './config/project.config.js'
 
 const bundler = webpack(webpackConfig)
 const port = app.get('port')
+const bs = browserSync.create();
 
 // Listen on port 9000 for Express
 app.listen(port, () => {
   console.log( chalk.green('\n' + '✔ Express Server listening on port'), chalk.cyan( port ) + '\n')
-});
+})
 
 /**
  *  Run Browsersync and use middleware for Hot Module Replacement
  */
 
 // const bs = browserSync.create();
-browserSync({
+bs.init({
     open: process.argv[2] === '--open' ? true : false,
     logFileChanges: true,
     proxy: {
@@ -60,7 +61,7 @@ browserSync({
     //         }
     //     }
     // ]
-});
+})
 
 // bs.watch(
 //   [

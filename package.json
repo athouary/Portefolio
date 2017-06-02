@@ -86,6 +86,7 @@
     "image-webpack-loader": "^3.3.1",
     "jsdoc-babel": "^0.3.0",
     "jsdoc-to-markdown": "^2.0.1",
+    "monkey-hot-loader": "0.0.3",
     "ncp": "^2.0.0",
     "node-dir": "^0.1.16",
     "node-twig": "^1.1.0",

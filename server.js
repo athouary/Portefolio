@@ -18,6 +18,22 @@ app.listen(port, () => {
   console.log( chalk.green('\n' + '✔ Express Server listening on port'), chalk.cyan( port ) + '\n')
 })
 
+
+/**
+ * Reload all devices when bundle is complete
+ * or send a fullscreen error message to the browser instead
+ */
+bundler.plugin('done', function(stats) {
+    if (stats.hasErrors() || stats.hasWarnings()) {
+        return bs.sockets.emit('fullscreen:message', {
+            title: 'Webpack Error:',
+            body: stripAnsi(stats.toString()),
+            timeout: 100000
+        });
+    }
+    bs.reload();
+});
+
 /**
  *  Run Browsersync and use middleware for Hot Module Replacement
  */

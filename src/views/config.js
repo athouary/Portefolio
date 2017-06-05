@@ -1,5 +1,10 @@
 /* eslint-disable */
-
+// Depend of environnement, require file
+if ( process.env.NODE_ENV !== 'production' ) {
+//   if (module.hot) {
+//     module.hot.accept()
+//   }
+}
 // Expose jQuery to the global (window) namespace
 // require('expose?$!expose?jQuery!jquery');
 

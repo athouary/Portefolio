@@ -6,5 +6,6 @@
 import jQuery from 'vendor/jquery/dist/jquery';
 
 jQuery(document).ready( function(){
-    console.log( 'Script Component/home' );
+  // $('.container').css('background', 'yellow')
+  console.log( 'Script Component/home' );
 });

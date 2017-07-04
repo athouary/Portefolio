@@ -96,6 +96,7 @@
     "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.5",
     "postcss-mixins": "^6.0.0",
+    "postcss-nesting": "^4.0.1",
     "postcss-url": "^7.0.0",
     "request": "^2.81.0",
     "rimraf": "^2.6.1",

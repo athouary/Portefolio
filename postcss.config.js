@@ -15,6 +15,7 @@ const config = {
     require('postcss-cssnext')(
         cssnextConfig
     ),
+    require('postcss-nesting')(),
     require('css-mqpacker')({
         sort: true
     })

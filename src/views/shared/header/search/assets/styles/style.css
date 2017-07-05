@@ -10,5 +10,4 @@
     @media (--viewport-medium) {
         font-size: calc(var(--fs-4) * 1.2);
     }
-
 }

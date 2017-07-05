@@ -8,17 +8,12 @@
 *    m-xxl, mt-xxl, mb-xxl, ml-xxl, mr-xxl
 */
 
-@mixin createSize margin, m, xs, var(--space-xs) ;
-
-@mixin createSize margin, m, sm, var(--space-sm) ;
-
-@mixin createSize margin, m, md, var(--space-md) ;
-
-@mixin createSize margin, m, lg, var(--space-lg) ;
-
-@mixin createSize margin, m, xl, var(--space-xl) ;
-
-@mixin createSize margin, m, xxl, var(--space-xxl) ;
+@mixin createSize margin, m, xs, var (--space-xs);
+@mixin createSize margin, m, sm, var (--space-sm);
+@mixin createSize margin, m, md, var (--space-md);
+@mixin createSize margin, m, lg, var (--space-lg);
+@mixin createSize margin, m, xl, var (--space-xl);
+@mixin createSize margin, m, xxl, var (--space-xxl);
 
 /**
 *    Creating paddings
@@ -30,63 +25,46 @@
 *    p-xxl, pt-xxl, pb-xxl, pl-xxl, pr-xxl
 */
 
-@mixin createSize padding, p, xs, var(--space-xs) ;
-
-@mixin createSize padding, p, sm, var(--space-sm) ;
-
-@mixin createSize padding, p, md, var(--space-md) ;
-
-@mixin createSize padding, p, lg, var(--space-lg) ;
-
-@mixin createSize padding, p, xl, var(--space-xl) ;
-
-@mixin createSize padding, p, xxl, var(--space-xxl) ;
+@mixin createSize padding, p, xs, var (--space-xs);
+@mixin createSize padding, p, sm, var (--space-sm);
+@mixin createSize padding, p, md, var (--space-md);
+@mixin createSize padding, p, lg, var (--space-lg);
+@mixin createSize padding, p, xl, var (--space-xl);
+@mixin createSize padding, p, xxl, var (--space-xxl);
 
 /**
 *    Creating borders-radiuses
 *    br-xs, btr-xs, bbr-xs, blr-xs, brr-xs, btlr-xs, btrr-xs, bbrr-xs, bblr-xs
 */
 
-@mixin createRadius xs, var(--radius-xs) ;
-
-@mixin createRadius sm, var(--radius-sm) ;
-
-@mixin createRadius md, var(--radius-md) ;
-
-@mixin createRadius lg, var(--radius-lg) ;
-
-@mixin createRadius xl, var(--radius-xl) ;
-
-@mixin createRadius md, var(--radius-md) ;
+@mixin createRadius xs, var (--radius-xs);
+@mixin createRadius sm, var (--radius-sm);
+@mixin createRadius md, var (--radius-md);
+@mixin createRadius lg, var (--radius-lg);
+@mixin createRadius xl, var (--radius-xl);
+@mixin createRadius md, var (--radius-md);
 
 /**
 *    Creating borders
 *    b-grey-1, bt-grey-1, bb-grey-1, bl-grey-1, br-grey-1 "1px solid var(--grey-1)"
 */
 
-@mixin createBorder 1px, white, var(--white) ;
-
-@mixin createBorder 1px, red, var(--red) ;
-
-@mixin createBorder 1px, grey-1, var(--grey-1) ;
-
-@mixin createBorder 1px, grey-2, var(--grey-2) ;
-
-@mixin createBorder 1px, grey-3, var(--grey-3) ;
+@mixin createBorder 1px, white, var (--white);
+@mixin createBorder 1px, red, var (--red);
+@mixin createBorder 1px, grey-1, var (--grey-1);
+@mixin createBorder 1px, grey-2, var (--grey-2);
+@mixin createBorder 1px, grey-3, var (--grey-3);
 
 /**
 *    Creating hover effects
 *    c-white-hover:hover, c-white-hover:active, c-white-hover:focus, c-white-active
 */
-@mixin createHover c-white, color, var(--white) ;
-
-@mixin createHover c-red, color, var(--red-hover) ;
-
-@mixin createHover bg-red, background-color, var(--red) ;
-
-@mixin createHover b-red, border-color, var(--red-hover) ;
+@mixin createHover c-white, color, var (--white);
+@mixin createHover c-red, color, var (--red-hover);
+@mixin createHover bg-red, background-color, var (--red);
+@mixin createHover b-red, border-color, var (--red-hover);
 
 /**
 *    Generating the grid
 */
-@mixin gridCalc ;
+@mixin gridCalc;

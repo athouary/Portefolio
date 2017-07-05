@@ -97,15 +97,16 @@ const config = {
       filename: 'assets/styles/[name].css?[contenthash]',
       allChunks: true
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-      minChunks: 3,
-      name: "common"
-    }),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
       "window.jQuery": "jquery"
     }),
+    new webpack.optimize.CommonsChunkPlugin({
+      minChunks: 3,
+      name: "common"
+    }),
+    new webpack.optimize.ModuleConcatenationPlugin(),
     new BabiliPlugin({
       // here you can configure Babili options
       // https://github.com/babel/babili/tree/master/packages/babel-preset-babili#options

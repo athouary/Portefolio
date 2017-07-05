@@ -71,7 +71,8 @@ const configWebpackDev = {
     new webpack.optimize.CommonsChunkPlugin({
       minChunks: 3,
       name: "common"
-    })
+    }),
+    new webpack.optimize.ModuleConcatenationPlugin()
   ],
   resolve: {
     alias: {

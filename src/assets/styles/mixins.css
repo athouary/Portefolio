@@ -29,11 +29,13 @@
 
     .$(short)-h-$(sizeShort) {
         $(attr)-left: $sizeVal;
+
         $(attr)-right: $sizeVal;
     }
 
     .$(short)-v-$(sizeShort) {
         $(attr)-top: $sizeVal;
+
         $(attr)-bottom: $sizeVal;
     }
 }
@@ -52,12 +54,15 @@
     .bt-$(colorName) {
         border-top: $size solid $color;
     }
+
     .bb-$(colorName) {
         border-bottom: $size solid $color;
     }
+
     .bl-$(colorName) {
         border-left: $size solid $color;
     }
+
     .br-$(colorName) {
         border-right: $size solid $color;
     }

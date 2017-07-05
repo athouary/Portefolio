@@ -3,9 +3,9 @@
  */
 
 // Test for multiple import dependency
-import jQuery from 'vendor/jquery/dist/jquery';
+import jQuery from 'vendor/jquery/dist/jquery'
 
-jQuery(document).ready( function(){
+jQuery(document).ready(function () {
   // $('.container').css('background', 'yellow')
-  console.log( 'Script Component/home' );
-});
+  console.log('Script Component/home')
+})

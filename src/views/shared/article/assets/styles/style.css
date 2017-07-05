@@ -19,7 +19,6 @@
     @media (--viewport-medium) {
         font-size: calc(var(--fs-3) * 1.2);
     }
-
 }
 
 .testArticle {
@@ -27,8 +26,9 @@
 }
 
 .container {
-  background: green;
-  @media (width >= 768px) {
-    width: 2em;
-  }
+    background: green;
+
+    @media (width >= 768px) {
+        width: 2em;
+    }
 }

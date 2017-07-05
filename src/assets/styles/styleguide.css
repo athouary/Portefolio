@@ -21,11 +21,11 @@ body {
 
 /* custom selectors defintion */
 
-@custom-selector :--heading h1,h2,h3,h4,h5,h6;
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
 
 /* custom selectors usage */
 :--heading {
-    margin-top: 0
+    margin-top: 0;
 }
 
 
@@ -37,13 +37,13 @@ a {
 }
 
 a:hover {
-    color: gray(255, 50%)
+    color: gray(255, 50%);
 }
 
 a:active {
-    color: rebeccapurple
+    color: rebeccapurple;
 }
 
 a:any-link {
-    color: color(var(--highlightColor) blackness(+20%))
+    color: color(var(--highlightColor) blackness(+20%));
 }

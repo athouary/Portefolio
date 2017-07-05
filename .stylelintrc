@@ -2,7 +2,7 @@
   "extends": "stylelint-config-standard",
   "rules": {
     "indentation": 4,
-    "number-leading-zero": null,
-    "unit-whitelist": ["em", "rem", "s"]
+    "number-leading-zero": "never",
+    "unit-whitelist": ["em", "rem", "%", "px"]
   }
 }

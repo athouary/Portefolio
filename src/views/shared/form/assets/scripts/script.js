@@ -3,9 +3,8 @@
  */
 
 // Test for multiple import dependency
-import jQuery from 'vendor/jquery/dist/jquery';
+import jQuery from 'vendor/jquery/dist/jquery'
 
-jQuery(document).ready( function(){
-console.log( 'Script Component/home' );
-
-});
+jQuery(document).ready(function () {
+  console.log('Script Component/home')
+})

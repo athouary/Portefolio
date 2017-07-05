@@ -100,7 +100,7 @@ video {
     padding: 0;
     border: 0 none;
     font-size: 100%;
-    font: inherit
+    font: inherit;
 }
 
 article,
@@ -119,12 +119,12 @@ menu,
 nav,
 section,
 video {
-    display: block
+    display: block;
 }
 
 html {
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
 }
 
 
@@ -135,12 +135,12 @@ ul,
 li {
     list-style: none;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 blockquote,
 q {
-    quotes: none
+    quotes: none;
 }
 
 blockquote:before,
@@ -148,12 +148,12 @@ blockquote:after,
 q:before,
 q:after {
     content: '';
-    content: none
+    content: none;
 }
 
 table {
     border-collapse: collapse;
-    border-spacing: 0
+    border-spacing: 0;
 }
 
 a:hover,
@@ -161,7 +161,7 @@ a:active,
 a,
 object,
 embed {
-    outline: 0
+    outline: 0;
 }
 
 a {
@@ -171,11 +171,11 @@ a {
 
 img {
     border: 0 none;
-    vertical-align: middle
+    vertical-align: middle;
 }
 
 label {
-    cursor: pointer
+    cursor: pointer;
 }
 
 button,
@@ -238,20 +238,20 @@ textarea {
 button,
 input {
     line-height: normal;
-    -webkit-border-radius: 0
+    -webkit-border-radius: 0;
 }
 
 
 /*remove radius from iphone button*/
 
 button {
-    background-color: transparent
+    background-color: transparent;
 }
 
 [contenteditable="true"]:active,
 [contenteditable="true"]:focus {
     border: none;
-    outline: none
+    outline: none;
 }
 
 [draggable] {

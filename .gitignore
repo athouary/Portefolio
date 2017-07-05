@@ -11,4 +11,4 @@ src/assets/styles/STARTERFONT.css
 # npm package folder
 node_modules/
 node_shrinkwrap/
-npm-debug.log
+npm-debug.log.*

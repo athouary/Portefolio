@@ -32,10 +32,12 @@
     "test:eslintfmt": "./node_modules/.bin/eslint -c .eslintrc --fix ./src/ || true",
     "test:stylelint": "./node_modules/.bin/stylelint './src/**/*.css' --config .stylelintrc",
     "test:stylelfmt": "./node_modules/.bin/stylefmt -c .stylelintrc -r ./src/**/*.css || true",
-    "start": "cross-env NODE_ENV=development nodemon boot.js",
-    "start:open": "cross-env NODE_ENV=development nodemon boot.js --open",
+    "dev": "cross-env NODE_ENV=development nodemon boot.js",
+    "dev:open": "cross-env NODE_ENV=development nodemon boot.js --open",
+    "start": "npm run dev",
+    "start:open": "npm run dev:open",
     "doc:jsdoc": "./node_modules/.bin/jsdoc2md --configure './docs/jsdoc/jsdoc.json' './src/**/*.js' > './docs/jsdoc/API.md'",
-    "precommit": "npm run test:lint && npm run test"
+    "precommit": "npm run test:format && npm run test:lint && npm run test"
   },
   "dependencies": {
     "fontfaceobserver": "^2.0.13",

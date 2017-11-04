@@ -1,27 +1,26 @@
 require('babel-register')
 
-if ( process.env.NODE_ENV !== 'production' ) {
+if (process.env.NODE_ENV !== 'production') {
   require('./server')
 } else {
   const webpack = require('webpack')
   const webpackConfig = require('./webpack.config')
 
   webpack(webpackConfig.default, (err, stats) => {
-
     if (err || stats.hasErrors()) {
       // Fatal webpack errors (wrong configuration, etc)
       if (err) {
-        console.error(err.stack || err);
+        console.error(err.stack || err)
         if (err.details) {
-          console.error(err.details);
+          console.error(err.details)
         }
-        return;
+        return
       }
 
-      const info = stats.toJson();
+      const info = stats.toJson()
       // Compilation errors (missing modules, syntax errors, etc)
       if (stats.hasErrors()) {
-        console.error(info.errors);
+        console.error(info.errors)
       }
 
       // Compilation warnings
@@ -31,10 +30,9 @@ if ( process.env.NODE_ENV !== 'production' ) {
     }
     // Done processing
     console.log(stats.toString({
-      chunks: false,  // Makes the build much quieter
+      chunks: false, // Makes the build much quieter
       assets: true,
-      colors: true    // Shows colors in the console
-    }));
+      colors: true // Shows colors in the console
+    }))
   })
-
 }

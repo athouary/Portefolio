@@ -10,7 +10,7 @@ import webpackConfig from './webpack.config'
 import app from './config/app'
 import configVars from './config/project.config.js'
 
-const bundler = webpack(webpackConfig);
+const bundler = webpack(webpackConfig)
 const server = http.createServer(app)
 const port = app.get('port')
 
@@ -23,13 +23,15 @@ server.listen(port, () => {
  *  Run Browsersync and use middleware for Hot Module Replacement
  */
 
+ console.log( process.argv );
+
 const bs = browserSync.create()
 bs.init({
   open: process.argv[2] === '--open' ? true : false,
   logFileChanges: true,
   host: 'project.local.dev',
   proxy: {
-    target: 'http://localhost:' + port,
+    target: 'http://localhost:' + port
   },
   middleware: [
     webpackDevMiddleware(bundler, {

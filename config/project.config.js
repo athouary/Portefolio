@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-const path = require('path');
+const path = require('path')
 
 /**
  *   Configuration file for the current project
@@ -11,7 +11,7 @@ const path = require('path');
  *   assets: An object to specify the route and the actual path where the assets are stored
  *   aliases: Aliases for the templates
  */
-const gridMixin = require('./mixins.js');
+const gridMixin = require('./mixins.js')
 
 const configSite = {
   homePage: './components/home/index.html.twig',
@@ -20,13 +20,13 @@ const configSite = {
   aliases: {
     'STARTERPack': path.join(__dirname, '../src/views')
   },
-  gridMaxWidth: "1170px",
-  gridWidths: ["10", "15", "20", "25", "33.33", "45", "50", "60", "66.33", "75", "85", "90", "100"],
+  gridMaxWidth: '1170px',
+  gridWidths: ['10', '15', '20', '25', '33.33', '45', '50', '60', '66.33', '75', '85', '90', '100'],
   gridBreakpoints: new Map([
-    ["lg", 1200],
-    ["md", 1024],
-    ["sm", 768],
-    ["xs", 480]
+    ['lg', 1200],
+    ['md', 1024],
+    ['sm', 768],
+    ['xs', 480]
   ]),
   gridGutterSize: 20,
   gridOuterSpacing: 10,
@@ -41,7 +41,7 @@ const configSite = {
       features: {
         customProperties: {
           variables: {
-            "--GutterSize": this.gridGutterSize + "px"
+            '--GutterSize': this.gridGutterSize + 'px'
           }
         }
       }
@@ -51,4 +51,4 @@ const configSite = {
 
 // module.exports = config
 // export {config, configCss}
-module.exports = configSite;
+module.exports = configSite

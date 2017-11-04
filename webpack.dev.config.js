@@ -1,6 +1,6 @@
 import webpack from 'webpack'
 import path from 'path'
-import configSite from './config/project.config.js'
+import pkg from './package.json'
 
 const configWebpackDev = {
   devtool: '#eval',
@@ -12,48 +12,49 @@ const configWebpackDev = {
   output: {
     filename: 'assets/scripts/[name].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
+    publicPath: '/',
+    jsonpFunction: `${pkg.name.replace(/[^0-9a-z]/gi, '')}`
   },
   module: {
     rules: [{
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader'
-        }
-      },
-      {
-        test: /\.css$/,
-        exclude: /(node_modules|bower_components)/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1
-            }
-          },
-          {
-            loader: 'postcss-loader'
-          }
-        ]
-      },
-      {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        exclude: /(fonts|node_modules)/,
-        loader: 'file-loader',
-        options: {
-          name: './assets/images/[name].[ext]'
-        }
-      },
-      {
-        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-        exclude: /(images|node_modules)/,
-        loader: 'file-loader',
-        options: {
-          name: './assets/font/[name].[ext]'
-        }
+      test: /\.js$/,
+      exclude: /(node_modules|bower_components)/,
+      use: {
+        loader: 'babel-loader'
       }
+    },
+    {
+      test: /\.css$/,
+      exclude: /(node_modules|bower_components)/,
+      use: [
+        'style-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 1
+          }
+        },
+        {
+          loader: 'postcss-loader'
+        }
+      ]
+    },
+    {
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      exclude: /(fonts|node_modules)/,
+      loader: 'file-loader',
+      options: {
+        name: './assets/images/[name].[ext]'
+      }
+    },
+    {
+      test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+      exclude: /(images|node_modules)/,
+      loader: 'file-loader',
+      options: {
+        name: './assets/font/[name].[ext]'
+      }
+    }
     ]
   },
   plugins: [
@@ -64,13 +65,13 @@ const configWebpackDev = {
     }),
     // needed for internal dependency, but need expose in config.js for external call
     new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery"
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
     }),
     new webpack.optimize.CommonsChunkPlugin({
       minChunks: 3,
-      name: "common"
+      name: 'common'
     }),
     new webpack.optimize.ModuleConcatenationPlugin()
   ],
@@ -85,7 +86,7 @@ const configWebpackDev = {
   externals: {
     // import jquery is external and available
     //  on the global var jQuery
-    customImport: "Zepto"
+    customImport: 'Zepto'
   }
 }
 

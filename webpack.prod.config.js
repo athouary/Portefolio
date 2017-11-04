@@ -4,8 +4,6 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import BabiliPlugin from 'babili-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 
-import configSite from './config/project.config.js'
-
 const config = {
   context: path.resolve(__dirname, 'src'),
   entry: {
@@ -19,67 +17,67 @@ const config = {
   },
   module: {
     rules: [{
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader'
-        }
-      },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [{
-              loader: 'css-loader',
-              options: {
-                importLoaders: 1,
-                minimize: true || { /* CSSNano Options */ }
-              }
-            },
-            {
-              loader: 'postcss-loader'
-            }
-          ]
-        })
-      },
-      {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        exclude: /fonts/,
+      test: /\.js$/,
+      exclude: /(node_modules|bower_components)/,
+      use: {
+        loader: 'babel-loader'
+      }
+    },
+    {
+      test: /\.css$/,
+      exclude: /node_modules/,
+      use: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
         use: [{
-            loader: 'file-loader',
-            options: {
-              name: './assets/images/[name].[ext]?[hash]'
-            }
-          },
-          {
-            loader: 'image-webpack-loader',
-            query: {
-              mozjpeg: {
-                progressive: true,
-              },
-              gifsicle: {
-                interlaced: false,
-              },
-              optipng: {
-                optimizationLevel: 4,
-              },
-              pngquant: {
-                quality: '75-90',
-                speed: 3,
-              }
-            }
+          loader: 'css-loader',
+          options: {
+            importLoaders: 1,
+            minimize: true || { /* CSSNano Options */ }
           }
+        },
+        {
+          loader: 'postcss-loader'
+        }
         ]
-      },
-      {
-        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-        exclude: /images/,
+      })
+    },
+    {
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      exclude: /fonts/,
+      use: [{
         loader: 'file-loader',
         options: {
-          name: './assets/fonts/[name].[ext]?[hash]'
+          name: './assets/images/[name].[ext]?[hash]'
+        }
+      },
+      {
+        loader: 'image-webpack-loader',
+        query: {
+          mozjpeg: {
+            progressive: true
+          },
+          gifsicle: {
+            interlaced: false
+          },
+          optipng: {
+            optimizationLevel: 4
+          },
+          pngquant: {
+            quality: '75-90',
+            speed: 3
+          }
         }
       }
+      ]
+    },
+    {
+      test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+      exclude: /images/,
+      loader: 'file-loader',
+      options: {
+        name: './assets/fonts/[name].[ext]?[hash]'
+      }
+    }
     ]
   },
   plugins: [
@@ -98,13 +96,13 @@ const config = {
       allChunks: true
     }),
     new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery"
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
     }),
     new webpack.optimize.CommonsChunkPlugin({
       minChunks: 3,
-      name: "common"
+      name: 'common'
     }),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new BabiliPlugin({
@@ -126,7 +124,7 @@ const config = {
   externals: {
     // require("jquery") is external and available
     //  on the global var jQuery
-    customImport: "Zepto"
+    customImport: 'Zepto'
   }
 }
 

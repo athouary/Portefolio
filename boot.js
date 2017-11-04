@@ -4,7 +4,7 @@ if ( process.env.NODE_ENV !== 'production' ) {
   require('./server')
 } else {
   const webpack = require('webpack')
-  const webpackConfig = require('./webpack.prod.config')
+  const webpackConfig = require('./webpack.config')
 
   webpack(webpackConfig.default, (err, stats) => {
 

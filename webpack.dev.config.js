@@ -67,9 +67,9 @@ const configWebpackDev = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('developpement')
-    }),
+    // new webpack.DefinePlugin({
+    //   'process.env.NODE_ENV': JSON.stringify('developpement')
+    // }),
     // needed for internal dependency, but need expose in config.js for external call
     new webpack.ProvidePlugin({
       $: 'jquery',

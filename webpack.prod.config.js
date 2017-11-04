@@ -91,9 +91,9 @@ const config = {
   },
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
-    }),
+    // new webpack.DefinePlugin({
+    //   'process.env.NODE_ENV': JSON.stringify('production')
+    // }),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,

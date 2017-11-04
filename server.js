@@ -6,7 +6,7 @@ import webpackDevMiddleware from 'webpack-dev-middleware'
 import webpackHotMiddleware from 'webpack-hot-middleware'
 import browserSync from 'browser-sync'
 
-import webpackConfig from './webpack.dev.config'
+import webpackConfig from './webpack.config'
 import app from './config/app'
 import configVars from './config/project.config.js'
 

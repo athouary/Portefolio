@@ -2,6 +2,13 @@ import webpack from 'webpack'
 import path from 'path'
 import pkg from './package.json'
 
+function camelize (str) {
+  return str.replace(/^([A-Z])|[\s-_](\w)/g, function (match, p1, p2, offset) {
+    if (p2) return p2.toUpperCase();
+    return p1.toLowerCase();        
+  })
+}
+
 const configWebpackDev = {
   devtool: '#eval',
   context: path.resolve(__dirname, 'src'),
@@ -13,7 +20,7 @@ const configWebpackDev = {
     filename: 'assets/scripts/[name].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
-    jsonpFunction: `${pkg.name.replace(/[^0-9a-z]/gi, '')}`
+    jsonpFunction: `${camelize(pkg.name)}`
   },
   module: {
     rules: [{

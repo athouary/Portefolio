@@ -3,6 +3,14 @@ import path from 'path'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import BabiliPlugin from 'babili-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import pkg from './package.json'
+
+function camelize (str) {
+  return str.replace(/^([A-Z])|[\s-_](\w)/g, function (match, p1, p2, offset) {
+    if (p2) return p2.toUpperCase();
+    return p1.toLowerCase();        
+  })
+}
 
 const config = {
   context: path.resolve(__dirname, 'src'),
@@ -13,7 +21,8 @@ const config = {
   output: {
     filename: 'assets/scripts/[name].js?[chunkhash]',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
+    publicPath: '/',
+    jsonpFunction: `${camelize(pkg.name)}`
   },
   module: {
     rules: [{

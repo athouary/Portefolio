@@ -23,8 +23,6 @@ server.listen(port, () => {
  *  Run Browsersync and use middleware for Hot Module Replacement
  */
 
- console.log( process.argv );
-
 const bs = browserSync.create()
 bs.init({
   open: process.argv[2] === '--open' ? true : false,

@@ -1,6 +1,4 @@
-import webpack from 'webpack'
 import Config from 'webpack-config'
-import path from 'path'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import BabiliPlugin from 'babili-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'

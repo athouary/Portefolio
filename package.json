@@ -1,6 +1,6 @@
 {
   "name": "pmd-starterpack",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Complete Front-End workflow with Webpack, Babel, PostCss and real php Twig",
   "private": true,
   "homepage": "https://bitbucket.org/prismamediadigital/pmd-starterpack#readme",

@@ -1,6 +1,6 @@
 import Config from 'webpack-config'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
-import BabiliPlugin from 'babili-webpack-plugin'
+import BabelMinifyPlugin from 'babel-minify-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 export default new Config().extend(
@@ -69,11 +69,11 @@ export default new Config().extend(
       filename: 'assets/styles/[name].css?[contenthash]',
       allChunks: true
     }),
-    new BabiliPlugin({
+    new BabelMinifyPlugin({
       // here you can configure Babili options
       // https://github.com/babel/babili/tree/master/packages/babel-preset-babili#options
     }, {
-      // Here you can overide some config : 
+      // Here you can overide some config :
       // https://github.com/webpack-contrib/babili-webpack-plugin#overrides
     })
   ],

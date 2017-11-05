@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 const mixin = function (mixin) {
   let returnObject = {}

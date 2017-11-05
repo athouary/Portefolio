@@ -10,8 +10,8 @@
   },
   "author": "PrismaMedia",
   "engines": {
-    "node": "^6.9.1",
-    "npm": "^3.10.8"
+    "node": "^6.11.5",
+    "npm": "^3.10.10"
   },
   "scripts": {
     "rimraf": "./node_modules/.bin/rimraf",

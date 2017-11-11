@@ -12,8 +12,8 @@
 
         {% if env_serv is defined and env_serv == 'production' %}
             <!-- Latest compiled and minified CSS -->
-            <link rel="stylesheet" href="/assets/styles/common.css?48c8bb5824fe8a7e4207ee9fd5d38169&59b74cf5c59c5bc0b3f5">
-            <link rel="stylesheet" href="/assets/styles/main.css?da5c104323f819529f72e913020d92ba&59b74cf5c59c5bc0b3f5">
+            <link rel="stylesheet" href="/assets/styles/common.css">
+            <link rel="stylesheet" href="/assets/styles/main.css">
          {% endif %}
     {% endblock %}
     </head>
@@ -27,8 +27,13 @@
             In Layout Body
         {% endblock %}
 
-        <script src="/assets/scripts/common.js?561239feb37d6ff5a776&59b74cf5c59c5bc0b3f5"></script>
-        <script src="/assets/scripts/main.js?d38e154707644d3bcc47&59b74cf5c59c5bc0b3f5"></script>
+        {% block footer %}
+            <div id="footer">
+              In Layout Footer
+            </div>
+        {% endblock %}
+
+        <script src="/assets/scripts/main.js"></script>
 
         {% block javascript %}
         {% endblock %}

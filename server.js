@@ -21,7 +21,6 @@ server.listen(port, () => {
   console.log(chalk.green('\n' + '✔ Express Server listening on port'), chalk.cyan(port) + '\n')
 })
 
-
 /**
  *  Run Browsersync and use middleware for Hot Module Replacement
  */

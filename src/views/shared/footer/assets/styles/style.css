@@ -2,7 +2,12 @@
  * components/home/assets
  */
 
-@import "assets/styles/vars.css";
+@import "vars.css";
+
+#footer {
+  background:black;
+  color: white;
+}
 
 .test {
     font-size: 80px;
@@ -10,6 +15,6 @@
     // background: url('/images/background.jpg');
 
     @media (--viewport-medium) {
-        font-size: calc(var(--fontSize) * 1.2);
+      color: lime;
     }
 }

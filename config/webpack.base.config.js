@@ -13,10 +13,11 @@ function camelize (str) {
 export default new Config().merge({
   context: path.resolve(__dirname, '../src'),
   entry: {
-    common: ['jquery', 'scriptjs', './views/shared/header/config']
+    // common: ['./views/shared/header/config']
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
+    chunkFilename: 'assets/scripts/[name]-bundle.js',
     publicPath: '/',
     jsonpFunction: `${camelize(pkg.name)}`
   },
@@ -30,16 +31,15 @@ export default new Config().merge({
   },
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-      minChunks: 3,
-      name: 'common'
-    })
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   minChunks: 3,
+    //   name: 'common'
+    // })
   ],
   module: {
     rules: [{

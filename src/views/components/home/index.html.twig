@@ -46,6 +46,11 @@
 
 {% endblock %}
 
+{% block footer %}
+  {% include "./shared/footer/index.html.twig" %}
+{% endblock %}
+
+
 {% block javascript %}
     {# TODO: here it's work but it would be cool to manage it from shared than from component #}
     {#<script src="/assets/scripts/head.js"></script>#}

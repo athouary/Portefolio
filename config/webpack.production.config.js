@@ -1,7 +1,8 @@
 import Config from 'webpack-config'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import BabelMinifyPlugin from 'babel-minify-webpack-plugin'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
+// import HtmlWebpackPlugin from 'html-webpack-plugin'
+import ManifestPlugin from 'webpack-manifest-plugin'
 
 export default new Config().extend(
   'config/webpack.base.config.js').merge({
@@ -9,7 +10,7 @@ export default new Config().extend(
     main: ['./views/config']
   },
   output: {
-    filename: 'assets/scripts/[name].js?[chunkhash]'
+    chunkFilename: 'assets/scripts/[name]-[chunkhash].js'
   },
   module: {
     rules: [{
@@ -35,7 +36,7 @@ export default new Config().extend(
       use: [{
         loader: 'file-loader',
         options: {
-          name: './assets/images/[name].[ext]?[hash]'
+          name: './assets/images/[name]-[hash].[ext]'
         }
       },
       {
@@ -59,14 +60,15 @@ export default new Config().extend(
     }]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      inject: false,
-      hash: true,
-      filename: './views/layout.html.twig',
-      template: './views/layout.html.tpl.twig'
-    }),
+    // new HtmlWebpackPlugin({
+    //   inject: false,
+    //   hash: true,
+    //   filename: './views/layout.html.twig',
+    //   template: './views/layout.html.tpl.twig'
+    // }),
+    new webpack.optimize.ModuleConcatenationPlugin(),
     new ExtractTextPlugin({
-      filename: 'assets/styles/[name].css?[contenthash]',
+      filename: 'assets/styles/[name]-[contenthash].css',
       allChunks: true
     }),
     new BabelMinifyPlugin({
@@ -75,7 +77,8 @@ export default new Config().extend(
     }, {
       // Here you can overide some config :
       // https://github.com/webpack-contrib/babili-webpack-plugin#overrides
-    })
+    }),
+    new ManifestPlugin()
   ],
   performance: {
     hints: 'error'

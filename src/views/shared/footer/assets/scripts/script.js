@@ -6,5 +6,5 @@
 import jQuery from 'vendor/jquery/dist/jquery'
 
 jQuery(document).ready(function () {
-  console.log('Script Component/home')
+  console.log('Script Dynamic Shared/Footer')
 })

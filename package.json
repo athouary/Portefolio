@@ -19,7 +19,7 @@
     "build": "npm run clean && npm run font && npm run build:webpack",
     "build:webpack": "cross-env NODE_ENV=production node boot",
     "clean": "npm run rimraf dist",
-    "dev": "cross-env NODE_ENV=development nodemon boot.js",
+    "dev": "cross-env NODE_ENV=development webpack-dashboard -- nodemon boot.js",
     "dev:open": "cross-env NODE_ENV=development nodemon boot.js --open",
     "font": "dcs-icon-font --icons ./src/assets/fonts/svg/**/*.svg --out ./src/assets/fonts --fontname STARTERFONT --baseclass icon --classprefix icon- --cssTemplate ./src/assets/fonts/templates/fonts.hbs --cssDest ./src/assets/styles/ --cssFontsUrl ../fonts/STARTERFONT/",
     "test": "cross-env NODE_ENV=test jest --watch --coverage",
@@ -85,6 +85,7 @@
     "stylelint-config-standard": "^17.0.0",
     "webpack": "^3.8.1",
     "webpack-config": "^7.5.0",
+    "webpack-dashboard": "^1.0.2",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-hot-middleware": "^2.20.0"
   }

@@ -2,7 +2,6 @@ import chalk from 'chalk'
 import http from 'http'
 
 import webpack from 'webpack'
-import DashboardPlugin from 'webpack-dashboard/plugin'
 import webpackDevMiddleware from 'webpack-dev-middleware'
 import webpackHotMiddleware from 'webpack-hot-middleware'
 import browserSync from 'browser-sync'
@@ -15,7 +14,7 @@ const bundler = webpack(webpackConfig)
 const server = http.createServer(app)
 const port = app.get('port')
 
-bundler.apply(new DashboardPlugin());
+bundler.apply(new DashboardPlugin())
 // Listen on port 9000 for Express
 server.listen(port, () => {
   console.log(chalk.green('\n' + '✔ Express Server listening on port'), chalk.cyan(port) + '\n')

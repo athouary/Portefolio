@@ -14,7 +14,6 @@ const bundler = webpack(webpackConfig)
 const server = http.createServer(app)
 const port = app.get('port')
 
-bundler.apply(new DashboardPlugin())
 // Listen on port 9000 for Express
 server.listen(port, () => {
   console.log(chalk.green('\n' + '✔ Express Server listening on port'), chalk.cyan(port) + '\n')

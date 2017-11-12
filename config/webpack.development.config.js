@@ -3,11 +3,12 @@ import webpack from 'webpack'
 
 export default new Config().extend('config/webpack.base.config.js').merge({
   devtool: '#eval',
-  output: {
-    filename: 'assets/scripts/[name].js'
-  },
   entry: {
     main: ['webpack/hot/dev-server', 'webpack-hot-middleware/client?reload=true', './views/config']
+  },
+  output: {
+    filename: 'assets/scripts/[name].js',
+    chunkFilename: 'assets/scripts/[name]-bundle.js',
   },
   module: {
     rules: [{
@@ -37,8 +38,5 @@ export default new Config().extend('config/webpack.base.config.js').merge({
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
-  ],
-  performance: {
-    hints: 'warning'
-  }
+  ]
 })

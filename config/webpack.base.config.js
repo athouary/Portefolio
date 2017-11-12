@@ -1,5 +1,5 @@
-import webpack from 'webpack'
 import Config from 'webpack-config'
+import webpack from 'webpack'
 import path from 'path'
 import pkg from '../package.json'
 
@@ -17,30 +17,9 @@ export default new Config().merge({
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    chunkFilename: 'assets/scripts/[name]-bundle.js',
     publicPath: '/',
     jsonpFunction: `${camelize(pkg.name)}`
   },
-  resolve: {
-    alias: {
-      template: path.resolve(__dirname, '../src/views'),
-      vendor: path.resolve(__dirname, '../node_modules')
-    },
-    modules: ['node_modules', path.resolve(__dirname, '../src')],
-    extensions: ['.js', '.css']
-  },
-  plugins: [
-    new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery'
-    }),
-    // new webpack.optimize.CommonsChunkPlugin({
-    //   minChunks: 3,
-    //   name: 'common'
-    // })
-  ],
   module: {
     rules: [{
       test: /\.js$/,
@@ -57,5 +36,21 @@ export default new Config().merge({
         name: './assets/font/[name].[ext]'
       }
     }]
-  }
+  },
+  resolve: {
+    alias: {
+      template: path.resolve(__dirname, '../src/views'),
+      vendor: path.resolve(__dirname, '../node_modules')
+    },
+    modules: ['node_modules', path.resolve(__dirname, '../src')],
+    extensions: ['.js', '.css']
+  },
+  plugins: [
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    })
+  ]
 })

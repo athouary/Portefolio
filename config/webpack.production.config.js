@@ -1,15 +1,15 @@
 import Config from 'webpack-config'
+import webpack from 'webpack'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import BabelMinifyPlugin from 'babel-minify-webpack-plugin'
-// import HtmlWebpackPlugin from 'html-webpack-plugin'
 import ManifestPlugin from 'webpack-manifest-plugin'
 
-export default new Config().extend(
-  'config/webpack.base.config.js').merge({
+export default new Config().extend('config/webpack.base.config.js').merge({
   entry: {
     main: ['./views/config']
   },
   output: {
+    filename: 'assets/scripts/[name]-[hash].js',
     chunkFilename: 'assets/scripts/[name]-[chunkhash].js'
   },
   module: {
@@ -68,8 +68,7 @@ export default new Config().extend(
     // }),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new ExtractTextPlugin({
-      filename: 'assets/styles/[name]-[contenthash].css',
-      allChunks: true
+      filename: 'assets/styles/[name]-[contenthash].css'
     }),
     new BabelMinifyPlugin({
       // here you can configure Babili options

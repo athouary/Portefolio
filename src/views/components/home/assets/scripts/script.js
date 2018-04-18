@@ -1,0 +1,3 @@
+/*
+ * components/home/assets/script
+ */

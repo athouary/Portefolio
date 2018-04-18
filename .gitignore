@@ -1,0 +1,14 @@
+# Build files folder
+dist/
+
+# Ignore Doc subfolder
+docs/**/*.md
+
+# ignore font generated files and css
+src/assets/fonts/STARTERFONT
+src/assets/styles/STARTERFONT.css
+
+# npm package folder
+node_modules/
+node_shrinkwrap/
+npm-debug.log.*

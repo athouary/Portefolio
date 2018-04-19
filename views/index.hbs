@@ -1,4 +1,23 @@
-  {{> home/home}}
-  {{> about/about}}
-  {{> work/work}}
-  {{> contact/contact}}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Auxane Thouary - Développeur front-end</title>
+    {{#if inProduction}}
+        <link type="text/css" href="/styles/main-fb7e1fc526bbb258f93bc732e65da065.css" rel="stylesheet">
+    {{/if}}
+</head>
+<body class="cyan-bg">
+    {{>header/header}}
+    {{>home/home}}
+    {{>about/about}}
+    {{>work/work}}
+    {{>contact/contact}}
+    {{>footer/footer}}
+    {{#if envIsProduction}}
+        <script type="application/javascript" src="/scripts/main-b2abab6a029f13a26811.js"></script>
+    {{else}}
+        <script type="application/javascript" src="assets/scripts/main.js"></script>
+    {{/if}}
+</body>
+</html>

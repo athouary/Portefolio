@@ -14,7 +14,7 @@ const app = express()
 const hbs = ExpressHandlebars.create({
   layoutsDir: configVars.viewsPath,
   partialsDir: configVars.componentsPath,
-  defaultLayout: 'layout.hbs',
+  defaultLayout: 'index.hbs',
   extname: '.hbs'
 })
 let globalData = {
@@ -29,7 +29,7 @@ app.engine('.hbs', hbs.engine)
 app.set('view engine', '.hbs')
 
 // Regex to match the component name
-const componentNameRegex = new RegExp('(\/[a-z]*)$')
+const componentNameRegex = new RegExp('(/[a-z]*)$')
 const indexPath = resolvePath(configVars.viewsPath, 'index.hbs')
 
 // Promise to get the data from all the components
@@ -41,7 +41,6 @@ const fetchData = () => (new Promise((resolve, reject) => {
       fs.readFile(componentDataPath, (err, data) => {
         if (err) {
           console.log(err)
-          reject()
         } else {
           Object.assign(globalData, JSON.parse(data))
         }

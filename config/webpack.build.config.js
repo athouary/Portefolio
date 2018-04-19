@@ -3,6 +3,7 @@ import webpack from 'webpack'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import BabelMinifyPlugin from 'babel-minify-webpack-plugin'
 import ManifestPlugin from 'webpack-manifest-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
 export default new Config().extend('config/webpack.base.config.js').merge({
   entry: {
@@ -39,6 +40,10 @@ export default new Config().extend('config/webpack.base.config.js').merge({
           name: './images/[name]-[hash].[ext]'
         }
       }]
+    },
+    {
+      test: /layout.hbs$/,
+      loader: 'handlebars-loader'
     }]
   },
   plugins: [
@@ -55,7 +60,13 @@ export default new Config().extend('config/webpack.base.config.js').merge({
       // https://github.com/webpack-contrib/babili-webpack-plugin#overrides
     }),
     // TODO: Check if needed
-    new ManifestPlugin()
+    new ManifestPlugin(),
+    new HtmlWebpackPlugin({
+      inject: false,
+      title: 'Auxane Thouary - Développeur front-end',
+      filename: '../views/index.hbs',
+      template: './layout.hbs'
+    })
   ],
   performance: {
     hints: 'error'

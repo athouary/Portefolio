@@ -1,7 +1,7 @@
+/* stylelint-disable */
 /* ==========================================================================
 RESET
 ========================================================================== */
-
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 
@@ -10,8 +10,8 @@ html {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 

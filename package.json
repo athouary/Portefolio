@@ -22,7 +22,7 @@
     "prod": "cross-env NODE_ENV=production node app",
     "dev": "cross-env NODE_ENV=development nodemon app.js",
     "test": "cross-env NODE_ENV=test jest --watch --coverage",
-    "test:eslint": "./node_modules/.bin/eslint -c .eslintrc ./views/",
+    "test:eslint": "./node_modules/.bin/eslint -c .eslintrc ./config && ./node_modules/.bin/eslint -c .eslintrc ./src && ./node_modules/.bin/eslint -c .eslintrc ./views",
     "test:eslintfmt": "./node_modules/.bin/eslint -c .eslintrc --fix ./views/ || true",
     "test:lintjs": "npm run test:eslint && npm run test:eslintfmt",
     "test:stylelint": "./node_modules/.bin/stylelint './views/**/*.css' --config .stylelintrc",
@@ -31,7 +31,7 @@
     "doc:jsdoc": "./node_modules/.bin/jsdoc2md --configure './docs/jsdoc/jsdoc.json' './src/**/*.js' > './docs/jsdoc/API.md'",
     "precommit": "npm run test:lintjs && npm run test:lintcss"
   },
-  "devDependencies": {
+  "dependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",
     "babel-loader": "^7.1.2",
@@ -40,6 +40,10 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.22.0",
     "babel-register": "^6.26.0",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0"
+  },
+  "devDependencies": {
     "browser-sync": "^2.18.13",
     "chalk": "^2.3.0",
     "cross-env": "^5.1.1",
@@ -51,11 +55,10 @@
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
-    "express": "^4.16.2",
-    "express-handlebars": "^3.0.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
     "handlebars": "^4.0.11",
+    "handlebars-loader": "^1.7.0",
     "html-webpack-plugin": "^2.30.1",
     "husky": "^0.14.3",
     "jest": "^21.2.1",

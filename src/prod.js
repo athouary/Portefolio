@@ -7,14 +7,14 @@ import { resolve as resolvePath } from 'path'
 import fs from 'fs'
 
 // Import main config Object to specify paths to views and components
-import configSite from '../config/project.config.js'
+import configVars from '../config/project.config.js'
 
 // Init Express Server
 const app = express()
 const hbs = ExpressHandlebars.create({
-  layoutsDir: configSite.viewsPath,
-  partialsDir: configSite.componentsPath,
-  defaultLayout: 'layout.hbs',
+  layoutsDir: configVars.viewsPath,
+  partialsDir: configVars.componentsPath,
+  defaultLayout: 'index.hbs',
   extname: '.hbs'
 })
 let globalData = {
@@ -22,8 +22,8 @@ let globalData = {
 }
 
 // Regex to match the component name
-const componentNameRegex = new RegExp('(\/[a-z]*)$')
-const indexPath = resolvePath(configSite.viewsPath, 'index.hbs')
+const componentNameRegex = new RegExp('(/[a-z]*)$')
+const indexPath = resolvePath(configVars.viewsPath, 'index.hbs')
 
 // Promise to get the data from all the components
 const fetchData = () => (new Promise((resolve, reject) => {
@@ -33,11 +33,10 @@ const fetchData = () => (new Promise((resolve, reject) => {
     Object.keys(components).map(componentPath => {
       // TODO: put the component path in the project config
       const componentName = componentPath.replace(componentNameRegex, '')
-      const componentDataPath = resolvePath(configSite.componentsPath, componentName, `${componentName}.json`)
+      const componentDataPath = resolvePath(configVars.componentsPath, componentName, `${componentName}.json`)
       fs.readFile(componentDataPath, (err, data) => {
         if (err) {
           console.error(err)
-          reject()
         } else {
           Object.assign(globalData, JSON.parse(data))
         }
@@ -48,7 +47,7 @@ const fetchData = () => (new Promise((resolve, reject) => {
 }))
 
 // Create Handlebars Engine for Express
-app.set('views', configSite.viewsPath)
+app.set('views', configVars.viewsPath)
 
 app.engine('.hbs', hbs.engine)
 app.set('view engine', '.hbs')
@@ -60,5 +59,5 @@ fetchData().then(() => {
     res.render(indexPath, globalData)
   })
 
-  app.listen('passenger')  
+  app.listen('passenger')
 })

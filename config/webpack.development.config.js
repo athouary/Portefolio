@@ -8,7 +8,7 @@ export default new Config().extend('config/webpack.base.config.js').merge({
   },
   output: {
     filename: 'assets/scripts/[name].js',
-    chunkFilename: 'assets/scripts/[name]-bundle.js',
+    chunkFilename: 'assets/scripts/[name]-bundle.js'
   },
   module: {
     rules: [{

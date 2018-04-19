@@ -38,24 +38,6 @@ export default new Config().extend('config/webpack.base.config.js').merge({
         options: {
           name: './images/[name]-[hash].[ext]'
         }
-      },
-      {
-        loader: 'image-webpack-loader',
-        query: {
-          mozjpeg: {
-            progressive: true
-          },
-          gifsicle: {
-            interlaced: false
-          },
-          optipng: {
-            optimizationLevel: 4
-          },
-          pngquant: {
-            quality: '75-90',
-            speed: 3
-          }
-        }
       }]
     }]
   },

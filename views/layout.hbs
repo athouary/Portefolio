@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>{{htmlWebpackPlugin.options.title}}</title>
-    \{{#if inProduction}}
+    \{{#if envIsProduction}}
         <link type="text/css" href="{{htmlWebpackPlugin.files.css}}" rel="stylesheet">
     \{{/if}}
 </head>

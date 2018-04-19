@@ -46,9 +46,10 @@ const fetchData = () => (new Promise((resolve, reject) => {
   })
 }))
 
-// Create Handlebars Engine for Express
 app.set('views', configVars.viewsPath)
+app.use(express.static('public'))
 
+// Create Handlebars Engine for Express
 app.engine('.hbs', hbs.engine)
 app.set('view engine', '.hbs')
 

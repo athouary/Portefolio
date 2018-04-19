@@ -7,7 +7,7 @@ import webpackHotMiddleware from 'webpack-hot-middleware'
 import browserSync from 'browser-sync'
 
 import webpackConfig from './webpack.config'
-import app from './config/app'
+import app from './src/dev'
 import configVars from './config/project.config.js'
 
 const bundler = webpack(webpackConfig)
@@ -48,11 +48,3 @@ bs.init({
     configVars.viewsPath + '/**/*.json'
   ]
 })
-
-// TODO: check if needs to be removed
-// bs.watch(
-//   [
-//       configVars.assetsPath + '/**/*.css',
-//       configVars.assetsPath + '/**/*.js',
-//       configVars.viewsPath + '/**/*.twig'
-//   ], {ignored: '*.map.css'});

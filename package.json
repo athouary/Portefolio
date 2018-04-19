@@ -17,10 +17,10 @@
     "rimraf": "./node_modules/.bin/rimraf",
     "ncp": "./node_modules/.bin/ncp",
     "build": "npm run clean && npm run build:webpack",
-    "build:webpack": "cross-env NODE_ENV=production nodemon boot.js",
-    "clean": "npm run rimraf dist",
-    "dev": "cross-env NODE_ENV=development nodemon boot.js",
-    "dev:open": "cross-env NODE_ENV=development nodemon boot.js --open",
+    "build:webpack": "cross-env NODE_ENV=build node app",
+    "clean": "npm run rimraf public",
+    "prod": "cross-env NODE_ENV=production node app",
+    "dev": "cross-env NODE_ENV=development nodemon app.js",
     "test": "cross-env NODE_ENV=test jest --watch --coverage",
     "test:eslint": "./node_modules/.bin/eslint -c .eslintrc ./views/",
     "test:eslintfmt": "./node_modules/.bin/eslint -c .eslintrc --fix ./views/ || true",
@@ -28,12 +28,8 @@
     "test:stylelint": "./node_modules/.bin/stylelint './views/**/*.css' --config .stylelintrc",
     "test:stylelfmt": "./node_modules/.bin/stylefmt -c .stylelintrc -r ./src/**/*.css || true",
     "test:lintcss": "npm run test:stylelint",
-    "prod": "cross-env NODE_ENV=production nodemon boot.js",
     "doc:jsdoc": "./node_modules/.bin/jsdoc2md --configure './docs/jsdoc/jsdoc.json' './src/**/*.js' > './docs/jsdoc/API.md'",
     "precommit": "npm run test:lintjs && npm run test:lintcss"
-  },
-  "dependencies": {
-    "jquery": "^3.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

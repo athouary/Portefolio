@@ -2,7 +2,7 @@ require('babel-register')
 
 if (process.env.NODE_ENV === 'development') {
   require('./server')
-} else {
+} else if (process.env.NODE_ENV === 'build') {
   const webpack = require('webpack')
   const webpackConfig = require('./webpack.config')
 
@@ -35,4 +35,6 @@ if (process.env.NODE_ENV === 'development') {
       colors: true // Shows colors in the console
     }))
   })
+} else {
+  require('./src/prod')
 }

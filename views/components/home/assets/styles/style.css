@@ -1,0 +1,16 @@
+/*
+ * components/home/assets
+ */
+
+@import "vars.css";
+
+.classFromHomeComponent {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  background: url('../images/background.jpg');
+
+  @media (--viewport-medium) {
+    font-size: calc(var(--fs-3) * 1.2);
+  }
+}

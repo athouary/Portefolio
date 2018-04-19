@@ -6,11 +6,11 @@ import ManifestPlugin from 'webpack-manifest-plugin'
 
 export default new Config().extend('config/webpack.base.config.js').merge({
   entry: {
-    main: ['./views/config']
+    main: ['./config']
   },
   output: {
-    filename: 'assets/scripts/[name]-[hash].js',
-    chunkFilename: 'assets/scripts/[name]-[chunkhash].js'
+    filename: 'scripts/[name]-[hash].js',
+    chunkFilename: 'scripts/[name]-[chunkhash].js'
   },
   module: {
     rules: [{
@@ -36,7 +36,7 @@ export default new Config().extend('config/webpack.base.config.js').merge({
       use: [{
         loader: 'file-loader',
         options: {
-          name: './assets/images/[name]-[hash].[ext]'
+          name: './images/[name]-[hash].[ext]'
         }
       },
       {
@@ -62,7 +62,7 @@ export default new Config().extend('config/webpack.base.config.js').merge({
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin(),
     new ExtractTextPlugin({
-      filename: 'assets/styles/[name]-[contenthash].css'
+      filename: 'styles/[name]-[contenthash].css'
     }),
     new BabelMinifyPlugin({
       // TODO: Check if needed

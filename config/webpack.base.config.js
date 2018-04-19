@@ -11,9 +11,9 @@ function camelize (str) {
 }
 
 export default new Config().merge({
-  context: path.resolve(__dirname, '../src'),
+  context: path.resolve(__dirname, '../views'),
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, '../public'),
     publicPath: '/',
     jsonpFunction: `${camelize(pkg.name)}`
   },
@@ -30,14 +30,14 @@ export default new Config().merge({
       exclude: /(images|node_modules)/,
       loader: 'file-loader',
       options: {
-        name: './assets/font/[name].[ext]'
+        name: './views/assets/font/[name].[ext]'
       }
     }]
   },
   resolve: {
     alias: {
-      Views: path.resolve(__dirname, '../src/views'),
-      Components: path.resolve(__dirname, '../src/views/components'),
+      Views: path.resolve(__dirname, '../views'),
+      Components: path.resolve(__dirname, '../views/components'),
       Vendors: path.resolve(__dirname, '../node_modules')
     },
     modules: ['node_modules', path.resolve(__dirname, '../src')],

@@ -24,7 +24,7 @@ All path configurations should be administrable in ```config/project.config.js``
 
 **homePage** point to the template you want to render (not the layout, the template).
 
-**viewsPath** are related to the folder of all views basicly ```src/views```
+**viewsPath** are related to the folder of all views basicly ```/views```
 
 **assetsPath** where all commons files are stored (css, js, images, etc.)/
 

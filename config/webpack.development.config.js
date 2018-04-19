@@ -4,7 +4,7 @@ import webpack from 'webpack'
 export default new Config().extend('config/webpack.base.config.js').merge({
   devtool: '#eval',
   entry: {
-    main: ['webpack/hot/dev-server', 'webpack-hot-middleware/client?reload=true', './views/config']
+    main: ['webpack/hot/dev-server', 'webpack-hot-middleware/client?reload=true', './config']
   },
   output: {
     filename: 'assets/scripts/[name].js',

@@ -6,7 +6,7 @@ const cssnextConfig = configSite.cssNextConfig()
 const config = {
   plugins: [
     require('postcss-import')({
-      path: path.resolve(__dirname, './src/assets/styles') // Du to some bug with resolve of relative/absolute path we need to define it here ATM
+      path: path.resolve(__dirname, './views/styles') // Du to some bug with resolve of relative/absolute path we need to define it here ATM
     }),
     require('postcss-mixins')({
       mixins: configSite.mixins

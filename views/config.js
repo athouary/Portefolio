@@ -5,10 +5,10 @@ if ( process.env.NODE_ENV !== 'production' ) {
 }
 
 // import Main JS
-import '../assets/scripts/main'
+import './assets/scripts/main'
 
 // import Main CSS
-import '../assets/styles/main'
+import './assets/styles/main'
 
 // import Main Images
 // import '../assets/images/sample.jpg'

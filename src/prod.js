@@ -1,6 +1,7 @@
 // Import Express and engine for Handlebars
 import express from 'express'
 import ExpressHandlebars from 'express-handlebars'
+import Locale from 'locale'
 
 // Import path tools
 import { resolve as resolvePath } from 'path'
@@ -17,8 +18,14 @@ const hbs = ExpressHandlebars.create({
   defaultLayout: 'index.hbs',
   extname: '.hbs'
 })
+const languages = ['fr', 'en']
 let globalData = {
-  envIsProduction: process.env.NODE_ENV === 'production'
+  en: {
+    envIsProduction: true
+  },
+  fr: {
+    envIsProduction: true
+  }
 }
 
 // Regex to match the component name
@@ -33,13 +40,15 @@ const fetchData = () => (new Promise((resolve, reject) => {
     Object.keys(components).map(componentPath => {
       // TODO: put the component path in the project config
       const componentName = componentPath.replace(componentNameRegex, '')
-      const componentDataPath = resolvePath(configVars.componentsPath, componentName, `${componentName}.json`)
-      fs.readFile(componentDataPath, (err, data) => {
-        if (err) {
-          console.error(err)
-        } else {
-          Object.assign(globalData, JSON.parse(data))
-        }
+      Object.keys(globalData).map((language) => {
+        const componentDataPath = resolvePath(configVars.componentsPath, componentName, `${componentName}.${language}.json`)
+        fs.readFile(componentDataPath, (err, data) => {
+          if (err) {
+            console.log(err)
+          } else {
+            Object.assign(globalData[language], JSON.parse(data))
+          }
+        })
       })
     })
     resolve()
@@ -48,6 +57,7 @@ const fetchData = () => (new Promise((resolve, reject) => {
 
 app.set('views', configVars.viewsPath)
 app.use(express.static('public'))
+app.use(Locale(languages, 'fr'))
 
 // Create Handlebars Engine for Express
 app.engine('.hbs', hbs.engine)
@@ -57,7 +67,13 @@ app.set('view engine', '.hbs')
 fetchData().then(() => {
   // Routing: handle client requests
   app.get('/', (req, res) => {
-    res.render(indexPath, globalData)
+    let currentLanguage
+    if (languages.indexOf(req.query.lang) >= 0) {
+      currentLanguage = req.query.lang
+    } else {
+      currentLanguage = req.locale
+    }
+    res.render(indexPath, globalData[currentLanguage])
   })
 
   app.listen('passenger')

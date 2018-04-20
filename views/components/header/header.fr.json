@@ -1,0 +1,22 @@
+{
+  "header": {
+    "menuLogo": {
+      "url": "#",
+      "image":{
+        "url": "logo.png",
+        "title":  "FRANCAIS"
+      }
+    },
+    "menuItems": [
+      {
+        "link": "#about",
+        "title": "About me",
+        "subtitle": "Get to know me",
+        "image": {
+          "url": "about.png",
+          "title":  "About icon"
+        }
+      }
+    ]
+  }
+}

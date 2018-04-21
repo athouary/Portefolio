@@ -21,6 +21,9 @@
   --fs-6: 24px;
   --fs-7: 36px;
   --fs-8: 42px;
+
+  /* OTHERS */
+  --menu-width: 190px;
 }
 
 /*  Custom media queries

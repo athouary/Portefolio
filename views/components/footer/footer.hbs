@@ -1,3 +1,10 @@
 <footer>
-  Footer block: {{footer.data}}
+  <p class="footer-text">{{footer.text}}</p>
+  <p class="footer-copyright">{{footer.copyright}}</p>
+  <div class="footer-action">
+    <a href="{{footer.button.url}}" class="footer-button">
+      <img src="{{footer.button.image.url}}" alt="{{footer.button.image.title}}"/>
+    </a>
+    <div class="footer-line"></div>
+  </div>
 </footer>

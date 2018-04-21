@@ -47,7 +47,6 @@ const fetchData = () => (new Promise((resolve, reject) => {
       const componentName = componentPath.replace(componentNameRegex, '')
       Object.keys(globalData).map((language) => {
         const componentDataPath = resolvePath(configVars.componentsPath, componentName, `${componentName}.${language}.json`)
-        console.log(componentDataPath)
         fs.readFile(componentDataPath, (err, data) => {
           if (err) {
             console.log(err)
@@ -57,7 +56,6 @@ const fetchData = () => (new Promise((resolve, reject) => {
         })
       })
     })
-    console.log(globalData)
     resolve()
   })
 }))

@@ -1,5 +1,63 @@
 {
-  "work": {
-    "data": "Data from work page"
+  "works": {
+    "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit minus blanditiis mollitia assumenda quaerat repellendus ipsa porro, tenetur! Fugit eligendi cumque illum saepe, repellat quia, sunt tempore iusto laborum amet hic veritatis quibusdam impedit error provident harum voluptate iste reiciendis quidem! Quibusdam incidunt doloribus itaque aspernatur dolores inventore blanditiis mollitia.",
+    "projects": [
+      {
+        "title": "Titre de la réalisation",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium est fugit, vel quasi facere quaerat, ducimus ut quos illum accusamus.",
+        "image": {
+          "url": "",
+          "title": "Project image"
+        },
+        "button": "En savoir plus",
+        "skills": [
+          "Symfony 3",
+          "CSS",
+          "HTML"
+        ]
+      },
+      {
+        "title": "Titre de la réalisation",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium est fugit, vel quasi facere quaerat, ducimus ut quos illum accusamus.",
+        "image": {
+          "url": "",
+          "title": "Project image"
+        },
+        "button": "En savoir plus",
+        "skills": [
+          "Symfony 3",
+          "CSS",
+          "HTML"
+        ]
+      },
+      {
+        "title": "Titre de la réalisation",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium est fugit, vel quasi facere quaerat, ducimus ut quos illum accusamus.",
+        "image": {
+          "url": "",
+          "title": "Project image"
+        },
+        "button": "En savoir plus",
+        "skills": [
+          "Symfony 3",
+          "CSS",
+          "HTML"
+        ]
+      },
+      {
+        "title": "Titre de la réalisation",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium est fugit, vel quasi facere quaerat, ducimus ut quos illum accusamus.",
+        "image": {
+          "url": "",
+          "title": "Project image"
+        },
+        "button": "En savoir plus",
+        "skills": [
+          "Symfony 3",
+          "CSS",
+          "HTML"
+        ]
+      }
+    ]
   }
 }

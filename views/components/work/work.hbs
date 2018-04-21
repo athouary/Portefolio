@@ -1,3 +1,28 @@
 <section>
-  Work page {{work.data}}
+  <h3 class="works-title">
+    {{works.title}}
+  </h3>
+  {{#each works.projects}}
+    <div class="works-picture">
+      <img src="{{this.image.url}}" alt="{{this.image.title}}">
+      <div class="works-action">
+        <button class="works-button">
+          {{this.button}}
+        </button>
+      </div>
+      <article>
+        <h2 class="works-project-title">{{this.title}}</h2>
+        <p class="works-project-text">{{this.text}}</p>
+        {{#each this.skills}}
+          <ul>
+            <li class="works-project-skill">{{this}}</li>
+          </ul>
+        {{/each}}
+      </article>
+      <div class="works-controls">
+        <button class="works-previous"><</button>
+        <button class="works-next">></button>
+      </div>
+    </div>
+  {{/each}}
 </section>

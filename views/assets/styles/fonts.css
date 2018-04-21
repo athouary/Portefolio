@@ -1,0 +1,49 @@
+/* stylelint-disable */
+@font-face {
+  font-family: 'Cambria';
+  font-path: '../fonts/Cambria';
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cambria';
+  font-path: '../fonts/Cambria-Bold';
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cambria';
+  font-path: '../fonts/Cambria-BoldItalic';
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Cambria';
+  font-path: '../fonts/Cambria-Italic';
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'HelveticaCd';
+  font-path: '../fonts/Helvetica-Condensed';
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaCd';
+  font-path: '../fonts/Helvetica-CondensedBold';
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaCd';
+  font-path: '../fonts/Helvetica-CondBoldObl';
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'HelveticaCd';
+  font-path: '../fonts/Helvetica-CondensedOblique';
+  font-weight: normal;
+  font-style: italic;
+}

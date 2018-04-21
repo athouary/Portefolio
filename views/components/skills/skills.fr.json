@@ -1,0 +1,97 @@
+{
+  "skills": {
+    "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dolorum, magni suscipit porro molestias quibusdam ipsam.",
+    "softSkills": [
+      {
+        "title": "Adaptation",
+        "subtitle": "Sous-titre",
+        "image": {
+          "url": "",
+          "title": "Icone adapation"
+        }
+      },
+      {
+        "title": "Gestion de projet",
+        "subtitle": "Sous-titre",
+        "image": {
+          "url": "",
+          "title": "Icone gestion de projet"
+        }
+      },
+      {
+        "title": "Travail d'équipe",
+        "subtitle": "Sous-titre",
+        "image": {
+          "url": "",
+          "title": "Icone travail d'équipe"
+        }
+      },
+      {
+        "title": "Leadership",
+        "subtitle": "Sous-titre",
+        "image": {
+          "url": "",
+          "title": "Icone leadership"
+        }
+      }
+    ],
+    "hardSkills": [
+      {
+        "title": "HTML 5 & CCS 3",
+        "level": 8
+      },
+      {
+        "title": "HTML 5 & CCS 3",
+        "level": 8
+      },
+      {
+        "title": "HTML 5 & CCS 3",
+        "level": 8
+      },
+      {
+        "title": "HTML 5 & CCS 3",
+        "level": 8
+      },
+      {
+        "title": "HTML 5 & CCS 3",
+        "level": 8
+      },
+      {
+        "title": "HTML 5 & CCS 3",
+        "level": 8
+      },
+      {
+        "title": "HTML 5 & CCS 3",
+        "level": 8
+      },
+      {
+        "title": "HTML 5 & CCS 3",
+        "level": 8
+      },
+      {
+        "title": "HTML 5 & CCS 3",
+        "level": 8
+      },
+      {
+        "title": "HTML 5 & CCS 3",
+        "level": 8
+      },
+      {
+        "title": "HTML 5 & CCS 3",
+        "level": 8
+      },
+      {
+        "title": "HTML 5 & CCS 3",
+        "level": 8
+      },
+      {
+        "title": "HTML 5 & CCS 3",
+        "level": 8
+      }
+    ],
+    "button": {
+      "title": "Télécharger mon CV",
+      "url": ""
+    }
+  }
+}

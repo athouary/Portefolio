@@ -68,6 +68,7 @@
     "ncp": "^2.0.0",
     "nodemon": "^1.12.1",
     "postcss-cssnext": "^3.0.2",
+    "postcss-fontpath": "^1.0.0",
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",
     "postcss-mixins": "^6.2.0",

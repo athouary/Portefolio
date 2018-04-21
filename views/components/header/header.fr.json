@@ -4,17 +4,51 @@
       "url": "#",
       "image":{
         "url": "logo.png",
-        "title":  "FRANCAIS"
+        "title":  "Logo Auxane Thouary"
       }
     },
     "menuItems": [
       {
-        "link": "#about",
-        "title": "About me",
-        "subtitle": "Get to know me",
+        "url": "#apropos",
+        "title": "À propos",
+        "subtitle": "Qui-suis-je&nbsp;?",
         "image": {
           "url": "about.png",
-          "title":  "About icon"
+          "title": "Icone à propos"
+        }
+      },
+      {
+        "url": "#projets",
+        "title": "Projets",
+        "subtitle": "Mes réalisations",
+        "image": {
+          "url": "work.png",
+          "title": "Icone projets"
+        }
+      },
+      {
+        "url": "#contact",
+        "title": "Contact",
+        "subtitle": "Restons en contact",
+        "image": {
+          "url": "contact.png",
+          "title": "Icone contact"
+        }
+      }
+    ],
+    "menuExternals": [
+      {
+        "url": "#",
+        "image": {
+          "url": "linkedin.png",
+          "title": "Icone LinkedIn"
+        }
+      },
+      {
+        "url": "#",
+        "image": {
+          "url": "github.png",
+          "title": "Icone GitHub"
         }
       }
     ]

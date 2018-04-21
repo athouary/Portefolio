@@ -1,5 +1,13 @@
 {
   "footer": {
-    "data": "Data from footer"
+    "text": "Lorem ipsum dolor sit amet.",
+    "copyright": "©2018",
+    "button": {
+      "url": "",
+      "image": {
+        "url": "",
+        "title": "Flèche vers le haut"
+      }
+    }
   }
 }

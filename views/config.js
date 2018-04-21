@@ -14,7 +14,7 @@ import './assets/styles/main'
 // import '../assets/images/sample.jpg'
 
 // import Components
-import Header from 'Components/header/config'
+import 'Components/header/config'
 
 // TODO: move to appropriate place
 function isInViewport(elem) {

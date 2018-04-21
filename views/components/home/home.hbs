@@ -1,3 +1,18 @@
 <section>
-  Home block: {{home.data}}
+  <h1>
+    <span class="home-title">{{home.title}}</span>
+    <span class="home-subtitle">{{home.subtitle}}</span>
+  </h1>
+  <ul class="home-language">
+  {{#each home.languages}}
+    <li class="home-language">
+      <a href="{{this.url}}">{{this.title}}</a>
+    </li>
+  {{/each}}
+  </ul>
+  <div class="home-action">
+    <a class="home-button" href="{{home.button.url}}">
+      {{home.button.title}}
+    </a>
+  </div>
 </section>

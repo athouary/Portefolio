@@ -1,5 +1,26 @@
 {
   "contact": {
-    "data": "Data from contact page"
+    "name": {
+      "placeholder": "Votre nom",
+      "image": {
+        "url": "",
+        "title": "Image champ nom"
+      }
+    },
+    "object": {
+      "placeholder": "Objet",
+      "image": {
+        "url": "",
+        "title": "Image champ objet"
+      }
+    },
+    "message": {
+      "placeholder": "Message",
+      "image": {
+        "url": "",
+        "title": "Image champ message"
+      }
+    },
+    "button": "Envoyer"
   }
 }

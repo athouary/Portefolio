@@ -1,5 +1,20 @@
 {
   "home": {
-    "data": "New data from home"
+    "title": "Bonjour, je suis développeur web,",
+    "subtitle":"mais pas seulement...",
+    "languages": [
+      {
+        "title": "en",
+        "url": "?lang=en"
+      },
+      {
+        "title": "fr",
+        "url": "?lang=fr"
+      }
+    ],
+    "button": {
+      "title": "Découvrez-moi",
+      "url": "#about"
+    }
   }
 }

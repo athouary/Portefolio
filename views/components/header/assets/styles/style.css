@@ -7,13 +7,62 @@
   top: 0;
   left: 0;
   background-color: var(--white);
+  padding: 170px 0 65px;
+
+  & nav {
+    height: 100%;
+  }
+}
+
+.menu-logo {
+  position: absolute;
+  top: 40px;
+  text-align: center;
+}
+
+.menu-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  font-family: "HelveticaCd";
+  align-items: stretch;
+  justify-content: space-evenly;
+  height: 100%;
 }
 
 .menu-item {
   font-family: "Cambria";
+}
+
+.menu-link {
+  display: block;
+  text-align: center;
+
+  & > * {
+    display: block;
+  }
+}
+
+.menu-title {
+  font-family: "HelveticaCd";
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.menu-subtitle {
+  font-family: "Cambria";
+  text-transform: uppercase;
+  font-size: var(--fs-2);
+}
+
+.menu-externals {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > * + * {
+    margin-left: 5px;
+  }
 }

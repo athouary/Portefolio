@@ -162,6 +162,7 @@ a,
 object,
 embed {
   outline: 0;
+  color: inherit;
 }
 
 a {

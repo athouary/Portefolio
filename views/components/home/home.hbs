@@ -1,11 +1,11 @@
-<section>
+<section class="home">
   <h1>
-    <span class="home-title">{{home.title}}</span>
-    <span class="home-subtitle">{{home.subtitle}}</span>
+    <div class="home-title">{{home.title}}</div>
+    <div class="home-subtitle">{{home.subtitle}}</div>
   </h1>
-  <ul class="home-language">
+  <ul class="home-languages">
   {{#each home.languages}}
-    <li class="home-language">
+    <li class="home-language selected">
       <a href="{{this.url}}">{{this.title}}</a>
     </li>
   {{/each}}

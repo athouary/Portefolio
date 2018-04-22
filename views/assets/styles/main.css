@@ -11,4 +11,6 @@
 
 body {
   padding-left: var(--menu-width);
+  font-family: "Cambria";
+  background-color: var(--grey-3);
 }

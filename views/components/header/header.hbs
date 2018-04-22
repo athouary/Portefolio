@@ -1,14 +1,14 @@
 <header class="menu">
   <nav>
-    <img class="menu-logo" src="{{header.menuLogo.image.url}}" alt="{{header.menuLogo.image.title}}">
+    <a class="menu-logo" href="{{header.menuLogo.url}}">
+      <img class="" src="{{header.menuLogo.image.url}}" alt="{{header.menuLogo.image.title}}">
+    </a>
     <ul class="menu-list">
-      <li class="menu-item"><a class="menu-link" href="{{header.menuLogo.url}}">
-      </a></li>
       {{#each header.menuItems}}
       <li class="menu-item"><a class="menu-link" href="{{this.url}}">
         <span class="menu-title">{{this.title}}</span>
         <img src="{{this.image.url}}" alt="{{this.image.title}}"/>
-        <span "menu-subtitle">{{this.subtitle}}</span>
+        <span class="menu-subtitle">{{{this.subtitle}}}</span>
       </a></li>
       {{/each}}
     </ul>

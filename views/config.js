@@ -15,6 +15,7 @@ import './assets/styles/main'
 
 // import Components
 import 'Components/header/config'
+import 'Components/home/config'
 
 // TODO: move to appropriate place
 function isInViewport(elem) {

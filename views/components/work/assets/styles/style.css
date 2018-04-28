@@ -1,0 +1,85 @@
+@import "vars";
+
+.works {
+    background-color: var(--grey-3);
+}
+
+.works-item {
+    padding-top: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.works-picture {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.works-image {
+    flex-shrink: 0;
+    display: block;
+    height: 375px;
+    width: 370px; /* TODO: Remove */
+    background-color: var(--highlightColor);
+}
+
+.works-action {
+    position: absolute;
+    bottom: 0;
+}
+
+.works-column {
+    position: relative;
+    left: -20px;
+    top: 20px;
+}
+
+.works-project {
+    color: var(--white);
+    padding: 30px 25px 80px;
+    background-color: var(--purple);
+    width: 400px;
+    position: relative;
+}
+
+.works-project-title {
+    font-size: var(--fs-6);
+    padding-bottom: 20px;
+}
+
+.works-project-skills {
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+}
+
+.works-project-skill {
+    font-family: "HelveticaCd";
+    font-size: var(--fs-2);
+    display: inline-block;
+    border: 1px solid var(--white);
+    border-radius: 12px;
+    padding: 2px 8px;
+}
+
+.works-controls {
+    display: flex;
+    position: relative;
+    top: 30px;
+    left: 50px;
+}
+
+.works-arrow {
+    display: inline-block;
+    color: var(--white);
+    background-color: var(--black);
+    width: 45px;
+    height: 45px;
+    font-size: var(--fs-5);
+    margin-right: 10px;
+}

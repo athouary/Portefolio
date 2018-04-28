@@ -5,13 +5,13 @@
   </h1>
   <ul class="home-languages">
   {{#each home.languages}}
-    <li class="home-language selected">
+    <li class="home-language isSelected">
       <a href="{{this.url}}">{{this.title}}</a>
     </li>
   {{/each}}
   </ul>
-  <div class="home-action">
-    <a class="home-button" href="{{home.button.url}}">
+  <div class="action">
+    <a class="action-button" href="{{home.button.url}}">
       {{home.button.title}}
     </a>
   </div>

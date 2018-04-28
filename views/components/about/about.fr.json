@@ -1,9 +1,9 @@
 {
   "about": {
-    "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit minus blanditiis mollitia assumenda quaerat repellendus ipsa porro, tenetur! Fugit eligendi cumque illum saepe, repellat quia, sunt tempore iusto laborum amet hic veritatis quibusdam impedit error provident harum voluptate iste reiciendis quidem! Quibusdam incidunt doloribus itaque aspernatur dolores inventore blanditiis mollitia.",
-    "text": "Ce que j'aime dans la vie",
+    "title": "Ce que j'aime dans la vie",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit minus blanditiis mollitia assumenda quaerat repellendus ipsa porro, tenetur! Fugit eligendi cumque illum saepe, repellat quia, sunt tempore iusto laborum amet hic veritatis quibusdam impedit error provident harum voluptate iste reiciendis quidem! Quibusdam incidunt doloribus itaque aspernatur dolores inventore blanditiis mollitia.",
     "image": {
-      "url": "",
+      "url": "./assets/images/us-football.jpg",
       "title": "Image football américain"
     }
   }

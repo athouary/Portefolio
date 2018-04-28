@@ -1,0 +1,28 @@
+@import "vars";
+
+.about {
+    background-color: var(--grey-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-article {
+    width: 50%;
+    padding: 55px 65px 55px 90px;
+    align-self: stretch;
+}
+
+.about-title {
+    margin-bottom: 45px;
+}
+
+.about-text {
+    line-height: 1.3em;
+}
+
+.about-image {
+    width: 50%;
+    height: auto;
+    display: block;
+}

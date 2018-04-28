@@ -1,11 +1,11 @@
-# Build files folder
-dist/
-
-# Ignore Doc subfolder
+# Project docs subdirectories
 docs/**/*.md
 
-# npm package folder
+# Npm
 node_modules/
 node_shrinkwrap/
 npm-debug.log.*
 .nvmrc
+
+# Project fils and directory
+.idea

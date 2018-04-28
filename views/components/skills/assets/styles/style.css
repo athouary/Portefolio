@@ -1,0 +1,77 @@
+@import "vars";
+
+:root {
+    --skills-hard-item-height: 43px;
+    --skills-hard-number: 5;
+}
+
+.skills {
+    background-color: var(--grey-3);
+    padding: 0 20px 60px;
+    text-align: center;
+}
+
+.skills-soft {
+    padding: 60px 30px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.skills-soft-item {
+    text-align: center;
+}
+
+.skills-soft-image {
+    margin-bottom: 20px;
+}
+
+.skills-soft-title {
+    margin-bottom: 5px;
+}
+
+.skills-soft-vert {
+    height: 45px;
+    border-left: solid 1px var(--black);
+}
+
+.skills-hard {
+    height: calc(var(--skills-hard-item-height) * var(--skills-hard-number));
+    width: 100%;
+    padding: 0 50px;
+    margin-top: 70px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.skills-hard-item {
+    width: 26%;
+}
+
+.skills-hard-title {
+    text-align: left;
+}
+
+.skills-hard-total {
+    width: 100%;
+    height: 8px;
+    background-color: var(--grey-2);
+    border-radius: 4px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.skills-hard-level {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 8px;
+    background-color: var(--purple);
+    border-radius: 4px 0 0 4px;
+}
+
+.skills-button {
+    display: inline-block;
+    margin: 50px auto 0;
+}

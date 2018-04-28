@@ -33,11 +33,21 @@ export default new Config().extend('config/webpack.base.config.js').merge({
     },
     {
       test: /\.(jpe?g|png|gif|svg)$/i,
-      exclude: /fonts/,
+      exclude: /(fonts|node_modules)/,
       use: [{
         loader: 'file-loader',
         options: {
           name: './images/[name]-[hash].[ext]'
+        }
+      }]
+    },
+    {
+      test: /\.(pdf)$/i,
+      exclude: /(fonts|node_modules)/,
+      use: [{
+        loader: 'file-loader',
+        options: {
+          name: './files/[name]-[hash].[ext]'
         }
       }]
     },
@@ -69,6 +79,6 @@ export default new Config().extend('config/webpack.base.config.js').merge({
     })
   ],
   performance: {
-    hints: 'error'
+    hints: 'warning'
   }
 })

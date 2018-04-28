@@ -1,68 +1,68 @@
 @import 'vars';
 
 .menu {
-  width: var(--menu-width);
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: var(--white);
-  padding: 170px 0 65px;
-
-  & nav {
+    width: var(--menu-width);
     height: 100%;
-  }
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--white);
+    padding: 170px 0 65px;
+
+    & nav {
+        height: 100%;
+    }
 }
 
 .menu-logo {
-  position: absolute;
-  top: 40px;
-  text-align: center;
+    position: absolute;
+    top: 40px;
+    text-align: center;
 }
 
 .menu-list {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: space-evenly;
-  height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+    height: 100%;
 }
 
 .menu-item {
-  font-family: "Cambria";
+    font-family: "Cambria";
 }
 
 .menu-link {
-  display: block;
-  text-align: center;
-
-  & > * {
     display: block;
-  }
+    text-align: center;
+
+    & > * {
+        display: block;
+    }
 }
 
 .menu-title {
-  font-family: "HelveticaCd";
-  font-weight: bold;
-  text-transform: uppercase;
+    font-family: "HelveticaCd";
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .menu-subtitle {
-  font-family: "Cambria";
-  text-transform: uppercase;
-  font-size: var(--fs-2);
+    font-family: "Cambria";
+    text-transform: uppercase;
+    font-size: var(--fs-2);
 }
 
 .menu-externals {
-  position: absolute;
-  bottom: 15px;
-  left: 0;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  & > * + * {
-    margin-left: 5px;
-  }
+    & > * + * {
+        margin-left: 5px;
+    }
 }

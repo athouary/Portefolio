@@ -9,12 +9,12 @@
 */
 .clearfix::before,
 .clearfix::after {
-  content: " "; /* 1 */
-  display: table; /* 2 */
+    content: " "; /* 1 */
+    display: table; /* 2 */
 }
 
 .clearfix::after {
-  clear: both;
+    clear: both;
 }
 
 /**
@@ -22,5 +22,85 @@
 * Include this rule to trigger hasLayout and contain floats.
 */
 .clearfix {
-  *zoom: 1;
+    *zoom: 1;
+}
+
+/**
+* Shared components
+*/
+.title {
+    text-transform: uppercase;
+    font-family: "HelveticaCd";
+    font-weight: bold;
+}
+
+.heading {
+    text-align: center;
+    font-size: var(--fs-5);
+    padding-top: 50px;
+}
+
+.button {
+    transition: background .3s ease;
+    padding: 11px 17px 8px;
+    background-color: var(--black);
+    color: var(--white);
+    text-transform: uppercase;
+    font-family: "HelveticaCd";
+    font-weight: bold;
+
+    &:hover {
+        background-color: var(--purple);
+    }
+}
+
+.action {
+    position: absolute;
+    bottom: 0;
+
+    &::after {
+        content: " ";
+        display: block;
+        height: 50px;
+        position: relative;
+        left: 50%;
+        border-left: solid 2px var(--white);
+    }
+}
+
+.action-button {
+    font-family: "HelveticaCd";
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 30px 8px;
+    border: solid 2px var(--white);
+    display: block;
+    color: var(--white);
+    font-size: var(--fs-5);
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-image {
+    position: absolute;
+    left: 5px;
+    top: 6px;
+}
+
+.input {
+    width: 100%;
+    padding: 8px 8px 8px 35px;
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--black);
+    font-size: var(--fs-2);
+
+    &::placeholder {
+        color: var(--grey-2);
+        font-size: var(--fs-2);
+    }
 }

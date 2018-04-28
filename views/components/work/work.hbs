@@ -1,28 +1,32 @@
-<section>
-  <h3 class="works-title">
-    {{works.title}}
-  </h3>
-  {{#each works.projects}}
-    <div class="works-picture">
-      <img src="{{this.image.url}}" alt="{{this.image.title}}">
-      <div class="works-action">
-        <button class="works-button">
-          {{this.button}}
-        </button>
-      </div>
-      <article>
-        <h2 class="works-project-title">{{this.title}}</h2>
-        <p class="works-project-text">{{this.text}}</p>
-        {{#each this.skills}}
-          <ul>
-            <li class="works-project-skill">{{this}}</li>
-          </ul>
-        {{/each}}
-      </article>
-      <div class="works-controls">
-        <button class="works-previous"><</button>
-        <button class="works-next">></button>
-      </div>
-    </div>
-  {{/each}}
+<section class="works">
+    <h3 class="heading">
+        {{works.title}}
+    </h3>
+    {{#each works.projects}}
+        <div class="works-item">
+            <div class="works-picture">
+                <img class="works-image" src="{{this.image.url}}" alt="{{this.image.title}}">
+                <div class="action">
+                    <button class="action-button">
+                        {{this.button}}
+                    </button>
+                </div>
+            </div>
+            <div class="works-column">
+                <article class="works-project">
+                    <h2 class="works-project-title">{{this.title}}</h2>
+                    <p class="works-project-text">{{this.text}}</p>
+                    <ul class="works-project-skills">
+                        {{#each this.skills}}
+                            <li class="works-project-skill">{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </article>
+                <div class="works-controls">
+                    <button class="works-arrow works-previous"><</button>
+                    <button class="works-arrow works-next">></button>
+                </div>
+            </div>
+        </div>
+    {{/each}}
 </section>

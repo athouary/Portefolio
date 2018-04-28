@@ -13,7 +13,7 @@ export default new Config().extend('config/webpack.base.config.js').merge({
   module: {
     rules: [{
       test: /\.css$/,
-      exclude: /(node_modules|bower_components)/,
+      exclude: /(node_modules)/,
       use: [
         'style-loader',
         {
@@ -33,6 +33,14 @@ export default new Config().extend('config/webpack.base.config.js').merge({
       loader: 'file-loader',
       options: {
         name: './assets/images/[name].[ext]'
+      }
+    },
+    {
+      test: /\.(pdf)$/i,
+      exclude: /(fonts|node_modules)/,
+      loader: 'file-loader',
+      options: {
+        name: './assets/files/[name].[ext]'
       }
     }]
   },

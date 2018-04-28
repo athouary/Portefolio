@@ -16,6 +16,11 @@ import './assets/styles/main'
 // import Components
 import 'Components/header/config'
 import 'Components/home/config'
+import 'Components/skills/config'
+import 'Components/about/config'
+import 'Components/work/config'
+import 'Components/contact/config'
+import 'Components/footer/config'
 
 // TODO: move to appropriate place
 function isInViewport(elem) {

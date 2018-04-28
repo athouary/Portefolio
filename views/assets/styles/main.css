@@ -1,6 +1,5 @@
 /*  Initialization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
 @import "reset";
 @import "vars";
 
@@ -10,7 +9,7 @@
 @import "fonts";
 
 body {
-  padding-left: var(--menu-width);
-  font-family: "Cambria";
-  background-color: var(--grey-3);
+    padding-left: var(--menu-width);
+    font-family: "Cambria";
+    background-color: var(--grey-2);
 }

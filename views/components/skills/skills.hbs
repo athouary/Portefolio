@@ -1,23 +1,27 @@
-<section>
-  <h3 class="skills-title">
+<section class="skills">
+  <h3 class="heading">
     {{skills.title}}
   </h3>
-  <section class=="skills-soft">
+  <section class="skills-soft">
     {{#each skills.softSkills}}
-      <article class="skills-soft-item">
-        <img src="{{this.image.url}}" alt="{{this.image.title}}">
-        <h2 class="skills-soft-title">{{this.title}}</h2>
-        <div class="skills-soft-subtitle">{{this.subtitle}}</div>
-      </article>
+    {{#unless @first}}
+    <div class="skills-soft-vert"></div>
+    {{/unless}}
+    <article class="skills-soft-item">
+      <img class="skills-soft-image" src="{{this.image.url}}" alt="{{this.image.title}}">
+      <h2 class="title skills-soft-title">{{this.title}}</h2>
+      <div class="skills-soft-subtitle">{{this.subtitle}}</div>
+    </article>
     {{/each}}
   </section>
   <section class="skills-hard">
     {{#each skills.hardSkills}}
-      <div class="skills-hard-item">
-        <h2 class="skills-hard-title">{{this.title}}</h2>
-        <!-- TODO: Create a JS module -->
-      </div>
+    <div class="skills-hard-item">
+      <h2 class="title skills-hard-title">{{this.title}}</h2>
+      <!-- TODO: Create a JS module -->
+        <div class="skills-hard-total"><div class="skills-hard-level"></div></div>
+    </div>
     {{/each}}
   </section>
-  <a class="skills-button" href="{{this.button.url}}">{{this.button.title}}</a>
+  <a class="button skills-button" href="{{skills.button.url}}">{{skills.button.title}}</a>
 </section>

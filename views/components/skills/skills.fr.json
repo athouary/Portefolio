@@ -91,7 +91,7 @@
     ],
     "button": {
       "title": "Télécharger mon CV",
-      "url": ""
+      "url": "./assets/files/CV.pdf"
     }
   }
 }

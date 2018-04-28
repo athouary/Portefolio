@@ -1,0 +1,39 @@
+@import 'vars';
+
+.footer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    font-family: "HelveticaCd";
+    font-size: var(--fs-2);
+}
+
+.footer-text {
+    position: absolute;
+    left: 30px;
+}
+
+.footer-action {
+    line-height: initial;
+    right: 60px;
+    text-align: center;
+
+    &::after {
+        height: 40px;
+    }
+}
+
+.footer-button {
+    color: var(--black);
+    border-color: var(--black);
+}
+
+.footer-line {
+    position: relative;
+    left: 50%;
+    height: 30px;
+    border-left: solid 2px var(--black);
+}

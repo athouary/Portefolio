@@ -1,8 +1,8 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
-    "indentation": 2,
+    "indentation": 4,
     "number-leading-zero": "never",
-    "unit-whitelist": ["em", "rem", "%", "px", "vh"]
+    "unit-whitelist": ["em", "rem", "%", "px", "vh", "s"]
   }
 }

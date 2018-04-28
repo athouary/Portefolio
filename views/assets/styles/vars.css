@@ -1,30 +1,31 @@
 /* custom properties */
 
 :root {
-  --highlightColor: hwb(190, 35%, 20%);
+    --highlightColor: hwb(190, 35%, 20%);
 
-  /* COLORS */
-  --white: #fff;
-  --white_60: rgba(255, 255, 255, .6);
-  --black: #000;
-  --black_60: rgba(0, 0, 0, .6);
-  --grey-1: #333;
-  --grey-2: #979797;
-  --grey-3: #eaeaea;
+    /* COLORS */
+    --white: #fff;
+    --white-60: rgba(255, 255, 255, .6);
+    --black: #000;
+    --black-60: rgba(0, 0, 0, .6);
+    --grey-1: #333;
+    --grey-2: #c7c7c7;
+    --grey-3: #f1f1f1;
+    --purple: #500024;
 
-  /* FONTS */
-  --fs-1: 10px;
-  --fs-2: 12px;
-  --fs-3: 14px;
-  --fs-4: 16px;
-  --fs-5: 18px;
-  --fs-6: 24px;
-  --fs-7: 36px;
-  --fs-8: 42px;
-  --fs-9: 56px;
+    /* FONTS */
+    --fs-1: 10px;
+    --fs-2: 12px;
+    --fs-3: 14px;
+    --fs-4: 16px;
+    --fs-5: 18px;
+    --fs-6: 24px;
+    --fs-7: 36px;
+    --fs-8: 42px;
+    --fs-9: 56px;
 
-  /* OTHERS */
-  --menu-width: 190px;
+    /* OTHERS */
+    --menu-width: 190px;
 }
 
 /*  Custom media queries

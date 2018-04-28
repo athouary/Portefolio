@@ -1,0 +1,28 @@
+@import "vars";
+
+.contact {
+    background-color: var(--grey-2);
+}
+
+.contact-form {
+    text-align: center;
+    margin: 0 auto;
+    width: 40%;
+    padding-top: 35px;
+}
+
+.contact-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.contact-name,
+.contact-object {
+    width: calc(50% - 7px);
+}
+
+.contact-button {
+    margin: 30px 0 40px;
+    font-size: var(--fs-4);
+}

@@ -3,6 +3,8 @@
 /*
  * components/about
  */
-import './assets/styles/style';
-import './assets/scripts/script';
-import './assets/files/CV.pdf';
+import gaugeFiller from './assets/scripts/script'
+import './assets/styles/style'
+import './assets/files/CV.pdf'
+
+gaugeFiller()

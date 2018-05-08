@@ -1,37 +1,37 @@
 {
   "header": {
     "menuLogo": {
-      "url": "#",
+      "id": "home",
       "image":{
-        "url": "logo.png",
+        "id": "logo",
         "title":  "Logo Auxane Thouary"
       }
     },
     "menuItems": [
       {
-        "url": "#apropos",
+        "id": "about",
         "title": "À propos",
         "subtitle": "Qui-suis-je&nbsp;?",
         "image": {
-          "url": "about.png",
+          "id": "about",
           "title": "Icone à propos"
         }
       },
       {
-        "url": "#projets",
+        "id": "works",
         "title": "Projets",
         "subtitle": "Mes réalisations",
         "image": {
-          "url": "work.png",
+          "id": "work",
           "title": "Icone projets"
         }
       },
       {
-        "url": "#contact",
+        "id": "contact",
         "title": "Contact",
         "subtitle": "Restons en contact",
         "image": {
-          "url": "contact.png",
+          "id": "contact",
           "title": "Icone contact"
         }
       }

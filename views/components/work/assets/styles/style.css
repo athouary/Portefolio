@@ -5,7 +5,7 @@
 }
 
 .works-item {
-    padding-top: 70px;
+    padding: 70px 0;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -82,4 +82,53 @@
     height: 45px;
     font-size: var(--fs-5);
     margin-right: 10px;
+    position: relative;
+    overflow: hidden;
+
+    /* &::after {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        transform: rotate(30deg);
+        opacity: 1;
+        background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, .13) 0%,
+                rgba(255, 255, 255, .13) 77%,
+                rgba(255, 255, 255, .5) 92%,
+                rgba(255, 255, 255, 0) 100%
+        );
+    }
+
+    &:first-child::after {
+        animation-name: blackPulse;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    &:last-child::after {
+        animation-name: blackPulse;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-delay: .45s;
+    } */
 }
+
+/* @-webkit-keyframes blackPulse {
+    from {
+        top: -110%;
+        left: -210%;
+    }
+
+    50% {
+
+        top: -110%;
+        left: -210%;
+    }
+
+    to {
+        top: -30%;
+        left: -30%;
+    }
+} */

@@ -1,7 +1,7 @@
 @import "vars";
 
 :root {
-    --skills-hard-item-height: 43px;
+    --skills-hard-item-height: 53px;
     --skills-hard-number: 5;
 }
 
@@ -57,15 +57,16 @@
     height: 8px;
     background-color: var(--grey-2);
     border-radius: 4px;
-    margin: 10px 0;
+    margin: 10px 0 20px;
     position: relative;
 }
 
 .skills-hard-level {
+    transition: width 1.5s ease-out;
     position: absolute;
     top: 0;
     left: 0;
-    width: 70%;
+    width: 0%;
     height: 8px;
     background-color: var(--purple);
     border-radius: 4px 0 0 4px;

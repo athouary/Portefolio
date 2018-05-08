@@ -19,6 +19,4 @@ const configSite = {
   }
 }
 
-// module.exports = config
-// export {config, configCss}
 module.exports = configSite

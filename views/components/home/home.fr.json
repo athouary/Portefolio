@@ -12,9 +12,10 @@
         "url": "?lang=fr"
       }
     ],
+    "currentLanguage": "fr",
     "button": {
       "title": "Découvrez-moi",
-      "url": "#about"
+      "page": "about"
     }
   }
 }

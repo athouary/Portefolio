@@ -12,6 +12,7 @@
         "url": "?lang=fr"
       }
     ],
+    "currentLanguage": "en",
     "button": {
       "title": "Découvrez-moi",
       "url": "#about"

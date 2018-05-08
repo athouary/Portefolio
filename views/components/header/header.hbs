@@ -1,25 +1,28 @@
 <header class="menu">
-  <nav>
-    <a class="menu-logo" href="{{header.menuLogo.url}}">
-      <img class="" src="{{header.menuLogo.image.url}}" alt="{{header.menuLogo.image.title}}">
-    </a>
-    <ul class="menu-list">
-      {{#each header.menuItems}}
-      <li class="menu-item"><a class="menu-link" href="{{this.url}}">
-        <span class="menu-title">{{this.title}}</span>
-        <img src="{{this.image.url}}" alt="{{this.image.title}}"/>
-        <span class="menu-subtitle">{{{this.subtitle}}}</span>
-      </a></li>
-      {{/each}}
-    </ul>
-  </nav>
-  <aside>
-    <ul class="menu-externals">
-      {{#each header.menuExternals}}
-      <li class="menu-external"><a href="{{this.url}}">
-        <img src="{{this.image.url}}" alt="{{this.image.title}}">
-      </a></li>
-      {{/each}}
-    </ul>
-  </aside>
+    <nav>
+        <div class="menu-bar">
+            <div class="menu-marker" data-marker></div>
+        </div>
+        <button class="menu-logo isSelected" href="{{header.menuLogo.url}}" data-goto-page="{{header.menuLogo.id}}" data-no-marker="true">
+            <svg class="menu-logo-icon"><use xlink:href="#{{header.menuLogo.image.id}}"></use></svg>
+        </button>
+        <ul class="menu-list">
+            {{#each header.menuItems}}
+                <li class="menu-item" data-goto-page="{{this.id}}">
+                    <span class="menu-title">{{this.title}}</span>
+                    <span class="menu-icon-line"><svg class="menu-icon"><use xlink:href="#{{this.image.id}}"></use></svg></span>
+                    <span class="menu-subtitle">{{{this.subtitle}}}</span>
+                </li>
+            {{/each}}
+        </ul>
+    </nav>
+    <aside>
+        <ul class="menu-externals">
+            {{#each header.menuExternals}}
+                <li class="menu-external"><a href="{{this.url}}">
+                    <img src="{{this.image.url}}" alt="{{this.image.title}}">
+                </a></li>
+            {{/each}}
+        </ul>
+    </aside>
 </header>

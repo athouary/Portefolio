@@ -23,6 +23,7 @@
 
     &::after {
         height: 40px;
+        width: 0;
     }
 }
 
@@ -32,6 +33,7 @@
 }
 
 .footer-line {
+    width: 0;
     position: relative;
     left: 50%;
     height: 30px;

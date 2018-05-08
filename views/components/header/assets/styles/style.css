@@ -17,7 +17,44 @@
 .menu-logo {
     position: absolute;
     top: 40px;
+    width: 100%;
     text-align: center;
+
+    &.isSelected {
+        & .menu-logo-icon {
+            height: 120px;
+            width: 120px;
+        }
+    }
+}
+
+.menu-logo-icon {
+    fill: var(--black);
+    transition: height ease-out .6s, width ease-out .6s;
+    height: 95px;
+    width: 95px;
+}
+
+.menu-bar {
+    position: absolute;
+    left: 0;
+    top: 170px;
+    bottom: 65px;
+    width: 10px;
+    border-left: 1px solid var(--white);
+    overflow: hidden;
+}
+
+.menu-marker {
+    position: absolute;
+    left: 0;
+    top: -100px;
+    content: " ";
+    display: inline;
+    width: 9px;
+    height: 75px;
+    transition: top ease-out .6s;
+    background-color: var(--purple);
 }
 
 .menu-list {
@@ -26,15 +63,16 @@
     align-items: stretch;
     justify-content: space-evenly;
     height: 100%;
+    position: relative;
 }
 
 .menu-item {
     font-family: "Cambria";
-}
-
-.menu-link {
-    display: block;
+    margin-left: 1px;
     text-align: center;
+    cursor: pointer;
+    position: relative;
+    transition: font-size ease-out .3s, color ease-out .3s;
 
     & > * {
         display: block;
@@ -64,5 +102,53 @@
 
     & > * + * {
         margin-left: 5px;
+    }
+}
+
+.menu-icon-line {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+
+    &::before,
+    &::after {
+        position: relative;
+        transition: top ease-out .3s;
+        top: -12.5px;
+        content: " ";
+        display: inline-block;
+        border-bottom: 1px solid var(--black);
+        width: 30px;
+    }
+}
+
+.menu-icon {
+    transition: width ease-out .3s, height ease-out .3s, fill ease-out .3s, border ease-out .3s;
+    width: 25px;
+    height: 25px;
+    fill: var(--black);
+    margin: 0 7px;
+}
+
+.menu-item.isSelected {
+    color: var(--purple);
+    font-size: var(--fs-5);
+
+    & .menu-subtitle {
+        font-size: var(--fs-3);
+    }
+
+    & .menu-icon {
+        width: 30px;
+        height: 30px;
+        fill: var(--purple);
+    }
+
+    & .menu-icon-line {
+        &::before,
+        &::after {
+            border-bottom: 1px solid var(--purple);
+            top: -15px;
+        }
     }
 }

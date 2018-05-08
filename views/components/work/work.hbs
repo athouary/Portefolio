@@ -1,32 +1,38 @@
-<section class="works">
+<section class="works" data-page="works">
     <h3 class="heading">
         {{works.title}}
     </h3>
-    {{#each works.projects}}
-        <div class="works-item">
-            <div class="works-picture">
-                <img class="works-image" src="{{this.image.url}}" alt="{{this.image.title}}">
-                <div class="action">
-                    <button class="action-button">
-                        {{this.button}}
-                    </button>
-                </div>
-            </div>
-            <div class="works-column">
-                <article class="works-project">
-                    <h2 class="works-project-title">{{this.title}}</h2>
-                    <p class="works-project-text">{{this.text}}</p>
-                    <ul class="works-project-skills">
-                        {{#each this.skills}}
-                            <li class="works-project-skill">{{this}}</li>
-                        {{/each}}
-                    </ul>
-                </article>
-                <div class="works-controls">
-                    <button class="works-arrow works-previous"><</button>
-                    <button class="works-arrow works-next">></button>
-                </div>
-            </div>
+    <div class="works-slider" data-glide>
+        <div class="works-window glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                {{#each works.projects}}
+                    <li class="works-item glide__slide">
+                        <div class="works-picture">
+                            <img class="works-image" src="{{this.image.url}}" alt="{{this.image.title}}">
+                            <div class="action">
+                                <button class="action-button">
+                                    {{this.button}}
+                                </button>
+                            </div>
+                        </div>
+                        <div class="works-column">
+                            <article class="works-project">
+                                <h2 class="works-project-title">{{this.title}}</h2>
+                                <p class="works-project-text">{{this.text}}</p>
+                                <ul class="works-project-skills">
+                                    {{#each this.skills}}
+                                        <li class="works-project-skill">{{this}}</li>
+                                    {{/each}}
+                                </ul>
+                            </article>
+                            <div class="works-controls" data-glide-el="controls">
+                                <button class="works-arrow works-previous" data-glide-dir="<"><</button>
+                                <button class="works-arrow works-next" data-glide-dir=">">></button>
+                            </div>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
         </div>
-    {{/each}}
+    </div>
 </section>

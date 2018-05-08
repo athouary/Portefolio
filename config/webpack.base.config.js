@@ -20,17 +20,23 @@ export default new Config().merge({
   module: {
     rules: [{
       test: /\.js$/,
-      exclude: /(node_modules|bower_components)/,
+      exclude: /(node_modules)/,
       use: {
         loader: 'babel-loader'
       }
-    },
-    {
+    }, {
       test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
       exclude: /(images|node_modules)/,
       loader: 'file-loader',
       options: {
         name: './views/assets/font/[name].[ext]'
+      }
+    }, {
+      test: /\.svg$/,
+      loader: 'svg-sprite-loader',
+      exclude: /(fonts|node_modules)/,
+      options: {
+        symbolId: '[name]'
       }
     }]
   },
@@ -38,7 +44,7 @@ export default new Config().merge({
     alias: {
       Views: path.resolve(__dirname, '../views'),
       Components: path.resolve(__dirname, '../views/components'),
-      Vendors: path.resolve(__dirname, '../node_modules')
+      Modules: path.resolve(__dirname, '../node_modules')
     },
     modules: ['node_modules', path.resolve(__dirname, '../src')],
     extensions: ['.js', '.css']

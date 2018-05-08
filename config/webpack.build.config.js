@@ -16,7 +16,7 @@ export default new Config().extend('config/webpack.base.config.js').merge({
   module: {
     rules: [{
       test: /\.css$/,
-      exclude: /node_modules/,
+      // exclude: /node_modules/,
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         use: [{
@@ -32,7 +32,7 @@ export default new Config().extend('config/webpack.base.config.js').merge({
       })
     },
     {
-      test: /\.(jpe?g|png|gif|svg)$/i,
+      test: /\.(jpe?g|png|gif)$/i,
       exclude: /(fonts|node_modules)/,
       use: [{
         loader: 'file-loader',

@@ -1,4 +1,4 @@
-<section class="skills">
+<section class="skills" data-page="about">
   <h3 class="heading">
     {{skills.title}}
   </h3>
@@ -18,8 +18,7 @@
     {{#each skills.hardSkills}}
     <div class="skills-hard-item">
       <h2 class="title skills-hard-title">{{this.title}}</h2>
-      <!-- TODO: Create a JS module -->
-        <div class="skills-hard-total"><div class="skills-hard-level"></div></div>
+        <div class="skills-hard-total" data-gauge-total="10"><div class="skills-hard-level" data-gauge-level="{{this.level}}"></div></div>
     </div>
     {{/each}}
   </section>

@@ -9,6 +9,7 @@ import fs from 'fs'
 
 // Import main config Object to specify paths to views and components
 import configVars from '../config/project.config.js'
+import helpers from './helpers.js'
 
 // Init Express Server
 const app = express()
@@ -16,7 +17,8 @@ const hbs = ExpressHandlebars.create({
   layoutsDir: configVars.viewsPath,
   partialsDir: configVars.componentsPath,
   defaultLayout: 'index.hbs',
-  extname: '.hbs'
+  extname: '.hbs',
+  helpers
 })
 const languages = ['fr', 'en']
 let globalData = {

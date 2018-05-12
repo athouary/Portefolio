@@ -4,7 +4,7 @@
     background-color: var(--grey-2);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 }
 
 .about-article {
@@ -23,6 +23,21 @@
 
 .about-image {
     width: 50%;
-    height: auto;
     display: block;
+    background: no-repeat center center / cover url('../images/us_football.jpg');
+}
+
+@media (--viewport-large) {
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .about-article {
+        width: 100%;
+    }
+
+    .about-image {
+        width: 100%;
+        min-height: 50vw;
+    }
 }

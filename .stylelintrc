@@ -3,6 +3,6 @@
   "rules": {
     "indentation": 4,
     "number-leading-zero": "never",
-    "unit-whitelist": ["em", "rem", "%", "px", "vh", "s", "deg"]
+    "unit-whitelist": ["em", "rem", "%", "px", "vh", "vw", "s", "deg"]
   }
 }

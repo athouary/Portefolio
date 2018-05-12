@@ -2,9 +2,8 @@
   "header": {
     "menuLogo": {
       "id": "home",
-      "image":{
-        "id": "logo",
-        "title":  "Logo Auxane Thouary"
+      "image": {
+        "id": "logo"
       }
     },
     "menuItems": [
@@ -13,8 +12,7 @@
         "title": "À propos",
         "subtitle": "Qui-suis-je&nbsp;?",
         "image": {
-          "id": "about",
-          "title": "Icone à propos"
+          "id": "about"
         }
       },
       {
@@ -22,17 +20,15 @@
         "title": "Projets",
         "subtitle": "Mes réalisations",
         "image": {
-          "id": "work",
-          "title": "Icone projets"
+          "id": "work"
         }
       },
       {
         "id": "contact",
         "title": "Contact",
-        "subtitle": "Restons en contact",
+        "subtitle": "Faisons connaissance",
         "image": {
-          "id": "contact",
-          "title": "Icone contact"
+          "id": "contact"
         }
       }
     ],
@@ -40,17 +36,19 @@
       {
         "url": "#",
         "image": {
-          "url": "linkedin.png",
-          "title": "Icone LinkedIn"
+          "id": "linkedin"
         }
       },
       {
-        "url": "#",
+        "url": "https://github.com/athouary",
         "image": {
-          "url": "github.png",
-          "title": "Icone GitHub"
+          "id": "github"
         }
       }
-    ]
+    ],
+    "button" : {
+      "title": "CV",
+      "url": "./assets/files/CV.pdf"
+    }
   }
 }

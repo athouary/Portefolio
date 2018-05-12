@@ -7,6 +7,7 @@
 .contact-form {
     text-align: center;
     margin: 0 auto;
+    min-width: 400px;
     width: 40%;
     padding-top: 35px;
 }

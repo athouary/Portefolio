@@ -1,5 +1,5 @@
 <section class="works" data-page="works">
-    <h3 class="heading">
+    <h3 class="heading works-title">
         {{works.title}}
     </h3>
     <div class="works-slider" data-glide>
@@ -9,11 +9,12 @@
                     <li class="works-item glide__slide">
                         <div class="works-picture">
                             <img class="works-image" src="{{this.image.url}}" alt="{{this.image.title}}">
-                            <div class="action">
+                            <div class="action works-action">
                                 <button class="action-button">
                                     {{this.button}}
                                 </button>
                             </div>
+                            <div class="works-shadow"></div>
                         </div>
                         <div class="works-column">
                             <article class="works-project">
@@ -26,8 +27,8 @@
                                 </ul>
                             </article>
                             <div class="works-controls" data-glide-el="controls">
-                                <button class="works-arrow works-previous" data-glide-dir="<"><</button>
-                                <button class="works-arrow works-next" data-glide-dir=">">></button>
+                                <button class="button works-arrow works-previous" data-glide-dir="<"><</button>
+                                <button class="button works-arrow works-next" data-glide-dir=">">></button>
                             </div>
                         </div>
                     </li>

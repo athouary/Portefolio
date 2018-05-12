@@ -11,7 +11,6 @@ import './assets/scripts/gets-in-viewport'
 import './assets/styles/main'
 
 // import Main Images
-// import '../assets/images/sample.jpg'
 
 // import Components
 import 'Components/header/config'

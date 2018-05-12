@@ -1,92 +1,92 @@
 {
   "skills": {
-    "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dolorum, magni suscipit porro molestias quibusdam ipsam.",
+    "title": "Le développement web me passionne, et ma formation d'ingénieur en systèmes d'information ainsi que mes expériences en tant que chef de projet m'ont permis de cultiver une palette de compétences particulièrement variée.",
     "softSkills": [
       {
         "title": "Adaptation",
-        "subtitle": "Sous-titre",
+        "subtitle": "Vitesse&nbsp;d'apprentissage et&nbsp;souplesse",
         "image": {
-          "url": "",
-          "title": "Icone adapation"
+          "id": "work"
         }
       },
       {
         "title": "Gestion de projet",
-        "subtitle": "Sous-titre",
+        "subtitle": "Coordination,&nbsp;pilotage et&nbsp;organisation",
         "image": {
-          "url": "",
-          "title": "Icone gestion de projet"
+          "id": "work"
         }
       },
       {
         "title": "Travail d'équipe",
-        "subtitle": "Sous-titre",
+        "subtitle": "Échanges&nbsp;et&nbsp;partages de&nbsp;connaissances",
         "image": {
-          "url": "",
-          "title": "Icone travail d'équipe"
+          "id": "work"
         }
       },
       {
         "title": "Leadership",
-        "subtitle": "Sous-titre",
+        "subtitle": "Écoute&nbsp;et&nbsp;force de&nbsp;suggestions",
         "image": {
-          "url": "",
-          "title": "Icone leadership"
+          "id": "work"
         }
       }
     ],
     "hardSkills": [
       {
         "title": "HTML 5 & CCS 3",
-        "level": 1
-      },
-      {
-        "title": "HTML 5 & CCS 3",
-        "level": 3
-      },
-      {
-        "title": "HTML 5 & CCS 3",
-        "level": 9
-      },
-      {
-        "title": "HTML 5 & CCS 3",
         "level": 9.5
       },
       {
-        "title": "HTML 5 & CCS 3",
-        "level": 10
+        "title": "Javascript (ES6)",
+        "level": 9.5
       },
       {
-        "title": "HTML 5 & CCS 3",
+        "title": "Webpack",
+        "level": 9
+      },
+      {
+        "title": "NodeJS",
         "level": 8
       },
       {
-        "title": "HTML 5 & CCS 3",
-        "level": 2
+        "title": "jQuery",
+        "level": 9
       },
       {
-        "title": "HTML 5 & CCS 3",
+        "title": "React, Riot",
         "level": 8
       },
       {
-        "title": "HTML 5 & CCS 3",
-        "level": 8
+        "title": "Git",
+        "level": 9.5
       },
       {
-        "title": "HTML 5 & CCS 3",
-        "level": 8
+        "title": "PHP",
+        "level": 7.5
       },
       {
-        "title": "HTML 5 & CCS 3",
-        "level": 5
+        "title": "MySQL",
+        "level": 7.5
       },
       {
-        "title": "HTML 5 & CCS 3",
+        "title": "Twig",
+        "level": 7
+      },
+      {
+        "title": "Hadoop, Spark",
         "level": 6
       },
       {
-        "title": "HTML 5 & CCS 3",
-        "level": 8
+        "title": "Symfony 3",
+        "level": 6
+      },
+      {
+        "title": "Anglais",
+        "level": 9
+      },
+      {
+        "title": "Français",
+        "level": 10
       }
     ],
     "button": {

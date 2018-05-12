@@ -65,6 +65,7 @@
         position: relative;
         left: 50%;
         border-left: solid 2px var(--white);
+        transition: height .6s ease;
     }
 }
 
@@ -77,6 +78,13 @@
     display: block;
     color: var(--white);
     font-size: var(--fs-5);
+    position: relative;
+}
+
+.action:hover {
+    &::after {
+        height: 40px;
+    }
 }
 
 .input-wrapper {
@@ -85,15 +93,22 @@
     align-items: center;
 }
 
-.input-image {
+.input-icon {
     position: absolute;
+    width: 20px;
+    height: 20px;
     left: 5px;
-    top: 6px;
+    fill: var(--purple);
+}
+
+.input-message-icon {
+    top: 7px;
 }
 
 .input {
     width: 100%;
     padding: 8px 8px 8px 35px;
+    font-family: "HelveticaCd";
     background-color: var(--white);
     color: var(--black);
     border: 1px solid var(--black);

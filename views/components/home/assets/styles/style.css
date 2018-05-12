@@ -1,7 +1,8 @@
 @import 'vars';
 
 .home {
-    background: no-repeat center / cover url('../images/aux.jpg');
+    background: no-repeat center center / cover url('../images/aux.jpg');
+    transition: background-position .6s ease-out;
 }
 
 .home-shade {
@@ -18,6 +19,7 @@
 
 .home-title {
     margin-top: 45px;
+    padding: 0 20px;
     font-size: var(--fs-9);
 }
 
@@ -42,5 +44,17 @@
 
     &.isSelected {
         border-bottom: 2px solid var(--white);
+    }
+}
+
+@media (--viewport-medium) {
+    .home-languages {
+        top: 15px;
+        right: 0;
+        margin: 0;
+    }
+
+    .home-language {
+        margin-right: 10px;
     }
 }

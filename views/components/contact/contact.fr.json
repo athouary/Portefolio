@@ -4,22 +4,19 @@
     "name": {
       "placeholder": "Votre nom",
       "image": {
-        "url": "",
-        "title": "Image champ nom"
+        "id": "person"
       }
     },
     "object": {
       "placeholder": "Objet",
       "image": {
-        "url": "",
-        "title": "Image champ objet"
+        "id": "target"
       }
     },
     "message": {
       "placeholder": "Message",
       "image": {
-        "url": "",
-        "title": "Image champ message"
+        "id": "pen"
       }
     },
     "button": "Envoyer"

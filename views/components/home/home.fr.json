@@ -1,6 +1,6 @@
 {
   "home": {
-    "title": "Salut, je suis développeur web,",
+    "title": "Auxane&nbsp;Thouary, développeur&nbsp;web",
     "subtitle":"mais pas seulement...",
     "languages": [
       {
@@ -14,7 +14,7 @@
     ],
     "currentLanguage": "fr",
     "button": {
-      "title": "Découvrez-moi",
+      "title": "En savoir plus",
       "page": "about"
     }
   }

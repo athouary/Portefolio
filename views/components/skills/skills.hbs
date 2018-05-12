@@ -1,26 +1,28 @@
 <section class="skills" data-page="about">
-  <h3 class="heading">
-    {{skills.title}}
-  </h3>
-  <section class="skills-soft">
-    {{#each skills.softSkills}}
-    {{#unless @first}}
-    <div class="skills-soft-vert"></div>
-    {{/unless}}
-    <article class="skills-soft-item">
-      <img class="skills-soft-image" src="{{this.image.url}}" alt="{{this.image.title}}">
-      <h2 class="title skills-soft-title">{{this.title}}</h2>
-      <div class="skills-soft-subtitle">{{this.subtitle}}</div>
-    </article>
-    {{/each}}
-  </section>
-  <section class="skills-hard">
-    {{#each skills.hardSkills}}
-    <div class="skills-hard-item">
-      <h2 class="title skills-hard-title">{{this.title}}</h2>
-        <div class="skills-hard-total" data-gauge-total="10"><div class="skills-hard-level" data-gauge-level="{{this.level}}"></div></div>
-    </div>
-    {{/each}}
-  </section>
-  <a class="button skills-button" href="{{skills.button.url}}">{{skills.button.title}}</a>
+    <h3 class="heading">
+        {{skills.title}}
+    </h3>
+    <section class="skills-soft">
+        {{#each skills.softSkills}}
+            {{#unless @first}}
+                <div class="skills-soft-vert"></div>
+            {{/unless}}
+            <article class="skills-soft-item">
+                <svg class="skills-soft-image"><use xlink:href="#{{this.image.id}}"></use></svg>
+                <h2 class="title skills-soft-title">{{this.title}}</h2>
+                <div class="skills-soft-subtitle">{{{this.subtitle}}}</div>
+            </article>
+        {{/each}}
+    </section>
+    <section class="skills-hard">
+        {{#each skills.hardSkills}}
+            <div class="skills-hard-item">
+                <h2 class="title skills-hard-title">{{this.title}}</h2>
+                <div class="skills-hard-total" data-gauge-total="10">
+                    <div class="skills-hard-level" data-gauge-level="{{this.level}}"></div>
+                </div>
+            </div>
+        {{/each}}
+    </section>
+    <a class="button skills-button" href="{{skills.button.url}}">{{skills.button.title}}</a>
 </section>

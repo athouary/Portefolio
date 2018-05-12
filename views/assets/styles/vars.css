@@ -12,6 +12,7 @@
     --grey-2: #c7c7c7;
     --grey-3: #f1f1f1;
     --purple: #500024;
+    --purple-60: rgba(80, 0, 36, .6);
 
     /* FONTS */
     --fs-1: 10px;
@@ -23,9 +24,6 @@
     --fs-7: 36px;
     --fs-8: 42px;
     --fs-9: 56px;
-
-    /* OTHERS */
-    --menu-width: 190px;
 }
 
 /*  Custom media queries

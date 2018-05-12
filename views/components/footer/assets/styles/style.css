@@ -27,6 +27,12 @@
     }
 }
 
+.footer-action:hover {
+    & .footer-line {
+        height: 20px;
+    }
+}
+
 .footer-button {
     color: var(--black);
     border-color: var(--black);
@@ -37,5 +43,6 @@
     position: relative;
     left: 50%;
     height: 30px;
+    transition: height .6s ease;
     border-left: solid 2px var(--black);
 }

@@ -1,22 +1,25 @@
 <section class="contact" data-page="contact">
-  <h3 class="heading contact-title">
-    {{contact.title}}
-  </h3>
-  <form class="contact-form" method="post" action="">
-    <div class="contact-row">
-      <div class="input-wrapper contact-name">
-        <img class="input-image" src="{{contact.name.image.url}}" alt="{{contact.name.image.title}}"/>
-        <input class="input" type="text" placeholder="{{contact.name.placeholder}}"/>
-      </div>
-      <div class="input-wrapper contact-object">
-        <img class="input-image" src="{{contact.object.image.url}}" alt="{{contact.object.image.title}}"/>
-        <input class="input" type="text" placeholder="{{contact.object.placeholder}}"/>
-      </div>
-    </div>
-    <div class="input-wrapper contact-message">
-      <img class="input-image" src="{{contact.message.image.url}}" alt="{{contact.message.image.title}}"/>
-      <textarea class="input" name="name" rows="5" cols="80" type="text" placeholder="{{contact.message.placeholder}}"></textarea>
-    </div>
-    <button class="button contact-button" type="submit">{{contact.button}}</button>
-  </form>
+    <h3 class="heading contact-title">
+        {{contact.title}}
+    </h3>
+    <form class="contact-form" method="post" action="">
+        <div class="contact-row">
+            <div class="input-wrapper contact-name">
+                <svg class="input-icon">
+                    <use xlink:href="#{{contact.name.image.id}}"></use>
+                </svg>
+                <input class="input" type="text" placeholder="{{contact.name.placeholder}}"/>
+            </div>
+            <div class="input-wrapper contact-object">
+                <svg class="input-icon"><use xlink:href="#{{contact.object.image.id}}"></use></svg>
+                <input class="input" type="text" placeholder="{{contact.object.placeholder}}"/>
+            </div>
+        </div>
+        <div class="input-wrapper contact-message">
+            <svg class="input-icon input-message-icon"><use xlink:href="#{{contact.message.image.id}}"></use></svg>
+            <textarea class="input" name="name" rows="5" cols="80" type="text"
+                      placeholder="{{contact.message.placeholder}}"></textarea>
+        </div>
+        <button class="button contact-button" type="submit">{{contact.button}}</button>
+    </form>
 </section>

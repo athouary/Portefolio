@@ -1,61 +1,79 @@
 {
   "works": {
-    "title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, minus, optio. Earum expedita maxime nemo obcaecati officia officiis possimus quisquam!",
+    "title": "Voici un aperçu des projets que j'ai réalisés dans le cadre de mon travail, de mes études ou de mes recherches personnelles. Malgré des objectifs et enjeux différents, j'ai toujours mis la vitesse chargement des pages et l'expérience utilisateur parmis mes priorités.",
     "projects": [
       {
-        "title": "Titre de la réalisation",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium est fugit, vel quasi facere quaerat, ducimus ut quos illum accusamus.",
+        "title": "Negatoscreen",
+        "text": "Premier développement web professionnel de ma carrière, il s'agit de la réalisation d’un site web from scratch, à partir d'une maquette, pour le lancement d'un produit innovant.",
         "image": {
-          "url": "",
-          "title": "Project image"
+          "url": "./assets/images/negatoscreen.gif",
+          "title": "Image Negatoscreen"
         },
         "button": "En savoir plus",
         "skills": [
-          "Symfony 3",
-          "CSS",
-          "HTML"
+          "Less",
+          "Twig",
+          "jQuery",
+          "PHP"
         ]
       },
       {
-        "title": "Titre de la réalisation",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium est fugit, vel quasi facere quaerat, ducimus ut quos illum accusamus.",
+        "title": "Les savoirs inutiles de NEON",
+        "text": "À travers cette mission, j'ai pu créer un module de scroll infini couplant des requêtes AJAX avec la dynamique de Riot, un équivalent de React, en plus léger.",
         "image": {
-          "url": "",
-          "title": "Project image"
+          "url": "./assets/images/savoirs-inutiles.gif",
+          "title": "Image Neon"
         },
         "button": "En savoir plus",
         "skills": [
-          "Symfony 3",
-          "CSS",
-          "HTML"
+          "PostCSS",
+          "Riot",
+          "Webpack"
         ]
       },
       {
-        "title": "Titre de la réalisation",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium est fugit, vel quasi facere quaerat, ducimus ut quos illum accusamus.",
+        "title": "Zodémo",
+        "text": "Dans le cadre de mon projet de fin d'études au sein de la future start-up Dicodys, mon équipe et moi-même avons réalisé une plateforme intelligente de jeux éducatifs pour enfants dyslexiques.",
         "image": {
-          "url": "",
-          "title": "Project image"
+          "url": "./assets/images/zodemo.gif",
+          "title": "Image zodemo"
         },
         "button": "En savoir plus",
         "skills": [
-          "Symfony 3",
-          "CSS",
-          "HTML"
+          "Stylus",
+          "React",
+          "Webpack",
+          "Node"
         ]
       },
       {
-        "title": "Titre de la réalisation",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium est fugit, vel quasi facere quaerat, ducimus ut quos illum accusamus.",
+        "title": "La fabuleuse table de Noël",
+        "text": "En plus des sites éditoriaux, j'ai réalisé des petits projets parallèles chez Prisma Media. Par exemple, la Fabuleuse Table de Noël de Cuisine Actuelle est une page spéciale publiée pour les fêtes de fin d'année.",
         "image": {
-          "url": "",
-          "title": "Project image"
+          "url": "./assets/images/table_noel.gif",
+          "title": "Image table Noël"
         },
         "button": "En savoir plus",
         "skills": [
-          "Symfony 3",
-          "CSS",
-          "HTML"
+          "PostCSS",
+          "Handlebars",
+          "Grunt"
+        ]
+      },
+      {
+        "title": "Les sites de Prisma Media",
+        "text": "J'ai participé à l'évolution des sites web de plusieurs marques réputées, avec l'idée de faire converger des structures et technologies diverses vers un modèle commun.",
+        "image": {
+          "url": "./assets/images/sites_edito.gif",
+          "title": "Image sites editos"
+        },
+        "button": "En savoir plus",
+        "skills": [
+          "PostCss",
+          "Twig",
+          "Grunt",
+          "Webpack",
+          "Symfony"
         ]
       }
     ]

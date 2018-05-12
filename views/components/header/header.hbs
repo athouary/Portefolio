@@ -16,13 +16,14 @@
             {{/each}}
         </ul>
     </nav>
-    <aside>
-        <ul class="menu-externals">
-            {{#each header.menuExternals}}
-                <li class="menu-external"><a href="{{this.url}}">
-                    <img src="{{this.image.url}}" alt="{{this.image.title}}">
-                </a></li>
-            {{/each}}
-        </ul>
-    </aside>
 </header>
+<aside class="menu-links">
+    <a class="button menu-button" href="{{header.button.url}}">{{header.button.title}}</a>
+    <ul class="menu-externals">
+        {{#each header.menuExternals}}
+            <li class="menu-external"><a href="{{this.url}}">
+                <svg class="menu-external-icon"><use xlink:href="#{{this.image.id}}"></use></svg>
+            </a></li>
+        {{/each}}
+    </ul>
+</aside>

@@ -5,4 +5,4 @@
  */
 
 import './assets/styles/style'
-import './assets/images/us-football.jpg'
+import './assets/images/us_football.jpg'

@@ -29,7 +29,7 @@ export default new Config().merge({
       exclude: /(images|node_modules)/,
       loader: 'file-loader',
       options: {
-        name: './views/assets/font/[name].[ext]'
+        name: './assets/fonts/[name].[ext]'
       }
     }, {
       test: /\.svg$/,

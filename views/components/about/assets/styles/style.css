@@ -41,3 +41,18 @@
         min-height: 50vw;
     }
 }
+
+@media (--viewport-extraSmall) {
+    .about-article {
+        padding: 40px 30px;
+        font-size: var(--fs-3);
+    }
+
+    .about-title {
+        margin-bottom: 30px;
+    }
+
+    .about-image {
+        min-height: 66vw;
+    }
+}

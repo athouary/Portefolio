@@ -1,6 +1,6 @@
 <section class="skills" data-page="about">
-    <h3 class="heading">
-        {{skills.title}}
+    <h3 class="heading skills-title">
+        {{{skills.title}}}
     </h3>
     <section class="skills-soft">
         {{#each skills.softSkills}}
@@ -24,5 +24,5 @@
             </div>
         {{/each}}
     </section>
-    <a class="button skills-button" href="{{skills.button.url}}">{{skills.button.title}}</a>
+    <a class="button skills-button" href="{{skills.button.url}}" target="_blank">{{skills.button.title}}</a>
 </section>

@@ -1,10 +1,10 @@
 {
   "works": {
-    "title": "Voici un aperçu des projets que j'ai réalisés dans le cadre de mon travail, de mes études ou de mes recherches personnelles. Malgré des objectifs et enjeux différents, j'ai toujours mis la vitesse chargement des pages et l'expérience utilisateur parmis mes priorités.",
+    "title": "Voici un aperçu des pro&shy;jets que j'ai réa&shy;li&shy;sés dans le cadre de mon tra&shy;vail, de mes études ou de mes re&shy;cherches per&shy;son&shy;nelles. Mal&shy;gré des ob&shy;jec&shy;tifs et en&shy;jeux dif&shy;fé&shy;rents, j'ai tou&shy;jours mis la vi&shy;tesse char&shy;ge&shy;ment des pages et l'ex&shy;pé&shy;rience uti&shy;li&shy;sa&shy;teur par&shy;mis mes prio&shy;ri&shy;tés.",
     "projects": [
       {
         "title": "Negatoscreen",
-        "text": "Premier développement web professionnel de ma carrière, il s'agit de la réalisation d’un site web from scratch, à partir d'une maquette, pour le lancement d'un produit innovant.",
+        "text": "Pre&shy;mier dé&shy;ve&shy;lop&shy;pe&shy;ment web pro&shy;fes&shy;sion&shy;nel de ma car&shy;rière, il s'agit de la réa&shy;li&shy;sa&shy;tion d’un site web from scratch, à par&shy;tir d'une ma&shy;quette, pour le lan&shy;ce&shy;ment d'un pro&shy;duit in&shy;no&shy;vant.",
         "image": {
           "url": "./assets/images/negatoscreen.gif",
           "title": "Image Negatoscreen"
@@ -19,7 +19,7 @@
       },
       {
         "title": "Les savoirs inutiles de NEON",
-        "text": "À travers cette mission, j'ai pu créer un module de scroll infini couplant des requêtes AJAX avec la dynamique de Riot, un équivalent de React, en plus léger.",
+        "text": "À tra&shy;vers cette mis&shy;sion, j'ai pu créer un mo&shy;dule de scroll in&shy;fini cou&shy;plant des re&shy;quêtes AJAX avec la dy&shy;na&shy;mique de Riot, un équi&shy;valent de React, en plus lé&shy;ger.",
         "image": {
           "url": "./assets/images/savoirs-inutiles.gif",
           "title": "Image Neon"
@@ -33,7 +33,7 @@
       },
       {
         "title": "Zodémo",
-        "text": "Dans le cadre de mon projet de fin d'études au sein de la future start-up Dicodys, mon équipe et moi-même avons réalisé une plateforme intelligente de jeux éducatifs pour enfants dyslexiques.",
+        "text": "Dans le cadre de mon pro&shy;jet de fin d'études au sein de la fu&shy;ture start&shy;up Di&shy;co&shy;dys, mon équipe et moi&shy;même avons réa&shy;lisé une pla&shy;te&shy;forme in&shy;tel&shy;li&shy;gente de jeux édu&shy;ca&shy;tifs pour en&shy;fants dys&shy;lexiques.",
         "image": {
           "url": "./assets/images/zodemo.gif",
           "title": "Image zodemo"
@@ -48,7 +48,7 @@
       },
       {
         "title": "La fabuleuse table de Noël",
-        "text": "En plus des sites éditoriaux, j'ai réalisé des petits projets parallèles chez Prisma Media. Par exemple, la Fabuleuse Table de Noël de Cuisine Actuelle est une page spéciale publiée pour les fêtes de fin d'année.",
+        "text": "En plus des sites édi-to-riaux, j'ai réa-lisé des pe-tits pro-jets pa-ral-lèles chez Prisma Me-dia. Par exemple, la Fa-bu-leuse Table de Noël de Cui-sine Ac-tuelle est une page spé-ciale pu-bliée pour les fêtes de fin d'an-née.",
         "image": {
           "url": "./assets/images/table_noel.gif",
           "title": "Image table Noël"
@@ -62,7 +62,7 @@
       },
       {
         "title": "Les sites de Prisma Media",
-        "text": "J'ai participé à l'évolution des sites web de plusieurs marques réputées, avec l'idée de faire converger des structures et technologies diverses vers un modèle commun.",
+        "text": "J'ai par&shy;ti&shy;cipé à l'évo&shy;lu&shy;tion des sites web de plu&shy;sieurs marques ré&shy;pu&shy;tées, avec l'idée de faire conver&shy;ger des struc&shy;tures et tech&shy;no&shy;lo&shy;gies di&shy;verses vers un mo&shy;dèle com&shy;mun.",
         "image": {
           "url": "./assets/images/sites_edito.gif",
           "title": "Image sites editos"

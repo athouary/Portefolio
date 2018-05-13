@@ -14,6 +14,11 @@
 .footer-text {
     position: absolute;
     left: 30px;
+    top: 0;
+}
+
+.footer-copyright {
+    font-family: "Cambria";
 }
 
 .footer-action {
@@ -33,9 +38,13 @@
     }
 }
 
-.footer-button {
+.footer-action-button {
     color: var(--black);
     border-color: var(--black);
+}
+
+.footer-links {
+    display: none;
 }
 
 .footer-line {
@@ -45,4 +54,64 @@
     height: 30px;
     transition: height .6s ease;
     border-left: solid 2px var(--black);
+}
+
+@media (--viewport-medium) {
+    .footer-action {
+        display: none;
+    }
+}
+
+@media (--viewport-medium) {
+    .footer {
+        height: auto;
+        padding: 15px 0 30px;
+        line-height: initial;
+    }
+
+    .footer-button {
+        background-color: var(--white);
+        color: var(--black);
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    .footer-externals {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+    }
+
+    .footer-external {
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+
+    .footer-external-icon {
+        width: 20px;
+        height: 20px;
+        fill: var(--white);
+        transition: fill .3s ease;
+        display: block;
+
+        &:hover {
+            fill: var(--purple);
+        }
+    }
+
+    .footer-copyright {
+        margin: 15px 0;
+    }
+
+    .footer-text {
+        position: static;
+    }
 }

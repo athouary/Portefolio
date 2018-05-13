@@ -12,9 +12,9 @@
     align-items: flex-start;
 }
 
-.works-title {
-    padding-right: 20px;
-    padding-left: 20px;
+.works-slider,
+.works-window {
+    overflow: hidden;
 }
 
 .works-picture {
@@ -29,7 +29,6 @@
     flex-shrink: 0;
     display: block;
     height: 375px;
-    min-width: 350px; /* TODO: Remove */
     background-color: var(--highlightColor);
 }
 
@@ -57,7 +56,6 @@
     background-color: var(--purple);
     width: 400px;
     position: relative;
-    box-shadow: 0px 0px 12px 0px var(--black-60);
 }
 
 .works-project-title {
@@ -98,7 +96,7 @@
     position: relative;
     overflow: hidden;
     transition: background-color .3s ease;
-    box-shadow: 0px 0px 12px 0px var(--black-60);
+    box-shadow: 0 0 12px 0 var(--black-60);
 
     /* &::after {
         content: "";
@@ -156,6 +154,10 @@
         overflow: auto;
     }
 
+    .works-shadow {
+        display: none;
+    }
+
     .works-picture {
         padding-top: 35px;
         width: 100%;
@@ -165,10 +167,6 @@
         width: 100%;
         max-width: 510px;
         height: auto;
-    }
-
-    .works-shadow {
-        display: none;
     }
 
     .works-action {
@@ -203,5 +201,36 @@
         width: 35px;
         height: 35px;
         margin: 0;
+    }
+}
+
+@media (--viewport-large) {
+    .works-project {
+        padding-bottom: 60px;
+    }
+
+    .works-project-title {
+        font-size: var(--fs-5);
+        padding-bottom: 20px;
+    }
+
+    .works-project-skills {
+        position: absolute;
+        bottom: 25px;
+        right: 30px;
+    }
+
+    .works-project-text {
+        font-size: var(--fs-3);
+    }
+
+    .works-project-skill {
+        font-size: var(--fs-1);
+    }
+}
+
+@media (--viewport-extraSmall) {
+    .works-shadow {
+        display: block;
     }
 }

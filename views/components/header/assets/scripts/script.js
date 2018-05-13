@@ -1,5 +1,8 @@
+import mobileCheck from 'Views/assets/scripts/mobileCheck'
+
 const pageElems = [...document.querySelectorAll('[data-page]')]
 const linksElems = [...document.querySelectorAll('[data-goto-page]')]
+const mobileLinksElems = [...document.querySelectorAll('[data-menu-mobile]')]
 const marker = document.querySelector('[data-marker]')
 
 export function setCurrentLink () {
@@ -23,6 +26,7 @@ export function setCurrentLink () {
           moveMarkerTo()
         }
       }
+      setMobileLinkDisplay()
     }
   })
 }
@@ -61,5 +65,24 @@ export function moveMarkerTo (target) {
     marker.style.top = `${target.offsetTop - 3}px`
   } else {
     marker.style.top = '-100px'
+  }
+}
+
+export function setMobileLinkDisplay () {
+  if (mobileCheck.small()) {
+    let oneIsSelected = false
+    mobileLinksElems.map(link => {
+      if (!link.classList.contains('isSelected')) {
+        link.classList.add('isNotSelected')
+      } else {
+        oneIsSelected = true
+        link.classList.remove('isNotSelected')
+      }
+    })
+    if (!oneIsSelected) {
+      mobileLinksElems.map(link => {
+        link.classList.remove('isNotSelected')
+      })
+    }
   }
 }

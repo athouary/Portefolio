@@ -1,10 +1,22 @@
 <footer class="footer">
-  <p class="footer-text">{{footer.text}}</p>
-  <p class="footer-copyright">{{footer.copyright}}</p>
-  <div class="action footer-action" data-goto-page="home">
-    <button href="{{footer.button.url}}" class="action-button footer-button">
-      <img src="{{footer.button.image.url}}" alt="{{footer.button.image.title}}"/>
-    </button>
-    <div class="footer-line"></div>
-  </div>
+    <div class="footer-links">
+        <a class="button footer-button" href="{{header.button.url}}" target="_blank">{{header.button.title}}</a>
+        <ul class="footer-externals">
+            {{#each header.menuExternals}}
+                <li class="footer-external"><a href="{{this.url}}" target="_blank">
+                    <svg class="footer-external-icon">
+                        <use xlink:href="#{{this.image.id}}"></use>
+                    </svg>
+                </a></li>
+            {{/each}}
+        </ul>
+    </div>
+    <p class="footer-copyright">{{footer.copyright}}</p>
+    <p class="footer-text">{{footer.text}}</p>
+    <div class="action footer-action" data-goto-page="home">
+        <button href="{{footer.button.url}}" class="action-button footer-action-button">
+            <img src="{{footer.button.image.url}}" alt="{{footer.button.image.title}}"/>
+        </button>
+        <div class="footer-line"></div>
+    </div>
 </footer>

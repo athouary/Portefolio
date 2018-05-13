@@ -25,5 +25,28 @@
 
 .contact-button {
     margin: 30px 0 40px;
-    font-size: var(--fs-4);
+}
+
+@media (--viewport-extraSmall) {
+    .contact-form {
+        min-width: 0;
+        width: 100%;
+        padding: 30px;
+    }
+
+    .contact-row {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .contact-name,
+    .contact-object {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .contact-button {
+        margin: 25px 0 10px;
+    }
 }

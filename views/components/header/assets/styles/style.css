@@ -192,14 +192,15 @@ body {
     }
 }
 
-
 @media (--viewport-medium) {
     body {
-        padding: 0;
+        padding-left: 0;
+        padding-bottom: calc(var(--menu-height-md) - 9px);
     }
 
     .menu {
-        width: 100%;
+        width: 100vw;
+        height: auto;
         top: auto;
         bottom: 0;
         left: 0;
@@ -235,6 +236,8 @@ body {
         align-items: center;
         font-size: var(--fs-3);
         background-color: var(--white);
+        transition: height .3s ease-out, border .3s ease-out;
+        border-top: 0 solid var(--purple);
 
         &::before {
             z-index: -1;
@@ -275,11 +278,13 @@ body {
     }
 
     .menu-externals {
-        display: block;
         position: absolute;
         top: 0;
-        width: 100%;
+        left: 0;
         height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .menu-external {
@@ -293,6 +298,9 @@ body {
     }
 
     .menu-button {
+        z-index: 1;
+        position: absolute;
+        top: -7px;
         background-color: var(--white);
         color: var(--black);
     }
@@ -300,6 +308,11 @@ body {
     .menu-item.isSelected {
         font-size: var(--fs-3);
         border-top: 9px solid var(--purple);
+        height: calc(var(--menu-height-md) + 9px);
+
+        &::before {
+            box-shadow: 0 -9px 12px 0 rgba(0, 0, 0, .6);
+        }
 
         & .menu-icon {
             width: 25px;
@@ -309,6 +322,6 @@ body {
     }
 
     .menu-item.isNotSelected {
-        height: calc(var(--menu-height-md) - 10px);
+        height: calc(var(--menu-height-md) - 9px);
     }
 }

@@ -8,8 +8,12 @@
 @import "tools";
 @import "fonts";
 
+body,
+html {
+    overflow-x: hidden;
+}
+
 body {
-    padding-left: var(--menu-width);
-    font-family: "Cambria";
+    font-family: "Source Serif Pro", serif;
     background-color: var(--grey-2);
 }

@@ -113,3 +113,37 @@
         width: 40%;
     }
 }
+
+@media (--viewport-extraSmall) {
+    .skills {
+        padding: 0 0 50px;
+    }
+
+    .skills-soft {
+        padding: 30px 0;
+    }
+
+    .skills-soft-item {
+        min-width: 100px;
+        padding: 15px 0;
+    }
+
+    .skills-soft-image {
+        width: 30px;
+        height: 30px;
+    }
+
+    .skills-soft-subtitle {
+        padding: 0 15px;
+        font-size: var(--fs-2);
+    }
+
+    .skills-hard {
+        margin-top: 10px;
+        justify-content: space-evenly;
+    }
+
+    .skills-button {
+        margin-top: 30px;
+    }
+}

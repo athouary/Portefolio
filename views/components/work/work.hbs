@@ -27,8 +27,12 @@
                                 </ul>
                             </article>
                             <div class="works-controls" data-glide-el="controls">
-                                <button class="button works-arrow works-previous" data-glide-dir="<"><</button>
-                                <button class="button works-arrow works-next" data-glide-dir=">">></button>
+                                <button class="button works-arrow" data-glide-dir="<">
+                                    <svg class="works-arrow-image works-previous"><use xlink:href="#{{@root.works.previous.image.id}}"></use></svg>
+                                </button>
+                                <button class="button works-arrow" data-glide-dir=">">
+                                    <svg class="works-arrow-image works-next"><use xlink:href="#{{@root.works.next.image.id}}"></use></svg>
+                                </button>
                             </div>
                         </div>
                     </li>

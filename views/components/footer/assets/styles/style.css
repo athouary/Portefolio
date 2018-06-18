@@ -7,7 +7,7 @@
     position: relative;
     height: 40px;
     line-height: 40px;
-    font-family: "HelveticaCd";
+    font-family: "Roboto Condensed", sans-serif;
     font-size: var(--fs-2);
 }
 
@@ -41,6 +41,19 @@
 .footer-action-button {
     color: var(--black);
     border-color: var(--black);
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-action-image {
+    fill: var(--black);
+    transform: rotate(-90deg);
+    height: 20px;
+    width: 20px;
 }
 
 .footer-links {

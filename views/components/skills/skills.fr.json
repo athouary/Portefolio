@@ -6,28 +6,28 @@
         "title": "Adaptation",
         "subtitle": "Vitesse&nbsp;d'apprentissage et&nbsp;souplesse",
         "image": {
-          "id": "work"
+          "id": "adaptation"
         }
       },
       {
         "title": "Gestion de projet",
         "subtitle": "Coordination,&nbsp;pilotage et&nbsp;organisation",
         "image": {
-          "id": "work"
+          "id": "project-management"
         }
       },
       {
         "title": "Travail d'équipe",
         "subtitle": "Échanges&nbsp;et&nbsp;partages de&nbsp;connaissances",
         "image": {
-          "id": "work"
+          "id": "team-work"
         }
       },
       {
         "title": "Leadership",
         "subtitle": "Écoute&nbsp;et&nbsp;force de&nbsp;suggestions",
         "image": {
-          "id": "work"
+          "id": "leadership"
         }
       }
     ],

@@ -5,8 +5,7 @@
     "button": {
       "url": "",
       "image": {
-        "url": "",
-        "title": "Up"
+        "id": "right-arrow"
       }
     }
   }

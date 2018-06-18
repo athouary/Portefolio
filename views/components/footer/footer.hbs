@@ -15,7 +15,7 @@
     <p class="footer-text">{{footer.text}}</p>
     <div class="action footer-action" data-goto-page="home">
         <button href="{{footer.button.url}}" class="action-button footer-action-button">
-            <img src="{{footer.button.image.url}}" alt="{{footer.button.image.title}}"/>
+            <svg class="footer-action-image"><use xlink:href="#{{footer.button.image.id}}"></use></svg>
         </button>
         <div class="footer-line"></div>
     </div>

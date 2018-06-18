@@ -12,6 +12,7 @@ body {
 .menu {
     width: var(--menu-width);
     height: 100%;
+    overflow-y: scroll;
     position: fixed;
     top: 0;
     left: 0;
@@ -22,6 +23,7 @@ body {
 
     & nav {
         height: 100%;
+        min-height: calc(var(--desktop-min-height) - 170px - 65px);
     }
 }
 
@@ -91,7 +93,7 @@ body {
 }
 
 .menu-title {
-    font-family: "HelveticaCd";
+    font-family: "Roboto Condensed", sans-serif;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -170,6 +172,13 @@ body {
     padding: 0 15px;
 }
 
+/* hack */
+@media (--viewport-vertical-small) {
+    .menu-links {
+        display: none;
+    }
+}
+
 .menu-externals {
     text-align: center;
     display: flex;
@@ -210,6 +219,7 @@ body {
 
         & nav {
             width: 100%;
+            min-height: 0;
         }
     }
 

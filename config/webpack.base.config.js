@@ -43,6 +43,7 @@ export default new Config().merge({
   resolve: {
     alias: {
       Views: path.resolve(__dirname, '../views'),
+      Assets: path.resolve(__dirname, '../views/assets'),
       Components: path.resolve(__dirname, '../views/components'),
       Modules: path.resolve(__dirname, '../node_modules')
     },

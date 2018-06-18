@@ -67,6 +67,7 @@
         left: 50%;
         border-left: solid 2px var(--white);
         transition: height .6s ease;
+        pointer-events: none;
     }
 }
 
@@ -108,16 +109,21 @@
 
 .input {
     width: 100%;
-    padding: 8px 8px 8px 35px;
+    padding: 10px 10px 10px 35px;
     font-family: "Roboto Condensed", sans-serif;
-    background-color: var(--white);
+    background-color: var(--grey-3);
     color: var(--black);
     border: 1px solid var(--black);
-    font-size: var(--fs-2);
+    font-size: var(--fs-3);
+    transition: background-color ease .3s;
 
     &::placeholder {
         color: var(--grey-2);
-        font-size: var(--fs-2);
+        font-size: var(--fs-3);
+    }
+
+    &:focus {
+        background-color: var(--white);
     }
 }
 

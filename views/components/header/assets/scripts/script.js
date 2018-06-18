@@ -62,7 +62,7 @@ export function smoothScrollToPage () {
 
 export function moveMarkerTo (target) {
   if (target !== undefined) {
-    marker.style.top = `${target.offsetTop - 3}px`
+    marker.style.top = `${target.offsetTop}px`
   } else {
     marker.style.top = '-100px'
   }

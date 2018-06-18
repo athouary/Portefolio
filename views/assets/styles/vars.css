@@ -1,7 +1,8 @@
 /* custom properties */
 
 :root {
-    --highlightColor: hwb(190, 35%, 20%);
+    /* DIMENSIONS */
+    --desktop-min-height: 550px;
 
     /* COLORS */
     --white: #fff;
@@ -35,3 +36,4 @@
 @custom-media --viewport-medium (width <= 768px);
 @custom-media --viewport-small (width <= 620px);
 @custom-media --viewport-extraSmall (width <= 480px);
+@custom-media --viewport-vertical-small (height <= 550px);

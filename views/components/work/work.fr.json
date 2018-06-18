@@ -76,6 +76,16 @@
           "Symfony"
         ]
       }
-    ]
+    ],
+    "previous": {
+      "image": {
+        "id": "right-arrow"
+      }
+    },
+    "next": {
+      "image": {
+        "id": "right-arrow"
+      }
+    }
   }
 }
